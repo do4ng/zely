@@ -1,6 +1,6 @@
 import http from 'http';
 
-export interface Preny {
+export interface Sard {
   server?: http.Server;
   logging?: boolean;
 }
@@ -12,7 +12,7 @@ export type HandlerType = (
 ) => void;
 
 export interface Server {
-  options: Preny;
+  options: Sard;
 
   middlewares: any[];
 
@@ -38,7 +38,7 @@ export interface Server {
   addHandler(m: string, query: string | RegExp, fn: any): void;
 }
 
-export function server(options: Preny): Server;
+export function server(options: Sard): Server;
 
 export function pathToRegexp(
   path: string,

@@ -3,7 +3,7 @@ import http from 'http';
 import 'colors';
 import { pathToRegexp } from './regexp';
 
-export interface Preny {
+export interface Sard {
   server?: http.Server;
   logging?: boolean;
 }
@@ -15,7 +15,7 @@ type HandlerType = (
 ) => void;
 
 class Server {
-  options: Preny = {};
+  options: Sard = {};
 
   middlewares: any[] = []; // empty
 
@@ -26,7 +26,7 @@ class Server {
     method: string;
   }[] = [];
 
-  constructor(options: Preny = {}) {
+  constructor(options: Sard = {}) {
     this.options = options;
     this.handles = [];
   }
@@ -137,7 +137,7 @@ class Server {
   }
 }
 
-function server(options: Preny = {}) {
+function server(options: Sard = {}) {
   return new Server(options);
 }
 

@@ -1,13 +1,20 @@
-# Preny
+# Sard.js
 
 > This package is very experimental.
-> Don't use it for production before `v1`
 
-Very Tiny Http Server Module (3kb).
+Very Tiny Http Server Module
+
+## Installation
+
+```bash
+$ npm i --save-dev sard.js
+```
+
+## Example
 
 ```ts
-const preny = require('preny');
-const app = preny.server({ logging: true });
+const sard = require('sard.js');
+const app = sard.server({ logging: true });
 
 app.use((req, res, next) => {
   // middleware
@@ -25,7 +32,7 @@ app.get('/users/:name', (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log('Server Running on http://localhost:3000\n');
+  // callback
 });
 ```
 
