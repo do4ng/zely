@@ -28,6 +28,7 @@ export async function getPages(config: Config) {
     readDirectory(config.routes || 'pages').map(async (file) => {
       file = relative(config.routes || 'pages', file);
 
+      const { ext } = parse(file);
       const target = join(config.routes || 'pages', file);
 
       if (cache.has(target)) {
@@ -36,6 +37,17 @@ export async function getPages(config: Config) {
         return {
           file,
           m: require(relative(__dirname, join(CACHE_DIRECTORY, cache.get(target)))),
+          type: 'module',
+        };
+      }
+
+      if (ext === '.html') {
+        const data = readFileSync(target).toString();
+
+        return {
+          file,
+          m: data,
+          type: 'html',
         };
       }
 
@@ -46,6 +58,7 @@ export async function getPages(config: Config) {
       return {
         file,
         m: output.m,
+        type: 'module',
       };
     })
   );
@@ -60,7 +73,7 @@ export async function getPages(config: Config) {
   return files;
 }
 
-export function filenameToRoute(map: Array<{ file: string; m: any }>) {
+export function filenameToRoute(map: Array<{ file: string; m: any; type: string }>) {
   return map.map((page) => {
     let { file } = page;
     // eslint-disable-next-line prefer-const
@@ -75,7 +88,7 @@ export function filenameToRoute(map: Array<{ file: string; m: any }>) {
     file = transformFilename(file);
     file = prettyURL(file);
 
-    return { file, m: page.m };
+    return { file, m: page.m, type: page.type };
   });
 }
 
@@ -96,20 +109,29 @@ export async function Handler(req: SardRequest, res: SardResponse, config: Confi
     if (pattern.test(parsed.pathname)) {
       // match!
 
-      page.m = ObjectkeysMap(page.m, (key) => key.toLowerCase());
+      if (page.type === 'html') {
+        // html
 
-      Object.keys(page.m).forEach((pageHandler) => {
-        if (pageHandler === req.method.toLowerCase() || pageHandler === 'all') {
-          const execd = new URL(req.url, `http://${req.headers.host}`).pathname.match(
-            pattern
-          );
-          params.forEach((param, index) => {
-            req.params[param] = execd[index + 1] || null;
-          });
+        res.setHeader('Content-Type', 'text/html');
+        res.end(page.m);
+      } else {
+        // module
 
-          page.m[pageHandler](req, res);
-        }
-      });
+        page.m = ObjectkeysMap(page.m, (key) => key.toLowerCase());
+
+        Object.keys(page.m).forEach((pageHandler) => {
+          if (pageHandler === req.method.toLowerCase() || pageHandler === 'all') {
+            const execd = new URL(req.url, `http://${req.headers.host}`).pathname.match(
+              pattern
+            );
+            params.forEach((param, index) => {
+              req.params[param] = execd[index + 1] || null;
+            });
+
+            page.m[pageHandler](req, res);
+          }
+        });
+      }
     }
   });
 }
