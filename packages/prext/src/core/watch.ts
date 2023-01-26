@@ -11,7 +11,7 @@ export function Watch(config: Config) {
   watcher.on('change', async (path) => {
     const { ext } = parse(path);
 
-    if (ext === 'ts' || ext === 'js') {
+    if (ext === '.ts' || ext === '.js') {
       const { filename } = await typescriptLoader(
         join(process.cwd(), config.base || '.', path)
       );
