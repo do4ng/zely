@@ -1,0 +1,7 @@
+{
+  "name": "prext-playground",
+  "version": "0.0.0",
+  "devDependencies": {
+    "prext": "*"
+  }
+}
