@@ -43,5 +43,9 @@ module.exports = {
     'no-return-await': 'off',
     'no-useless-escape': 'off',
     'no-new-func': 'off',
+    'no-restricted-syntax': 'off',
+    'no-extra-boolean-cast': 'off',
+    'import/no-duplicates': 'off',
+    'implicit-arrow-linebreak': 'off',
   },
 };
