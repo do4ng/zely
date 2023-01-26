@@ -1,23 +1,42 @@
-<center><h1>prext</h1></center>
+<section align="center">
+  <h1>🛰️ prext</h1>
+  Prext is a backend framework for Node.js
+
+[**github**](https://github.com/do4ng/prext) • [**npm**](https://npmjs.com/package/prext)
+
+</section>
+
+## Features
+
+- **🚧 Filed-based routing.** Prext.js creates routes automatically with filenames.
+- **🚀 Server Reload.** You don't have to restart server to apply changes.
+- **✅ Typescript Supported.**
+- **⚡ Lightning fast.**
+
+## Installation
+
+```sh
+> npm install --save-dev prext
+```
+
+```ts
+// prext.config.ts
+import { defineConfig } from 'prext';
+
+export default defineConfig({
+  port: 3000,
+  routes: '/pages/',
+});
+```
 
 ---
 
-Prext is a **development tool** for frontend/backend
+<section align="center">
+  <h3>💡 Prext is beta version and needs help</h3>
+</section>
 
 ---
 
-- **Extendable Views**. You can build your own app with helpful tools.
-- **Simple UI**. It has only the ui you need.
+## License
 
-### Getting Started
-
-[Follow Guide](./docs/getting-started.md) or follow the steps blow
-
-### Installation
-
-Install Prext with [prext-cli](./packages/prext-cli/)
-
-```
-npm install -g @prext/cli
-prext setup
-```
+MIT
