@@ -1,18 +1,14 @@
 /* eslint-disable no-unused-vars */
 import http from 'http';
 import 'colors';
+import { parse } from 'url';
 import { pathToRegexp } from './regexp';
+import { HandlerType, SardRequest, SardResponse } from '../types';
 
 export interface Sard {
   server?: http.Server;
   logging?: boolean;
 }
-
-type HandlerType = (
-  req: http.IncomingMessage,
-  res: http.ServerResponse,
-  next: () => void
-) => void;
 
 class Server {
   options: Sard = {};
@@ -69,8 +65,10 @@ class Server {
     this.addHandler('all', query, handler);
   }
 
-  handler(req: http.IncomingMessage & { params: object }, res: http.ServerResponse) {
+  handler(req: SardRequest, res: SardResponse) {
     let index = -1;
+
+    const parsed = parse(req.url);
 
     const loop = () => {
       if (index < this.handles.length && !res.writableEnded) {
@@ -80,7 +78,7 @@ class Server {
             handle.method.toUpperCase() === 'ALL' ||
             req.method.toUpperCase() === handle.method.toUpperCase()
           ) {
-            if (handle.__original?.pattern.test(req.url)) {
+            if (handle.__original?.pattern.test(parse(req.url).pathname)) {
               // parse params
 
               req.params = {};
