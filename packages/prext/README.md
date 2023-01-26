@@ -29,13 +29,9 @@ export default defineConfig({
 });
 ```
 
----
-
 ## Example
 
 Visit [playground](https://github.com/do4ng/prext/tree/main/playground)!
-
----
 
 ## License
 
