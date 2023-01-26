@@ -1,5 +1,5 @@
 import chokidar from 'chokidar';
-import { readFileSync, rmSync, writeFileSync } from 'fs';
+import { existsSync, readFileSync, rmSync, writeFileSync } from 'fs';
 import { join, parse } from 'path';
 import { Config } from '../config';
 import { CACHE_DIRECTORY, CACHE_FILE } from '../constants';
@@ -9,6 +9,9 @@ export function Watch(config: Config) {
   const watcher = chokidar.watch('.', { cwd: join(process.cwd(), config.base || '.') });
 
   watcher.on('change', async (path) => {
+    if (!existsSync(CACHE_FILE)) {
+      return;
+    }
     const { ext } = parse(path);
 
     if (ext === '.ts' || ext === '.js') {
