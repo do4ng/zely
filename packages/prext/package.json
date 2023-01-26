@@ -1,0 +1,22 @@
+{
+  "name": "prext",
+  "version": "0.0.0",
+  "types": "./types/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.esm.js",
+  "homepage": "https://github.com/do4ng/prext",
+  "bin": {
+    "prext": "./dist/bin.js"
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "dependencies": {
+    "animaux": "^0.0.3",
+    "chokidar": "^3.5.3",
+    "esbuild": "^0.17.4",
+    "esbuild-node-externals": "^1.6.0",
+    "sard.js": "*"
+  }
+}
