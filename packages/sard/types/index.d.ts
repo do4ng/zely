@@ -5,7 +5,7 @@ export interface Sard {
   logging?: boolean;
 }
 
-export type SardRequest = http.IncomingMessage & { params: object };
+export type SardRequest = http.IncomingMessage & { params: any };
 export type SardResponse = http.ServerResponse;
 
 export type HandlerType = (req: SardRequest, res: SardResponse, next: () => void) => void;
