@@ -50,3 +50,5 @@ const build = (
 
 build('sard');
 build('prext');
+// cli
+build('prext', 'src/bin/index.ts', { cjs: 'dist/bin.js', esm: 'dist/bin.esm.js' });
