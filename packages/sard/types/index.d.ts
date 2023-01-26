@@ -5,11 +5,10 @@ export interface Sard {
   logging?: boolean;
 }
 
-export type HandlerType = (
-  req: http.IncomingMessage & { params: object },
-  res: http.ServerResponse,
-  next: () => void
-) => void;
+export type SardRequest = http.IncomingMessage & { params: object };
+export type SardResponse = http.ServerResponse;
+
+export type HandlerType = (req: SardRequest, res: SardResponse, next: () => void) => void;
 
 export interface Server {
   options: Sard;
@@ -34,7 +33,7 @@ export interface Server {
 
   listen(port: number, ...args: any[]): this;
 
-  handler(req: http.IncomingMessage & { params: object }, res: http.ServerResponse): void;
+  handler(req: SardRequest, res: SardResponse): void;
   addHandler(m: string, query: string | RegExp, fn: any): void;
 }
 
