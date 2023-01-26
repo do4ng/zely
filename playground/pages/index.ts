@@ -5,7 +5,8 @@ export function get(req: PrextRequest, res: PrextResponse) {
   res.end(`
   <div class="container">
     <h2>${(req as any).message}</h2>
-    Visit <a href="/users/">users</a>
+    <p>Prext is a <a href="https://github.com/do4ng/prext">open-source</a> project</p>
+    <p>Visit <a href="/users/">user list</a> page!</p>
   </div>
 
   <style>

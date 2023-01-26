@@ -3,5 +3,8 @@
   "version": "0.0.0",
   "devDependencies": {
     "prext": "*"
+  },
+  "scripts": {
+    "dev": "prext dev"
   }
 }
