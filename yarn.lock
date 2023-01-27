@@ -952,10 +952,10 @@ ajv@^6.10.0, ajv@^6.12.4:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-animaux@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/animaux/-/animaux-0.0.3.tgz#fe0e6a88f9cc8e781f433280d138e4d84f8b891a"
-  integrity sha512-9dmtGLwH05IwVyAaE6Sovq5thQOLMUh3kalkUM9uFfok62ypv/lwhw6CHegEgS4U7sXKIhiEIWE7BY4iPrm9Cw==
+animaux@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/animaux/-/animaux-0.0.4.tgz#46a97966c41c8ef953844922de24aaf81ff3ce79"
+  integrity sha512-dPpVuWfXF7Mu9TXBsMnpkVoQiYyKZnmBPqoGYsjsKKLm2PKpiLNBTijUoPenZ272PUrYDagzvE2oEBI+7Ra4aA==
   dependencies:
     colors "^1.4.0"
 
@@ -3137,6 +3137,15 @@ pretty-format@^29.0.0, pretty-format@^29.4.0:
     "@jest/schemas" "^29.4.0"
     ansi-styles "^5.0.0"
     react-is "^18.0.0"
+
+prext@*:
+  version "0.0.0-beta.1"
+  dependencies:
+    animaux "^0.0.4"
+    chokidar "^3.5.3"
+    esbuild "^0.17.4"
+    esbuild-node-externals "^1.6.0"
+    sard.js "*"
 
 prompts@^2.0.1:
   version "2.4.2"
