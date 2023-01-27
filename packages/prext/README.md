@@ -18,7 +18,7 @@ Prext is a backend framework for Node.js
 - use create-prext-app
 
 ```sh
-> yarn create prext-app my-app --with-typescript
+> npx create-prext-app my-app --with-typescript
 ```
 
 - Manual installation
