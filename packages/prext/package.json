@@ -1,6 +1,6 @@
 {
   "name": "prext",
-  "version": "0.0.0-beta.1",
+  "version": "0.0.0-beta.2",
   "types": "./types/index.d.ts",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
@@ -13,7 +13,7 @@
     "types"
   ],
   "dependencies": {
-    "animaux": "^0.0.3",
+    "animaux": "^0.0.4",
     "chokidar": "^3.5.3",
     "esbuild": "^0.17.4",
     "esbuild-node-externals": "^1.6.0",
