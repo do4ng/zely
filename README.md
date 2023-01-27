@@ -15,6 +15,14 @@
 
 ## Installation
 
+- use create-prext-app
+
+```sh
+> yarn create prext-app my-app --with-typescript
+```
+
+- Manual installation
+
 ```sh
 > npm install --save-dev prext
 ```
