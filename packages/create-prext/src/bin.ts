@@ -61,7 +61,12 @@ app.action((options) => {
   }
 
   const pkgJSON = JSON.stringify(
-    { name: 'prext-app', version: '1.0.0', dependencies: { prext: '*' } },
+    {
+      name: 'prext-app',
+      version: '1.0.0',
+      dependencies: { prext: '*' },
+      scripts: { dev: 'prext dev' },
+    },
     null,
     2
   );
