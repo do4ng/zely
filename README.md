@@ -2,7 +2,7 @@
   <h1>🛰️ prext</h1>
   Prext is a backend framework for Node.js
 
-[**github**](https://github.com/do4ng/prext) • [**npm**](https://npmjs.com/package/prext)
+[**github**](https://github.com/do4ng/prext) • [**npm**](https://npmjs.com/package/prext) • [**website**](https://prext.netlify.app/)
 
 </section>
 
