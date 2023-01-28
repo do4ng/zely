@@ -1,0 +1,20 @@
+[
+  {
+    "category": "Guide",
+    "posts": [
+      ["what-is-prext", "What is Prext?"],
+      ["getting-started", "Getting Started"],
+      ["routing", "Routing"],
+      ["middlewares", "Middlewares"],
+      ["typescript", "Typescript"]
+    ]
+  },
+  {
+    "category": "Api Reference",
+    "posts": [
+      ["api-server", "Server"],
+      ["api-sard", "Sard.js"],
+      ["api-types", "Types"]
+    ]
+  }
+]

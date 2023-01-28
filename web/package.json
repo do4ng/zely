@@ -1,0 +1,16 @@
+{
+  "name": "web",
+  "version": "0.0.0",
+  "dependencies": {
+    "markdown-it": "^13.0.1",
+    "sass": "^1.56.0",
+    "shiki": "^0.12.1",
+    "vite": "^3.2.3",
+    "zitjs": "latest"
+  },
+  "scripts": {
+    "build": "npm run docs && vite build",
+    "dev": "npm run docs && vite",
+    "docs": "node helper/index.js"
+  }
+}
