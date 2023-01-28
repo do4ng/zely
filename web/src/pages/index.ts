@@ -10,7 +10,7 @@ export default html`
           <a href="/guide/what-is-prext">Guide</a>
         </li>
         <li>
-          <a href="https://github.com/do4ng/zit">Github</a>
+          <a href="https://github.com/do4ng/prext">Github</a>
         </li>
       </ul>
     </div>
@@ -28,7 +28,7 @@ export default html`
                 <a href="/guide/what-is-prext">get started</a>
               </button>
               <button class="tb shadow">
-                <a href="https://github.com/do4ng/zit">view on github</a>
+                <a href="https://github.com/do4ng/prext">view on github</a>
               </button>
             </div>
           </div>
