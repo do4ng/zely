@@ -1,9 +1,10 @@
 {
   "name": "create-prext-app",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "bin": {
     "create-prext": "dist/bin.js"
   },
+  "homepage": "https://prext.netlify.app/",
   "files": [
     "assets",
     "dist"
