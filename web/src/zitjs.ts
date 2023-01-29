@@ -1,1 +1,1 @@
-export * from 'zitjs';
+export * from "zitjs";

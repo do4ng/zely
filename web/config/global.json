@@ -1,0 +1,6 @@
+{
+  "github": "https://github.com/do4ng/prext",
+  "name": "prext",
+  "entry": "/guide/what-is-prext",
+  "description": "a backend framework for Node.js"
+}

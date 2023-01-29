@@ -1,34 +1,36 @@
-import { html } from '../zitjs';
+import { html } from "../zitjs";
+import global from "../../config/global.json";
+
+export const header = html` <div id="header">
+  <div id="header-container">
+    <div id="header-title"><a href="/">${global.name}</a></div>
+
+    <ul id="header-contents">
+      <li>
+        <a href="${global.entry}">Guide</a>
+      </li>
+      <li>
+        <a href="${global.github}">Github</a>
+      </li>
+    </ul>
+  </div>
+</div>`;
 
 export default html`
-  <div id="header">
-    <div id="header-container">
-      <div id="header-title">Prext</div>
-
-      <ul id="header-contents">
-        <li>
-          <a href="/guide/what-is-prext">Guide</a>
-        </li>
-        <li>
-          <a href="https://github.com/do4ng/prext">Github</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
+  ${header}
   <div id="main">
     <div id="title">
       <div class="flex-container">
         <div>
           <div id="title-content">
-            <h1>Prext.js</h1>
-            <p id="title-detail">File-based routing nodejs backend framework.</p>
+            <h1>${global.name}</h1>
+            <p id="title-detail">${global.description}</p>
             <div id="title-dir">
               <button class="tb shadow">
-                <a href="/guide/what-is-prext">get started</a>
+                <a href="${global.entry}">get started</a>
               </button>
               <button class="tb shadow">
-                <a href="https://github.com/do4ng/prext">view on github</a>
+                <a href="${global.github}">view on github</a>
               </button>
             </div>
           </div>

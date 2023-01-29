@@ -1,13 +1,17 @@
 .container {
   display: flex;
+  margin-top: 65px;
 }
 
 .side-list {
   background-color: rgba(231, 231, 231, 0.349);
-  height: 100vh;
   width: 23%;
   font-weight: bold;
-  overflow: hidden;
+  overflow-y: auto;
+  height: calc(100vh - 65px);
+  top: 0;
+  position: sticky;
+  align-self: flex-start;
 
   a {
     min-width: 100%;
@@ -17,10 +21,12 @@
   }
 
   .category {
-    font-family: 'Inter', sans-serif !important;
+    font-family: "Inter", sans-serif !important;
     width: 80%;
-    margin: 15px auto;
+    margin: 35px auto;
+    max-height: calc((100vh - 65px));
   }
+
   .logo {
     width: 80%;
     margin: 20px auto;
@@ -48,6 +54,7 @@
     color: #292929de;
     margin-bottom: 10px;
   }
+
   .category-post {
     padding: 5px;
     font-weight: bold;
@@ -56,6 +63,7 @@
     padding-left: 12px;
     color: #4b4b4ba2;
     transition: all ease 0.5s 0s;
+
     a:not(.active):hover {
       color: #707070;
     }
@@ -63,9 +71,11 @@
       color: #8cabff;
     }
   }
+
   .category-post.active {
     border-left: 1px solid #b7caff;
   }
+
   .category-post:not(.active):hover {
     border-left: 1px solid #919191c5;
   }
@@ -75,7 +85,7 @@
   width: 100%;
   position: relative;
   overflow-y: scroll;
-  height: 100vh;
+  height: calc((100vh - 65px));
 }
 
 ul,
@@ -176,4 +186,14 @@ hr {
   margin: 35px 0;
   border: 2px solid #b1b3b656;
   border-radius: 2px;
+}
+table {
+  width: 100%;
+  border: 1px solid hsla(0, 0%, 84%, 0.698);
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid hsla(0, 0%, 84%, 0.698);
+  padding: 3px 10px;
 }
