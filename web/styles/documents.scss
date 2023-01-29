@@ -1,10 +1,12 @@
+@import "./var.scss";
+
 .container {
   display: flex;
   margin-top: 65px;
 }
 
 .side-list {
-  background-color: rgba(231, 231, 231, 0.349);
+  background-color: var(--grey);
   width: 23%;
   font-weight: bold;
   overflow-y: auto;
@@ -27,31 +29,8 @@
     max-height: calc((100vh - 65px));
   }
 
-  .logo {
-    width: 80%;
-    margin: 20px auto;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(121, 121, 121, 0.349);
-
-    a {
-      font-size: 1.55rem;
-      font-weight: bold;
-      color: black;
-    }
-
-    .logo-docs {
-      background-color: #646cff3f;
-      color: #646cff;
-      font-size: 0.85rem;
-      font-weight: 400;
-      padding: 2px;
-      border-radius: 5px;
-      margin-left: 3px;
-    }
-  }
-
   .category-name {
-    color: #292929de;
+    color: var(--black);
     margin-bottom: 10px;
   }
 
@@ -61,7 +40,7 @@
     font-size: 1.15rem;
     border-left: 1px solid #e6e6e6;
     padding-left: 12px;
-    color: #4b4b4ba2;
+    color: var(--grey-dark);
     transition: all ease 0.5s 0s;
 
     a:not(.active):hover {
@@ -82,18 +61,15 @@
 }
 
 .post-container {
+  background-color: var(--bg);
+  color: var(--text);
   width: 100%;
   position: relative;
   overflow-y: scroll;
   height: calc((100vh - 65px));
 }
 
-ul,
-ol {
-  padding-left: 30px;
-}
 .post {
-  color: #333541;
   width: 72%;
   font-size: 17px;
 
@@ -142,6 +118,7 @@ ol {
     overflow: auto;
   }
 }
+
 .pre-next {
   margin-top: 105px;
   padding-bottom: 110px;
@@ -160,11 +137,11 @@ ol {
   .prext {
     padding: 10px 15px;
     border-radius: 7px;
-    border: 1px solid #b6b6b685;
+    border: 1px solid var(--grey-light);
     width: 85%;
 
     .prext-title {
-      color: rgba(71, 71, 71, 0.651);
+      color: var(--grey-dark);
     }
     .prext-content {
       font-size: 1rem;
@@ -174,26 +151,4 @@ ol {
   .prext:hover {
     border: 1px solid #646cff;
   }
-}
-blockquote {
-  border-left: 4px solid rgb(207, 207, 207);
-  padding-left: 1em;
-  border-radius: 1px;
-  margin: 2.3em 0;
-}
-
-hr {
-  margin: 35px 0;
-  border: 2px solid #b1b3b656;
-  border-radius: 2px;
-}
-table {
-  width: 100%;
-  border: 1px solid hsla(0, 0%, 84%, 0.698);
-  border-collapse: collapse;
-}
-td,
-th {
-  border: 1px solid hsla(0, 0%, 84%, 0.698);
-  padding: 3px 10px;
 }

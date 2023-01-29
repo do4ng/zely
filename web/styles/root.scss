@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@import "./var.scss";
+@import "./design.scss";
+@import "./header.scss";
 
 html,
 body,
 button {
   font-family: "Inter", sans-serif;
-
   letter-spacing: -0.5px;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 html,
@@ -24,7 +28,7 @@ a:not(.no-a) {
 }
 
 a:not(.no-a):hover {
-  color: #4078ff;
+  color: var(--blue-light);
   transition: all ease 0.25s 0s;
 }
 
@@ -35,11 +39,11 @@ button {
   font-weight: bold;
   font-size: 1em;
 
-  background-color: #fff;
-  color: #000;
+  background-color: var(--white);
+  color: var(--black);
 
   border: 0;
-  border-radius: 999px;
+  border-radius: 10px;
 
   cursor: pointer;
 }
@@ -52,15 +56,11 @@ button {
 .shadow {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
 // flex
 .flex-container {
-  display: flex;
-  width: 75%;
-  max-width: 1060px;
-
-  height: 200px;
-  padding: 50px;
-  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
 }
 
 // main
@@ -68,47 +68,19 @@ button {
   margin-top: 65px;
   max-width: 100vw;
 }
+
 #title {
   margin: 0;
   height: 350px;
-  color: #fff;
-  background: linear-gradient(to right, #597c99b6, #84baf7);
-
-  .message-container {
-    margin-left: auto;
-  }
-
-  .message-box-error {
-    font-size: 0.75rem;
-
-    width: 210px;
-    height: 47px;
-
-    border-radius: 5px;
-
-    margin-top: 25px;
-    padding: 5px 15px;
-
-    color: rgba(255, 255, 255, 0.644);
-    background-color: #f07177d2;
-    backdrop-filter: blur(10px);
-  }
-  .message-box-success {
-    font-size: 0.75rem;
-
-    width: 210px;
-    height: 47px;
-
-    border-radius: 5px;
-
-    margin-top: 20px;
-    margin-left: 25px;
-    padding: 5px 15px;
-
-    color: rgba(255, 255, 255, 0.644);
-    background-color: #4dac62;
-    backdrop-filter: blur(10px);
-  }
+  padding-top: 65px;
+  color: var(--white);
+  background: linear-gradient(
+    70deg,
+    #ffc8e2b6,
+    #7fb8fabe,
+    #72b4ffbe,
+    #ff9d42be
+  );
 
   #title-content {
     #title-detail {
@@ -120,50 +92,6 @@ button {
 
       button {
         margin-right: 15px;
-      }
-    }
-  }
-}
-
-// header
-#header {
-  backdrop-filter: blur(10px);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  width: 100%;
-  height: 65px;
-  border-bottom: 1px solid #52525248;
-  background-color: rgba(255, 255, 255, 0.671);
-
-  #header-container {
-    width: 85%;
-
-    margin: 0 auto;
-
-    display: flex;
-  }
-
-  #header-title {
-    padding-top: 20px;
-
-    font-size: 1.15rem;
-    font-weight: 500;
-  }
-
-  #header-contents {
-    margin-left: auto;
-    padding-top: 7px;
-
-    li {
-      list-style: none;
-      float: left;
-      margin-left: 36px;
-
-      a {
-        font-weight: 500;
       }
     }
   }

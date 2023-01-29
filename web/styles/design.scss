@@ -1,0 +1,26 @@
+blockquote {
+  border-left: 4px solid rgb(207, 207, 207);
+  padding-left: 1em;
+  border-radius: 1px;
+  margin: 2.3em 0;
+}
+
+hr {
+  margin: 35px 0;
+  border: 2px solid #b1b3b656;
+  border-radius: 2px;
+}
+table {
+  width: 100%;
+  border: 1px solid hsla(0, 0%, 84%, 0.698);
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid hsla(0, 0%, 84%, 0.698);
+  padding: 3px 10px;
+}
+ul,
+ol {
+  padding-left: 30px;
+}
