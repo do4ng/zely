@@ -12,4 +12,6 @@ export * from './core';
 export * from './loader';
 
 // server
-export * from './server';
+export * from './server/index';
+
+export { exportServer } from './export';

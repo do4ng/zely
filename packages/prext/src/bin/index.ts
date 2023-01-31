@@ -5,8 +5,9 @@ import program from 'animaux';
 import pkg from '../../package.json';
 import { getConfig } from '../config';
 import { Watch } from '../core/watch';
+import { exportServer } from '../export';
 import { info } from '../logger';
-import { Prext } from '../server';
+import { Prext } from '../server/index';
 
 const app = program('prext');
 
@@ -32,6 +33,15 @@ app
 
       info('Observer is watching your app.');
     });
+  });
+
+app
+  .command('export')
+  .describe('Export Prext Server')
+  .action(async (options) => {
+    const config = await getConfig(options.config || null);
+
+    exportServer(config);
   });
 
 app.parse(process.argv);

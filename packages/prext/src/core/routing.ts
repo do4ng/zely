@@ -1,15 +1,14 @@
 import { existsSync, readFileSync, writeFileSync } from 'fs';
 import { join, parse, relative } from 'path';
-import url from 'url';
-import { pathToRegexp, SardRequest, SardResponse } from 'sard.js';
+import { SardRequest, SardResponse } from 'sard.js';
 import { Config } from '../config';
 import { CACHE_DIRECTORY, CACHE_FILE, CACHE_VERSION } from '../constants';
 import { typescriptLoader } from '../loader';
 import { readDirectory } from '../../lib/readDirectory';
 import { transformFilename } from '../../lib/transform-filename';
 import { prettyURL } from '../../lib/pretty-url';
-import { ObjectkeysMap } from '../../lib/chageKeys';
 import { info } from '../logger';
+import { handles } from './handles';
 
 export async function getPages(config: Config) {
   let __cache: Record<string, string> = {};
@@ -37,6 +36,7 @@ export async function getPages(config: Config) {
         return {
           file,
           m: require(relative(__dirname, join(CACHE_DIRECTORY, cache.get(target)))),
+          modulePath: join(CACHE_DIRECTORY, cache.get(target)),
           type: 'module',
         };
       }
@@ -47,6 +47,7 @@ export async function getPages(config: Config) {
         return {
           file,
           m: data,
+          modulePath: '',
           type: 'html',
         };
       }
@@ -58,6 +59,7 @@ export async function getPages(config: Config) {
       return {
         file,
         m: output.m,
+        modulePath: output.filename,
         type: 'module',
       };
     })
@@ -73,7 +75,9 @@ export async function getPages(config: Config) {
   return files;
 }
 
-export function filenameToRoute(map: Array<{ file: string; m: any; type: string }>) {
+export function filenameToRoute(
+  map: Array<{ file: string; m: any; type: string; modulePath: string }>
+) {
   return map.map((page) => {
     let { file } = page;
     // eslint-disable-next-line prefer-const
@@ -88,7 +92,7 @@ export function filenameToRoute(map: Array<{ file: string; m: any; type: string 
     file = transformFilename(file);
     file = prettyURL(file);
 
-    return { file, m: page.m, type: page.type };
+    return { file, m: page.m, type: page.type, modulePath: page.modulePath };
   });
 }
 
@@ -96,42 +100,5 @@ export async function Handler(req: SardRequest, res: SardResponse, config: Confi
   const pages = await getPages(config);
   const routes = filenameToRoute(pages);
 
-  const parsed = url.parse(req.url);
-
-  // @ts-ignore
-  res.json = function (data: any) {
-    res.end(JSON.stringify(data));
-  };
-
-  routes.forEach((page) => {
-    const { pattern, params } = pathToRegexp(page.file, false);
-
-    if (pattern.test(parsed.pathname)) {
-      // match!
-
-      if (page.type === 'html') {
-        // html
-
-        res.setHeader('Content-Type', 'text/html');
-        res.end(page.m);
-      } else {
-        // module
-
-        page.m = ObjectkeysMap(page.m, (key) => key.toLowerCase());
-
-        Object.keys(page.m).forEach((pageHandler) => {
-          if (pageHandler === req.method.toLowerCase() || pageHandler === 'all') {
-            const execd = new URL(req.url, `http://${req.headers.host}`).pathname.match(
-              pattern
-            );
-            params.forEach((param, index) => {
-              req.params[param] = execd[index + 1] || null;
-            });
-
-            page.m[pageHandler](req, res);
-          }
-        });
-      }
-    }
-  });
+  handles(req, res, routes);
 }
