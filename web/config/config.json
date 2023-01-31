@@ -6,7 +6,8 @@
       ["getting-started", "Getting Started"],
       ["routing", "Routing"],
       ["middlewares", "Middlewares"],
-      ["typescript", "Typescript"]
+      ["typescript", "Typescript"],
+      ["guide-build", "Build"]
     ]
   },
   {
