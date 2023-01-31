@@ -19,12 +19,15 @@ app
   .action(async (options) => {
     const config = await getConfig(options.config || null);
     const port = config.port || 5050;
+    const startTime = performance.now();
 
     Prext(config).listen(port, () => {
       console.log('\nServer is Running~!'.green);
       console.log(` ${'├─'.gray} http://localhost:${String(port).cyan}`.bold);
       console.log(` ${'└─'.gray} http://127.0.0.1:${String(port).cyan}`.bold);
       console.log();
+      info(`Done in ${((performance.now() - startTime) / 1000).toFixed(2)}s`);
+
       Watch(config);
 
       info('Observer is watching your app.');
