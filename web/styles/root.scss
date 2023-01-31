@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
-@import "./var.scss";
-@import "./design.scss";
-@import "./header.scss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import './var.scss';
+@import './design.scss';
+@import './header.scss';
 
 html,
 body,
 button {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   letter-spacing: -0.5px;
   background-color: var(--bg);
   color: var(--text);
@@ -48,6 +48,13 @@ button {
   cursor: pointer;
 }
 
+:not(code, code span)::-moz-selection {
+  background: #ffd1e8;
+}
+:not(code, code span)::selection {
+  background: #ffd1e8;
+}
+
 // smooth
 .smt {
   transition: all ease 0.5s 0s;
@@ -65,24 +72,18 @@ button {
 
 // main
 #main {
-  margin-top: 65px;
   max-width: 100vw;
 }
 
 #title {
-  margin: 0;
-  height: 350px;
+  height: 390px;
   padding-top: 65px;
   color: var(--white);
-  background: linear-gradient(
-    70deg,
-    #ffc8e2b6,
-    #7fb8fabe,
-    #72b4ffbe,
-    #ff9d42be
-  );
+  background: linear-gradient(70deg, #ffc8e2b6, #7fb8fabe, #72b4ffbe, #ff9d42be);
 
   #title-content {
+    color: #ffffff;
+    margin-top: 65px;
     #title-detail {
       font-weight: 1.15rem;
     }

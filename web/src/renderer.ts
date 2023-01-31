@@ -8,9 +8,7 @@ import '../styles/documents.scss';
 
 (zit as any).useRouter(
   {
-    '/': {
-      template: MainPage,
-    },
+    '/': MainPage,
     // @ts-ignore
     '/guide/:slug': docs,
     __404: page404,

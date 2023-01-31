@@ -1,10 +1,9 @@
-import { createElement, html } from "../zitjs";
+import { createElement, html } from '../zitjs';
 
-import global from "../../config/global.json";
-import posts from "../../config/config.json";
-import docs from "./posts.json";
+import posts from '../../config/config.json';
+import docs from './posts.json';
 
-import { header } from "./index";
+import { header } from './index';
 
 const postList: string[] = [];
 const titleList: string[] = [];
@@ -16,13 +15,13 @@ posts.forEach((post) => {
   });
 });
 
-let sliced = window.location.href.split("/");
+let sliced = window.location.href.split('/');
 let now = sliced[sliced.length - 1];
 let next = postList[postList.indexOf(now) + 1];
 let pre = postList[postList.indexOf(now) - 1];
 
 const post = createElement(
-  { tagName: "div", attributes: { class: "post-container" } },
+  { tagName: 'div', attributes: { class: 'post-container' } },
   html`<div class="post">
     {{text}}
     <div class="pre-next">{{prePage}}{{nextPage}}</div>
@@ -39,7 +38,7 @@ export default {
   template,
   beforeLoad: async ({ params }) => {
     // update data
-    sliced = window.location.href.split("/");
+    sliced = window.location.href.split('/');
     now = sliced[sliced.length - 1];
     next = postList[postList.indexOf(now) + 1];
     pre = postList[postList.indexOf(now) - 1];
@@ -47,7 +46,7 @@ export default {
 
     console.log(text, params.slug);
     const sideList = createElement(
-      { tagName: "div", attributes: { class: "side-list" } },
+      { tagName: 'div', attributes: { class: 'side-list' } },
       `
     ${posts
       .map(
@@ -57,13 +56,11 @@ export default {
             <div class="category-content">
               ${category.posts.map(
                 (post) => html` <div
-                  class="category-post ${post[0] === params.slug
-                    ? "active"
-                    : ""}"
+                  class="category-post ${post[0] === params.slug ? 'active' : ''}"
                 >
                   <a
                     href="/guide/${post[0]}"
-                    class="${post[0] === params.slug ? "active" : ""}"
+                    class="${post[0] === params.slug ? 'active' : ''}"
                     >${post[1]}</a
                   >
                 </div>`
@@ -72,7 +69,7 @@ export default {
             <div class="footer"></div>
           </div>`
       )
-      .join("")}
+      .join('')}
     `
     );
 
@@ -84,7 +81,7 @@ export default {
         <div class="prext-title">Previous Page</div>
         <div class="prext-content">${titleList[postList.indexOf(pre)]}</div>
       </div></a>`
-        : "",
+        : '',
       nextPage: next
         ? `<a href="/guide/${next}" next>
         <div class="prext">
@@ -92,7 +89,7 @@ export default {
           <div class="prext-content">${titleList[postList.indexOf(next)]}</div>
         </div>
         </a>`
-        : "",
+        : '',
       side: sideList(),
     };
   },

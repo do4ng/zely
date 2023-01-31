@@ -24,3 +24,26 @@ ul,
 ol {
   padding-left: 30px;
 }
+
+:not(pre) > code {
+  padding: 2.5px 5px;
+  color: #404680e0;
+  background-color: #eeeeee;
+}
+
+code,
+pre {
+  border-radius: 5px;
+}
+
+pre {
+  font-size: 0.85rem;
+  border-radius: 2px;
+  background-color: #f6f8fa;
+  padding: 2px 4px;
+}
+pre.shiki {
+  padding: 15px 20px;
+  border-radius: 5px;
+  overflow: auto;
+}
