@@ -77,7 +77,7 @@ app.action((options) => {
 
   console.log(`\n  ${msg.$} cd ${target}`);
   console.log(`  ${msg.$} npm i`);
-  console.log(`  ${msg.$} yarn dev\n`);
+  console.log(`  ${msg.$} npm run dev\n`);
 
   console.log('Happy hacking'.cyan);
 });
