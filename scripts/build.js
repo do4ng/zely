@@ -53,4 +53,8 @@ build('prext');
 // cli
 build('prext', 'src/bin/index.ts', { cjs: 'dist/bin.js', esm: 'dist/bin.esm.js' });
 build('prext', 'src/server.ts', { cjs: 'dist/server.js', esm: 'dist/server.esm.js' });
+build('prext', 'src/export-config.ts', {
+  cjs: 'dist/config.js',
+  esm: 'dist/config.esm.js',
+});
 build('create-prext', 'src/bin.ts', { cjs: 'dist/bin.js', esm: 'dist/bin.esm.js' });
