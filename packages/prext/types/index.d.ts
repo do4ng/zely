@@ -7,6 +7,7 @@ export interface Config {
   routes?: string;
   middlewares?: Middleware[];
   base?: string;
+  build?: {};
 }
 
 export * from './config';
