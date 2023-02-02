@@ -7,7 +7,7 @@ import { typescriptLoader } from '../loader';
 import { readDirectory } from '../../lib/readDirectory';
 import { transformFilename } from '../../lib/transform-filename';
 import { prettyURL } from '../../lib/pretty-url';
-import { info } from '../logger';
+import { success } from '../logger';
 import { handles } from './handles';
 
 export async function getPages(config: Config) {
@@ -18,7 +18,7 @@ export async function getPages(config: Config) {
 
     if (cacheFile.__CACHE_VERSION === CACHE_VERSION.toString()) __cache = cacheFile;
   } else {
-    info('Success to create cache file.');
+    success('success to create cache file.');
   }
 
   const cache = new Map(Object.entries(__cache));

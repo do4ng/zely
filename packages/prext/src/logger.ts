@@ -26,7 +26,7 @@ function parseError(err: Error) {
 
 function error(err: Error | string) {
   if (typeof err === 'string') {
-    console.log(`${'(@)'.red.bold} ${err.bold}`);
+    console.log(`${'error'.red.bold} ${err.bold}`);
   } else {
     const stacks = parseError(err);
 
@@ -40,15 +40,15 @@ function error(err: Error | string) {
 }
 
 function warn(message: string) {
-  console.log(`${'(!)'.yellow.bold} ${message.bold}`);
+  console.log(`${'warning'.yellow.bold} ${message.bold}`);
 }
 
 function success(message: string) {
-  console.log(`${'(✔)'.green.bold} ${message.bold}`);
+  console.log(`${'success'.green.bold} ${message.bold}`);
 }
 
 function info(message: string) {
-  console.log(`${'(i)'.blue.bold} ${message.bold}`);
+  console.log(`${'info'.blue.bold} ${message.bold}`);
 }
 
 /**

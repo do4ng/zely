@@ -1,15 +1,15 @@
 import { build } from 'esbuild';
 import { rmSync, writeFileSync } from 'fs';
 import { join, relative } from 'path';
-import { Config } from './config';
-import { CACHE_DIRECTORY } from './constants';
+import { Config, configDev } from './config';
+import { CACHE_DIRECTORY, DEFAULT_CONFIG } from './constants';
 import { filenameToRoute, getPages } from './core';
-import { error, info } from './logger';
+import { success } from './logger';
 
 export function exportsCode(config: Config) {
   return {
     import:
-      'var { handles } = require("prext/dist/server");var { server } = require("sard.js");',
+      'var { handles } = require("prext/server");var { server } = require("sard.js");',
     init: 'var app = server();',
     listen: `app.listen(${config.port}, () => {console.log("Prext Server is running. " + "(localhost:${config.port})")});`,
   };
@@ -31,11 +31,20 @@ export async function exportServer(config: Config): Promise<void> {
 
   const pagesJSONCode = [];
 
+  // get bundled config file
+  const configData = await configDev();
+
+  if (!configData) {
+    writeFileSync(
+      join(CACHE_DIRECTORY, 'core.config.json'),
+      JSON.stringify(DEFAULT_CONFIG)
+    );
+  }
+
+  // import pages
   pages.forEach((page, index) => {
     if (page.type === 'html') {
-      error(
-        `${page.file} isn't supported file (type: ${page.type}). Visit https://prext.netlify.app/guide/export for more information.`
-      );
+      pagesCode[index] = `\`${page.m.replace(/`/g, '\\`')}\``;
     } else {
       pagesCode[index] = `require("./${join(
         '',
@@ -45,21 +54,21 @@ export async function exportServer(config: Config): Promise<void> {
   });
 
   pages.forEach((page, index) => {
-    if (page.type === 'module') {
-      pagesJSONCode.push(
-        `{file:"${page.file}",m:${pagesCode[index]},type:"${page.type}"}`
-      );
-    }
+    pagesJSONCode.push(`{file:"${page.file}",m:${pagesCode[index]},type:"${page.type}"}`);
   });
 
   writeFileSync(
     out,
-    `${code.import}${code.init};/*handle*/const prext_pages = [${pagesJSONCode.join(
-      ','
-    )}];app.all("*", (req,res) => {handles(req,res, prext_pages)});;${code.listen}`
+    `const __userconfig = require("./${relative(CACHE_DIRECTORY, configData)}");
+${code.import}
+${code.init}
+const prext_pages = [${pagesJSONCode.join(',')}];
+(__userconfig.default.middlewares || []).forEach((middleware) => app.use(middleware));
+app.all("*", (req,res) => {handles(req,res, prext_pages)});
+${code.listen}`
   );
 
-  info('success to create build file.');
+  success('success to create build file.');
 
   await build({
     entryPoints: [out],
@@ -70,7 +79,7 @@ export async function exportServer(config: Config): Promise<void> {
     minify: true,
   });
 
-  info('success to export app.');
+  success('success to export app.');
 
   console.log(`${`\n  + ${out}`.green}`);
   console.log(
