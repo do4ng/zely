@@ -11,13 +11,13 @@ export function exportsCode(config: Config) {
     import:
       'var { handles } = require("prext/server");var { server } = require("sard.js");',
     init: 'var app = server();',
-    listen: `app.listen(${config.port}, () => {console.log("Prext Server is running. " + "(localhost:${config.port})")});`,
+    listen: `app.listen(${config.port}, () => {console.log("Prext Server is running.".grey + " - " + "http://localhost:${config.port}".cyan)});`,
   };
 }
 
 export async function exportServer(config: Config): Promise<void> {
   rmSync(CACHE_DIRECTORY, { recursive: true, force: true });
-  console.log(`${'$'.gray} Exporting App.`.cyan);
+  console.log(`${'$'.gray} Exporting App.\n`.cyan);
 
   const start = performance.now();
 
@@ -81,9 +81,10 @@ ${code.listen}`
 
   success('success to export app.');
 
-  console.log(`${`\n  + ${out}`.green}`);
+  console.log(`\n${`  ${'-'.grey} ${(configData || '').yellow.dim}`}`);
+  console.log(`${`  ${'-'.grey} ${out.yellow.dim}`}\n`);
   console.log(
-    `${`  + ${outFile}`.green}  ${'done in'.gray} ${
+    `${`  ${'+'.green} ${outFile.cyan}`}  ${'done in'.gray} ${
       (performance.now() - start).toFixed(2).bold
     } ms\n`
   );
