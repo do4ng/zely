@@ -112,7 +112,7 @@ export default {
     header.setAttribute('style', 'border: #ffffff00; background-color: #ffffff00;');
 
     document.addEventListener('scroll', (evt) => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 10) {
         header.setAttribute('style', '');
       } else {
         header.setAttribute('style', 'border: #ffffff00; background-color: #ffffff00;');
