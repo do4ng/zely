@@ -1,0 +1,16 @@
+{
+  "name": "prext-analyst",
+  "version": "0.0.0",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "prext": "^0.0.10"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.esm.js",
+  "types": "./index.d.ts",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "homepage": "https://prext.netlify.app"
+}
