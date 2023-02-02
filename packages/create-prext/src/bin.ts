@@ -65,7 +65,7 @@ app.action((options) => {
       name: 'prext-app',
       version: '1.0.0',
       dependencies: { prext: '*' },
-      scripts: { dev: 'prext dev' },
+      scripts: { dev: 'prext dev', build: 'prext build' },
     },
     null,
     2
