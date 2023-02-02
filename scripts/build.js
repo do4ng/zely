@@ -15,6 +15,7 @@ const build = (
   out = { cjs: 'dist/index.js', esm: 'dist/index.esm.js' },
   cfg = {}
 ) => {
+  console.log(join(process.cwd(), 'packages', pkg, 'package.json'));
   /** @type {import("esbuild").BuildOptions } */
   const pkgBase = {
     entryPoints: [join(process.cwd(), 'packages', pkg, entryPoint)],
@@ -23,6 +24,7 @@ const build = (
         packagePath: join(process.cwd(), 'packages', pkg, 'package.json'),
       }),
     ],
+    external: ['esbuild'],
   };
   // @ts-ignore
   esbuild.build({
@@ -50,6 +52,7 @@ const build = (
 
 build('sard');
 build('prext');
+build('prext-analyst');
 // cli
 build('prext', 'src/bin/index.ts', { cjs: 'dist/bin.js', esm: 'dist/bin.esm.js' });
 build('prext', 'src/server.ts', { cjs: 'dist/server.js', esm: 'dist/server.esm.js' });
