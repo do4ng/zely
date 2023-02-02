@@ -6,7 +6,7 @@ import pkg from '../../package.json';
 import { getConfig } from '../config';
 import { Watch } from '../core/watch';
 import { exportServer } from '../export';
-import { info } from '../logger';
+import { error, info } from '../logger';
 import { Prext } from '../server/index';
 
 const app = program('prext');
@@ -42,6 +42,22 @@ app
     const config = await getConfig(options.config || null);
 
     exportServer(config);
+  });
+
+app
+  .command('analyze')
+  .describe('Analyze Prext Application')
+  .action(async () => {
+    try {
+      const { core } = require('prext-analyst');
+      core();
+    } catch (e) {
+      error(
+        `Cannot find module "prext-analyst"\n\nRun:\n${
+          '$'.grey
+        } npm i --save-dev prext-analyst\n`
+      );
+    }
   });
 
 app.parse(process.argv);
