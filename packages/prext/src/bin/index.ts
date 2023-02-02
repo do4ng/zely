@@ -36,7 +36,7 @@ app
   });
 
 app
-  .command('export')
+  .command('export', ['build'])
   .describe('Export Prext Server')
   .action(async (options) => {
     const config = await getConfig(options.config || null);
