@@ -1,6 +1,6 @@
 {
   "name": "prext",
-  "version": "0.0.3",
+  "version": "0.0.9",
   "types": "./types/index.d.ts",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
@@ -12,6 +12,33 @@
     "dist",
     "types"
   ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.esm.js",
+      "types": "./types/index.d.ts"
+    },
+    "./config": {
+      "require": "./dist/config.js",
+      "import": "./dist/config.esm.js",
+      "types": "./types/export-config.d.ts"
+    },
+    "./server": {
+      "require": "./dist/server.js",
+      "import": "./dist/server.esm.js",
+      "types": "./types/export-server.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "config": [
+        "types/export-config.d.ts"
+      ],
+      "server": [
+        "types/export-server.d.ts"
+      ]
+    }
+  },
   "dependencies": {
     "animaux": "^0.0.4",
     "chokidar": "^3.5.3",
