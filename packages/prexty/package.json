@@ -1,0 +1,20 @@
+{
+  "name": "prexty",
+  "version": "1.0.1",
+  "description": "",
+  "dependencies": {
+    "esbuild": "^0.17.6",
+    "esbuild-node-externals": "^1.6.0",
+    "prext": "^0.0.15-beta.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "prext": "*"
+  },
+  "main": "./dist/index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ]
+}
