@@ -17,7 +17,7 @@ You have to update configure file (`prext.config.js` or `prext.config.ts`).
 
 This step helps reduce the size of the output.
 
-## Example
+## Usage
 
 Run:
 

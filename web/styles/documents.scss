@@ -86,7 +86,32 @@
   h5 {
     font-family: ui-sans-serif, system-ui !important;
   }
-  h2 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    .header-anchor {
+      float: left;
+      margin-left: -0.8em;
+      padding-right: 0.2em;
+      user-select: none;
+      opacity: 0;
+      font-weight: 500;
+    }
+  }
+
+  h1:hover,
+  h2:hover,
+  h3:hover,
+  h4:hover,
+  h5:hover {
+    .header-anchor {
+      opacity: 100;
+    }
+  }
+  h2,
+  h3 {
     letter-spacing: -0.02em;
     margin: 48px 0 16px;
     font-weight: 600;

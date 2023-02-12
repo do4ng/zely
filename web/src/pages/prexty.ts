@@ -1,7 +1,7 @@
 import { createElement, html } from '../zitjs';
 
-import posts from '../../config/config.json';
-import docs from './posts.json';
+import posts from '../../config/prexty.json';
+import docs from './prexty.json';
 
 import { header } from './index';
 
@@ -59,7 +59,7 @@ export default {
                   class="category-post ${post[0] === params.slug ? 'active' : ''}"
                 >
                   <a
-                    href="/guide/${post[0]}"
+                    href="/prexty/${post[0]}"
                     class="${post[0] === params.slug ? 'active' : ''}"
                     >${post[1]}</a
                   >
@@ -76,14 +76,14 @@ export default {
     return {
       text: text.html,
       prePage: pre
-        ? `<a href="/guide/${pre}" pre>
+        ? `<a href="/prexty/${pre}" pre>
       <div class="prext">
         <div class="prext-title">Previous Page</div>
         <div class="prext-content">${titleList[postList.indexOf(pre)]}</div>
       </div></a>`
         : '',
       nextPage: next
-        ? `<a href="/guide/${next}" next>
+        ? `<a href="/prexty/${next}" next>
         <div class="prext">
           <div class="prext-title">Next Page</div>
           <div class="prext-content">${titleList[postList.indexOf(next)]}</div>

@@ -10,6 +10,9 @@ export const header = html` <div id="header">
         <a href="${global.entry}">Guide</a>
       </li>
       <li>
+        <a href="/prexty/introduction">Prexty</a>
+      </li>
+      <li>
         <a href="${global.github}">Github</a>
       </li>
     </ul>

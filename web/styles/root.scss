@@ -10,8 +10,12 @@ button {
   letter-spacing: -0.5px;
   background-color: var(--bg);
   color: var(--text);
+  scroll-behavior: smooth;
 }
-
+*,
+html {
+  scroll-behavior: smooth !important;
+}
 html,
 body {
   margin: 0;
