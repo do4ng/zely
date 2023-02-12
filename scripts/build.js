@@ -53,6 +53,7 @@ const build = (
 build('sard');
 build('prext');
 build('prext-analyst');
+build('prexty');
 // cli
 build('prext', 'src/bin/index.ts', { cjs: 'dist/bin.js', esm: 'dist/bin.esm.js' });
 build('prext', 'src/server.ts', { cjs: 'dist/server.js', esm: 'dist/server.esm.js' });
