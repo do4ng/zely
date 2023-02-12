@@ -19,6 +19,12 @@ const $ = {
     'pages/users/$id.js',
     'middlewares/message.js',
   ],
+  react: [
+    'prext.config.ts',
+    'pages/index.tsx',
+    'components/counter.tsx',
+    'public/index.html',
+  ],
 };
 
 const msg = {
@@ -32,7 +38,7 @@ const app = program('prext');
 function clone(
   target: string,
   files: string[],
-  type: 'with-javascript' | 'with-typescript'
+  type: 'with-javascript' | 'with-typescript' | 'react'
 ) {
   files.forEach((file) => {
     const data = readFileSync(join(__dirname, '../assets', type, file));
@@ -44,7 +50,8 @@ function clone(
 app
   .version(pkg.version)
   .option('--with-javascript', 'Javascript template', true)
-  .option('--with-typescript', 'Typescript template', false);
+  .option('--with-typescript', 'Typescript template', false)
+  .option('--react', 'Prexty (react) template', false);
 
 app.action((options) => {
   const target = options.__.join(' ');
@@ -52,26 +59,27 @@ app.action((options) => {
   mkdirSync(target, { recursive: true });
   mkdirSync(join(target, 'pages'), { recursive: true });
   mkdirSync(join(target, 'pages/users'), { recursive: true });
+  mkdirSync(join(target, 'components'), { recursive: true });
+  mkdirSync(join(target, 'public'), { recursive: true });
   mkdirSync(join(target, 'middlewares'), { recursive: true });
 
-  if (options['with-typescript']) {
+  const pkgJSON: any = {
+    name: 'prext-app',
+    version: '1.0.0',
+    dependencies: { prext: '*' },
+    scripts: { dev: 'prext dev', build: 'prext build' },
+  };
+
+  if (options.react) {
+    clone(target, $.react, 'react');
+    pkgJSON.dependencies.prexty = '*';
+  } else if (options['with-typescript']) {
     clone(target, $.ts, 'with-typescript');
   } else {
     clone(target, $.js, 'with-javascript');
   }
 
-  const pkgJSON = JSON.stringify(
-    {
-      name: 'prext-app',
-      version: '1.0.0',
-      dependencies: { prext: '*' },
-      scripts: { dev: 'prext dev', build: 'prext build' },
-    },
-    null,
-    2
-  );
-
-  writeFileSync(join(target, 'package.json'), pkgJSON);
+  writeFileSync(join(target, 'package.json'), JSON.stringify(pkgJSON, null, 2));
 
   console.log(`${msg.success} template cloned!`);
 
