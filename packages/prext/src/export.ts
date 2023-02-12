@@ -24,7 +24,7 @@ export async function exportServer(config: Config): Promise<void> {
   const out = join(CACHE_DIRECTORY, 'core.__build.js');
   const outDir = join(process.cwd(), config.base || '.', 'dist');
   const outFile = join(outDir, 'index.js');
-  const pages = filenameToRoute(await getPages(config));
+  const pages = filenameToRoute((await getPages(config)) as any);
 
   const code = exportsCode(config);
   const pagesCode = {};

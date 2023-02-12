@@ -1,6 +1,10 @@
 import url from 'url';
 import { pathToRegexp, SardRequest, SardResponse } from 'sard.js';
+import { existsSync, readFileSync } from 'fs';
+import { join } from 'path';
+import { CACHE_DIRECTORY } from '../constants';
 import { ObjectkeysMap } from '../../lib/chageKeys';
+import { error } from '../logger';
 
 export function handles(
   req: SardRequest,
@@ -18,6 +22,18 @@ export function handles(
   res.json = function (data: any) {
     res.end(JSON.stringify(data));
   };
+
+  if (parsed.pathname.startsWith('/.prext/')) {
+    const target = join(CACHE_DIRECTORY, '../', parsed.pathname);
+
+    if (existsSync(target)) {
+      res.setHeader('Content-Type', 'text/javascript');
+      res.end(readFileSync(target));
+    } else {
+      res.statusCode = 404;
+      res.end(`Cannot read ${target}`);
+    }
+  }
 
   routes.forEach((page) => {
     const { pattern, params } = pathToRegexp(page.file, false);
@@ -40,11 +56,16 @@ export function handles(
             const execd = new URL(req.url, `http://${req.headers.host}`).pathname.match(
               pattern
             );
+
             params.forEach((param, index) => {
               req.params[param] = execd[index + 1] || null;
             });
 
-            page.m[pageHandler](req, res);
+            try {
+              page.m[pageHandler](req, res);
+            } catch (e) {
+              error(new Error(e));
+            }
           }
         });
       }

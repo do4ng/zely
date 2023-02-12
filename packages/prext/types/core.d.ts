@@ -7,10 +7,12 @@ Javascript API
 
 */
 
+export type FileType = 'html' | 'module';
+
 export type FileData = {
   file: string;
   m: any;
-  type: string;
+  type: FileType;
   modulePath: string;
 };
 

@@ -1,12 +1,36 @@
-import { SardRequest, SardResponse } from 'sard.js';
+import { WatchOptions } from 'chokidar';
+import { BuildOptions } from 'esbuild';
+import { SardRequest, SardResponse, Server } from 'sard.js';
+import { FileData } from './core';
 
-export type Middleware = (req: SardRequest, res: SardResponse, next: () => void) => void;
+export type Middleware = (req: SardRequest, res: SardResponse) => void;
+
+export type HandlerType = (
+  req: SardRequest,
+  res: SardResponse,
+  routes: FileData[]
+) => void;
+
+export type PluginOutput = FileData | null | undefined | void;
+
+export interface Plugin {
+  name: string;
+  transform?: (id: string, code: string) => PluginOutput | Promise<PluginOutput>;
+  server?: (server: Server) => void;
+}
 
 export interface Config {
   port?: number;
   routes?: string;
   middlewares?: Middleware[];
   base?: string;
+  handler?: HandlerType;
+  esbuild?: BuildOptions;
+  plugins?: Plugin[];
+  watch?: {
+    enable: boolean;
+    options?: WatchOptions;
+  };
   build?: {};
 }
 

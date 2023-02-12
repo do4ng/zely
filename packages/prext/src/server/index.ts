@@ -13,6 +13,11 @@ export function Prext(config: Config): Server {
     app.use(middleware);
   });
 
+  config.plugins?.forEach((plugin) => {
+    // console.log(plugin);
+    if (plugin.server) plugin.server(app);
+  });
+
   app.all('*', (req, res) => Handler(req, res, config));
 
   return app;

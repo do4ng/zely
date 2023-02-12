@@ -1,18 +1,53 @@
-import { build } from 'esbuild';
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-unused-vars */
+import { build, BuildOptions } from 'esbuild';
 import { existsSync } from 'fs';
-import { SardRequest, SardResponse } from 'packages/sard/types';
+import { Server, SardRequest, SardResponse } from 'sard.js';
 import { join, relative } from 'path';
+import { WatchOptions } from 'chokidar';
 import { CACHE_DIRECTORY, DEFAULT_CONFIG } from './constants';
 import { typescriptLoader } from './loader';
 
-// eslint-disable-next-line no-unused-vars
+export type FileType = 'html' | 'module';
+
+export type FileData = {
+  file: string;
+  m: any;
+  type: FileType;
+  modulePath: string;
+};
+
 export type Middleware = (req: SardRequest, res: SardResponse) => void;
+
+export type HandlerType = (
+  req: SardRequest,
+  res: SardResponse,
+  routes: {
+    file: string;
+    m: any;
+    modulePath: string;
+    type: string;
+  }[]
+) => void;
+
+export interface Plugin {
+  name: string;
+  transform?: (id: string, code: string) => FileData;
+  server?: (server: Server) => void;
+}
 
 export interface Config {
   port?: number;
   routes?: string;
   middlewares?: Middleware[];
   base?: string;
+  handler?: HandlerType;
+  esbuild?: BuildOptions;
+  plugins?: Plugin[];
+  watch?: {
+    enable: boolean;
+    options?: WatchOptions;
+  };
   build?: {};
 }
 

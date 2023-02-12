@@ -1,16 +1,16 @@
-import { existsSync, readFileSync, writeFileSync } from 'fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { join, parse, relative } from 'path';
 import { SardRequest, SardResponse } from 'sard.js';
-import { Config } from '../config';
+import { Config, FileData } from '../config';
 import { CACHE_DIRECTORY, CACHE_FILE, CACHE_VERSION } from '../constants';
 import { typescriptLoader } from '../loader';
 import { readDirectory } from '../../lib/readDirectory';
 import { transformFilename } from '../../lib/transform-filename';
 import { prettyURL } from '../../lib/pretty-url';
-import { success } from '../logger';
+import { error, success } from '../logger';
 import { handles } from './handles';
 
-export async function getPages(config: Config) {
+export async function getPages(config: Config): Promise<FileData> {
   let __cache: Record<string, string> = {};
 
   if (existsSync(CACHE_FILE)) {
@@ -52,16 +52,45 @@ export async function getPages(config: Config) {
         };
       }
 
-      const output = await typescriptLoader(target);
+      let r = null;
 
-      cache.set(target, parse(output.filename).base);
+      await Promise.all(
+        (config.plugins || []).map(async (plugin) => {
+          try {
+            if (plugin.transform) {
+              const result = await plugin.transform(
+                target,
+                readFileSync(target).toString()
+              );
+              r = result;
 
-      return {
-        file,
-        m: output.m,
-        modulePath: output.filename,
-        type: 'module',
-      };
+              return;
+            }
+          } catch (e) {
+            error(`[${plugin.name}] ${e}`);
+          }
+        })
+      );
+
+      if (r) {
+        // console.log(r);
+        return r;
+      }
+
+      try {
+        const output = await typescriptLoader(target, config);
+
+        cache.set(target, parse(output.filename).base);
+
+        return {
+          file,
+          m: output.m,
+          modulePath: output.filename,
+          type: 'module',
+        };
+      } catch (e) {
+        error(`Occur ERROR while building ${file}\n${e}`);
+      }
     })
   );
 
@@ -70,14 +99,14 @@ export async function getPages(config: Config) {
   // cache version
   cacheJSON.__CACHE_VERSION = CACHE_VERSION.toString();
 
+  if (!existsSync(CACHE_DIRECTORY)) mkdirSync(CACHE_DIRECTORY);
+
   writeFileSync(CACHE_FILE, JSON.stringify(cacheJSON));
 
-  return files;
+  return files as any;
 }
 
-export function filenameToRoute(
-  map: Array<{ file: string; m: any; type: string; modulePath: string }>
-) {
+export function filenameToRoute(map: Array<FileData>) {
   return map.map((page) => {
     let { file } = page;
     // eslint-disable-next-line prefer-const
@@ -97,8 +126,15 @@ export function filenameToRoute(
 }
 
 export async function Handler(req: SardRequest, res: SardResponse, config: Config) {
-  const pages = await getPages(config);
-  const routes = filenameToRoute(pages);
+  try {
+    const pages = await getPages(config);
+    const routes = filenameToRoute(pages as any);
 
-  handles(req, res, routes);
+    // console.log(routes);
+
+    if (config.handler) config.handler(req, res, routes);
+    else handles(req, res, routes);
+  } catch (e) {
+    error(e);
+  }
 }
