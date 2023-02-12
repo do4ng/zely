@@ -73,6 +73,7 @@ app.action((options) => {
   if (options.react) {
     clone(target, $.react, 'react');
     pkgJSON.dependencies.prexty = '*';
+    pkgJSON.dependencies.react = 'latest';
   } else if (options['with-typescript']) {
     clone(target, $.ts, 'with-typescript');
   } else {
