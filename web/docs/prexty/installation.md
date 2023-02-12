@@ -2,6 +2,12 @@
 
 ---
 
+- using create-prext-app
+
+```bash
+> npx create-prext-app my-app --react
+```
+
 - manual installation
 
 ```bash
