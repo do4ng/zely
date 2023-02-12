@@ -14,7 +14,11 @@ HMR is in development. It isn't supported yet.
 
 ## Usage
 
-If you want to use `react` with prexty, you have to import `prexty/react` and add it to `options.lang`.
+Before use, you have to install `react`.
+
+```bash
+> yarn add -D react
+```
 
 ```ts
 // prext.config.ts
