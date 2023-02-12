@@ -6,7 +6,7 @@ import pkg from '../../package.json';
 import { getConfig } from '../config';
 import { Watch } from '../core/watch';
 import { exportServer } from '../export';
-import { error, info } from '../logger';
+import { error, info, warn } from '../logger';
 import { Prext } from '../server/index';
 
 const app = program('prext');
@@ -22,17 +22,24 @@ app
     const port = config.port || 5050;
     const startTime = performance.now();
 
-    Prext(config).listen(port, () => {
-      console.log('\nServer is Running~!'.green);
-      console.log(` ${'├─'.gray} http://localhost:${String(port).cyan}`.bold);
-      console.log(` ${'└─'.gray} http://127.0.0.1:${String(port).cyan}`.bold);
-      console.log();
-      info(`Done in ${((performance.now() - startTime) / 1000).toFixed(2)}s`);
+    try {
+      Prext(config).listen(port, () => {
+        console.log('\nServer is Running~!'.green);
+        console.log(` ${'├─'.gray} http://localhost:${String(port).cyan}`.bold);
+        console.log(` ${'└─'.gray} http://127.0.0.1:${String(port).cyan}`.bold);
+        console.log();
+        info(`Done in ${((performance.now() - startTime) / 1000).toFixed(2)}s`);
 
-      Watch(config);
-
-      info('Observer is watching your app.');
-    });
+        if (config?.watch?.enable === true || !config?.watch) {
+          Watch(config);
+          info('Observer is watching your app.');
+        } else {
+          warn('Observer has been disabled.');
+        }
+      });
+    } catch (e) {
+      error(e);
+    }
   });
 
 app
