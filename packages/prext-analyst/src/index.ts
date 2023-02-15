@@ -28,7 +28,7 @@ async function core() {
       .replace(/\\/g, '/')
       .split('/');
     console.log(
-      `${`${index + 1}.`.cyan} ${`${clean(config.routes || '/routes/')}`.grey}${
+      `${`${index + 1}.`.cyan} ${`${clean(config.routes || '/pages/')}`.grey}${
         page.file.replace(/\\/g, '/').bold
       } => ${routes[index].file.green} ${
         `(${sliced.slice(0, -1).join('/').dim}/${sliced[sliced.length - 1].bold})`.yellow
