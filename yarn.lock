@@ -3268,6 +3268,27 @@ prext@^0.0.10:
     esbuild-node-externals "^1.6.0"
     sard.js "*"
 
+prext@^0.0.15-beta.0:
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/prext/-/prext-0.0.15.tgz#12f3bca77af1c4703f80350ad16e0ed17e89222b"
+  integrity sha512-eFfKCKzxrNyS11ed9ctFknnWpbiCzWXXOgu5SR+CHfjwyVv2unRhGx17zGXr2smFIGSIZbhBg/c0WD8qm4It7A==
+  dependencies:
+    animaux "^0.0.4"
+    chokidar "^3.5.3"
+    esbuild "^0.17.6"
+    esbuild-node-externals "^1.6.0"
+    sard.js "*"
+
+prexty@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/prexty/-/prexty-0.0.3.tgz#7e106b2812d2f437d6de6f241f9c350277803b38"
+  integrity sha512-llmnXdD5p0gQnXgJtutt3LBmkpm7IhQxFPfEL4dUD+A5QPmt8TPONHMUFuazc3ioKYBB/GV1tjciZp6iMRbL2g==
+  dependencies:
+    esbuild "^0.17.6"
+    esbuild-node-externals "^1.6.0"
+    react-dom "^18.2.0"
+    sard.js "*"
+
 prompts@^2.0.1:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/prompts/-/prompts-2.4.2.tgz#7b57e73b3a48029ad10ebd44f74b01722a4cb069"
@@ -3509,7 +3530,7 @@ string-length@^4.0.1:
     char-regex "^1.0.2"
     strip-ansi "^6.0.0"
 
-string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+string-width@4.2.3, string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -3588,6 +3609,13 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
+
+teeti@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/teeti/-/teeti-0.0.1.tgz#fd933ec5a4bf3b2111265c5dcbed66f51783f02e"
+  integrity sha512-+pAUDe72jfjgap2r776IZszkAVeucsFcVwOB52xFiLNtHPHKkxSTQVg3Hqx5FO0FwRR+dGjgHw2VDV1/1dPUHA==
+  dependencies:
+    string-width "4.2.3"
 
 test-exclude@^6.0.0:
   version "6.0.0"
