@@ -11,21 +11,12 @@
     ]
   },
   {
-    "category": "Config",
+    "category": "APIs",
     "posts": [
-      ["config-define-config", "Define Config"],
-      ["config-types", "Config"]
-    ]
-  },
-  {
-    "category": "Api Reference",
-    "posts": [
-      ["api-server", "Server"],
+      ["api-server", "Server API"],
+      ["api-plugin", "Plugin API"],
+      ["api-config", "Config Reference"],
       ["api-sard", "Sard.js"]
     ]
-  },
-  {
-    "category": "Development",
-    "posts": [["dev-change-log", "Changelog"]]
   }
 ]

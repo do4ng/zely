@@ -47,3 +47,10 @@ pre.shiki {
   border-radius: 5px;
   overflow: auto;
 }
+
+li {
+  padding-bottom: 12px;
+}
+li::marker {
+  color: var(--grey-dark);
+}
