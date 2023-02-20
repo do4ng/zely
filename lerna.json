@@ -1,9 +1,7 @@
 {
-  "packages": [
-    "packages/*"
-  ],
+  "packages": ["packages/*"],
   "useWorkspaces": true,
-  "version": "1.0.3",
+  "version": "independent",
   "command": {
     "version": {
       "conventionalCommits": true,
@@ -46,9 +44,7 @@
             "hidden": false
           }
         ],
-        "issuePrefixes": [
-          "#"
-        ],
+        "issuePrefixes": ["#"],
         "issueUrlFormat": "{{host}}/{{owner}}/{{repository}}/issues/{{id}}",
         "commitUrlFormat": "{{host}}/{{owner}}/{{repository}}/commit/{{hash}}",
         "compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",
