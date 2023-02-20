@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1-beta.2](https://github.com/do4ng/prext/compare/web@1.0.1...web@1.0.1-beta.2) (2023-02-20)
+
+
+### Others
+
+* prelease ([e00d74b](https://github.com/do4ng/prext/commit/e00d74bcaa5eca141f30867ae2ad6b77b10b8313))
+
+
+### Documentation
+
+* fixed padding ([eeacbf6](https://github.com/do4ng/prext/commit/eeacbf6886ca499499072cac560ee4d7e0ec0aa2))
+
+
+
 ## [1.0.1-beta.1](https://github.com/do4ng/prext/compare/web@1.0.1...web@1.0.1-beta.1) (2023-02-20)
 
 
