@@ -45,9 +45,9 @@
     "chokidar": "^3.5.3",
     "esbuild": "^0.17.6",
     "esbuild-node-externals": "^1.6.0",
-    "sard.js": "^1.0.3"
+    "sard.js": "latest"
   },
   "devDependencies": {
-    "prext-analyst": "^1.0.3"
+    "prext-analyst": "latest"
   }
 }

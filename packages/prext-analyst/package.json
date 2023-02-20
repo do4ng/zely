@@ -3,7 +3,7 @@
   "version": "0.0.1-beta.2",
   "dependencies": {
     "colors": "^1.4.0",
-    "prext": "^0.0.10"
+    "prext": "*"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
