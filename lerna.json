@@ -10,37 +10,37 @@
         "types": [
           {
             "type": "feat",
-            "section": ":rocket: New Features",
+            "section": "New Features",
             "hidden": false
           },
           {
             "type": "fix",
-            "section": ":bug: Bug Fix",
+            "section": "Bug Fix",
             "hidden": false
           },
           {
             "type": "docs",
-            "section": ":memo: Documentation",
+            "section": "Documentation",
             "hidden": false
           },
           {
             "type": "style",
-            "section": ":sparkles: Styling",
+            "section": "Styling",
             "hidden": false
           },
           {
             "type": "refactor",
-            "section": ":house: Code Refactoring",
+            "section": "Code Refactoring",
             "hidden": false
           },
           {
             "type": "build",
-            "section": ":hammer: Build System",
+            "section": "Build System",
             "hidden": false
           },
           {
             "type": "chore",
-            "section": ":mega: Other",
+            "section": "Others",
             "hidden": false
           }
         ],
