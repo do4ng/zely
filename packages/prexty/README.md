@@ -1,6 +1,6 @@
 # Prexty
 
-Prexty is a frontend plugin for prext.js
+Prexty is a frontend plugin for prext.js.
 
 [**github**](https://github.com/do4ng/prext) • [**npm**](https://npmjs.com/package/prexty) • [**website**](https://prext.netlify.app/prexty/introduction)
 
