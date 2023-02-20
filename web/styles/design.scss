@@ -43,12 +43,14 @@ pre {
   padding: 2px 4px;
 }
 pre.shiki {
+  margin-bottom: 35px;
   padding: 15px 20px;
   border-radius: 5px;
   overflow: auto;
 }
 
 li {
+  padding-top: 5px;
   padding-bottom: 12px;
 }
 li::marker {

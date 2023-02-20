@@ -48,6 +48,10 @@
     color: var(--grey-dark);
     transition: all ease 0.5s 0s;
 
+    p {
+      margin: 0;
+    }
+
     a:not(.active):hover {
       color: #707070;
     }
