@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1-beta.3](https://github.com/do4ng/prext/compare/web@1.0.1-beta.2...web@1.0.1-beta.3) (2023-02-20)
+
+
+### Others
+
+* remove console.log ([b42a7dd](https://github.com/do4ng/prext/commit/b42a7ddbea6ec998c94dd06ac71b233fb7e03adb))
+
+
+
 ## [1.0.1-beta.2](https://github.com/do4ng/prext/compare/web@1.0.1...web@1.0.1-beta.2) (2023-02-20)
 
 
