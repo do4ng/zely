@@ -43,6 +43,7 @@ export default {
     next = postList[postList.indexOf(now) + 1];
     pre = postList[postList.indexOf(now) - 1];
     const text = docs[`${params.slug}.md`];
+    document.title = `${titleList[postList.indexOf(now)]} - Prext`;
 
     console.log(text, params.slug);
     const sideList = createElement(
@@ -61,7 +62,7 @@ export default {
                   <a
                     href="/prexty/${post[0]}"
                     class="${post[0] === params.slug ? 'active' : ''}"
-                    >${post[1]}</a
+                    ><p>${post[1]}</p></a
                   >
                 </div>`
               )}

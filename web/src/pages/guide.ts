@@ -45,6 +45,9 @@ export default {
     const text = docs[`${params.slug}.md`];
 
     console.log(text, params.slug);
+
+    document.title = `${titleList[postList.indexOf(now)]} - Prext`;
+
     const sideList = createElement(
       { tagName: 'div', attributes: { class: 'side-list' } },
       `
@@ -61,7 +64,7 @@ export default {
                   <a
                     href="/guide/${post[0]}"
                     class="${post[0] === params.slug ? 'active' : ''}"
-                    >${post[1]}</a
+                    ><p>${post[1]}</p></a
                   >
                 </div>`
               )}
