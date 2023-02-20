@@ -44,7 +44,7 @@ export default {
     pre = postList[postList.indexOf(now) - 1];
     const text = docs[`${params.slug}.md`];
 
-    console.log(text, params.slug);
+    // console.log(text, params.slug);
 
     document.title = `${titleList[postList.indexOf(now)]} - Prext`;
 

@@ -45,7 +45,7 @@ export default {
     const text = docs[`${params.slug}.md`];
     document.title = `${titleList[postList.indexOf(now)]} - Prext`;
 
-    console.log(text, params.slug);
+    // console.log(text, params.slug);
     const sideList = createElement(
       { tagName: 'div', attributes: { class: 'side-list' } },
       `
