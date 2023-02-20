@@ -3,16 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.0.1-beta.1](https://github.com/do4ng/prext/compare/web@1.0.1...web@1.0.1-beta.1) (2023-02-20)
-
-
-### Others
-
-* prelease ([e00d74b](https://github.com/do4ng/prext/commit/e00d74bcaa5eca141f30867ae2ad6b77b10b8313))
-
-
-
-
 ## 1.0.1 (2023-02-20)
 
 
