@@ -1,7 +1,9 @@
 {
-  "packages": ["packages/*"],
+  "packages": [
+    "packages/*"
+  ],
   "useWorkspaces": true,
-  "version": "0.0.0",
+  "version": "1.0.3",
   "command": {
     "version": {
       "conventionalCommits": true,
@@ -43,7 +45,14 @@
             "section": ":mega: Other",
             "hidden": false
           }
-        ]
+        ],
+        "issuePrefixes": [
+          "#"
+        ],
+        "issueUrlFormat": "{{host}}/{{owner}}/{{repository}}/issues/{{id}}",
+        "commitUrlFormat": "{{host}}/{{owner}}/{{repository}}/commit/{{hash}}",
+        "compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",
+        "userUrlFormat": "{{host}}/{{user}}"
       }
     },
     "publish": {

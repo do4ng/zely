@@ -1,6 +1,6 @@
 {
   "name": "prext",
-  "version": "0.0.16",
+  "version": "1.0.3",
   "types": "./types/index.d.ts",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
@@ -45,9 +45,9 @@
     "chokidar": "^3.5.3",
     "esbuild": "^0.17.6",
     "esbuild-node-externals": "^1.6.0",
-    "sard.js": "*"
+    "sard.js": "^1.0.3"
   },
   "devDependencies": {
-    "prext-analyst": "*"
+    "prext-analyst": "^1.0.3"
   }
 }
