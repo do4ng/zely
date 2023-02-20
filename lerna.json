@@ -1,7 +1,9 @@
 {
-  "packages": ["packages/*"],
+  "packages": [
+    "packages/*"
+  ],
   "useWorkspaces": true,
-  "version": "1.1.0",
+  "version": "1.1.1",
   "command": {
     "publish": {
       "tempTag": true
@@ -49,7 +51,9 @@
             "hidden": false
           }
         ],
-        "issuePrefixes": ["#"],
+        "issuePrefixes": [
+          "#"
+        ],
         "issueUrlFormat": "{{host}}/{{owner}}/{{repository}}/issues/{{id}}",
         "commitUrlFormat": "{{host}}/{{owner}}/{{repository}}/commit/{{hash}}",
         "compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",

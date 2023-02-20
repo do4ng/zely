@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/do4ng/prext/compare/v1.0.3...v1.1.1) (2023-02-20)
+
+
+### Others
+
+* fixed versions ([ab2ae57](https://github.com/do4ng/prext/commit/ab2ae5735ba85b46bd9235d9cf4a8050d0228489))
+* prelease ([e00d74b](https://github.com/do4ng/prext/commit/e00d74bcaa5eca141f30867ae2ad6b77b10b8313))
+* **release:** %s ([580d2ca](https://github.com/do4ng/prext/commit/580d2ca6380e2df50813fb874d1302c0747879fe))
+* **release:** publish ([17bad99](https://github.com/do4ng/prext/commit/17bad9958762f12c8be0254d117e74c7c8e48d38))
+* remove` v1.0.3` ([4efc809](https://github.com/do4ng/prext/commit/4efc80918752d3b4f276b700f4a4254c75d79d2d))
+* undo lerna changes ([0dc5070](https://github.com/do4ng/prext/commit/0dc50708ed449435b01a8ccbc112b9b0816fb48b))
+
+
+### Documentation
+
+* typo ([c2324f3](https://github.com/do4ng/prext/commit/c2324f3d202d266947139f6be177165f11c67edb))
+
+
+
 ## [1.1.0-beta.4](https://github.com/do4ng/prext/compare/prexty@1.1.0-beta.2...prexty@1.1.0-beta.4) (2023-02-20)
 
 
