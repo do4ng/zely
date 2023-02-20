@@ -25,11 +25,73 @@ export default defineConfig({
 });
 ```
 
----
-
 2. custom html loader
 
 Follow [Custom Loader Guide](/prexty/lang-custom).
+
+---
+
+3. transform guide
+
+```ts
+export function MyPlugin(): Plugin {
+  return {
+    name: 'my-plugin',
+
+    transform(id, code) {
+      // id: file name
+      // code: source
+
+      return {
+        // path
+        // like /about, /user/hello
+        file: parse(id).name,
+
+        /*
+          module.
+          See - https://prext.netlify.app/guide/routing
+        */
+        m: {
+          get(req, res) {
+            res.end('Hello World!');
+          },
+        },
+        /* 
+          "build" feature requires modulePath. 
+          If you don't want to support build feature, you don't have to provide this value.
+        */
+        modulePath: '',
+        type: 'module', // html or js
+      };
+    },
+  };
+}
+```
+
+4. server guide
+
+You can apply middlewares or custom handlers.
+
+> see [sard.js api](/guide/api-sard)
+
+```ts
+export function MyPlugin(): Plugin {
+  return {
+    name: 'my-plugin',
+
+    server(server) {
+      // middleware
+      server.use((req, res, next) => {
+        next();
+      });
+      // handling
+      server.get('/', (req, res) => {
+        res.end('hello');
+      });
+    },
+  };
+}
+```
 
 ## Typescript
 
