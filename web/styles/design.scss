@@ -49,8 +49,13 @@ pre.shiki {
   overflow: auto;
 }
 
+.post {
+  li {
+    padding-top: 5px;
+  }
+}
+
 li {
-  padding-top: 5px;
   padding-bottom: 12px;
 }
 li::marker {
