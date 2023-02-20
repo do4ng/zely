@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.0-beta.0](https://github.com/do4ng/prext/compare/prext-analyst@0.0.1-beta.2...prext-analyst@0.1.0-beta.0) (2023-02-20)
+
+
+### Others
+
+* fixed versions ([ab2ae57](https://github.com/do4ng/prext/commit/ab2ae5735ba85b46bd9235d9cf4a8050d0228489))
+* **release:** publish ([17bad99](https://github.com/do4ng/prext/commit/17bad9958762f12c8be0254d117e74c7c8e48d38))
+
+
+### New Features
+
+* log style ([93b4bf0](https://github.com/do4ng/prext/commit/93b4bf03d5c82ec5bae62237e6d159cf3b511d18))
+
+
+
 ## [0.0.1-beta.3](https://github.com/do4ng/prext/compare/prext-analyst@0.0.1-beta.2...prext-analyst@0.0.1-beta.3) (2023-02-20)
 
 

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.0-beta.4](https://github.com/do4ng/prext/compare/prext@0.1.0-beta.2...prext@0.1.0-beta.4) (2023-02-20)
+
+
+### Others
+
+* fixed versions ([ab2ae57](https://github.com/do4ng/prext/commit/ab2ae5735ba85b46bd9235d9cf4a8050d0228489))
+* **release:** publish ([17bad99](https://github.com/do4ng/prext/commit/17bad9958762f12c8be0254d117e74c7c8e48d38))
+
+
+
 ## [0.1.0-beta.3](https://github.com/do4ng/prext/compare/prext@0.1.0-beta.2...prext@0.1.0-beta.3) (2023-02-20)
 
 
