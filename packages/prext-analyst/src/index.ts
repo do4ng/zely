@@ -44,7 +44,7 @@ async function core() {
     sized += size;
   });
 
-  console.log('');
+  console.log('\n_____ RESULT _____\n');
   console.log(`Dist Directory - ${prext.CACHE_DIRECTORY.grey}`);
   console.log(`Cache File - ${prext.CACHE_FILE.grey}`);
   console.log(`Size - ${`${sized} byte`.grey}`);
