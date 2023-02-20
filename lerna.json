@@ -9,7 +9,6 @@
     "version": {
       "conventionalCommits": true,
       "message": "chore(release): %s",
-      "createRelease": "github",
       "exact": true,
       "changelogPreset": {
         "name": "conventional-changelog-conventionalcommits",
