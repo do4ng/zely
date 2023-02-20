@@ -3,6 +3,9 @@
   "useWorkspaces": true,
   "version": "independent",
   "command": {
+    "publish": {
+      "tempTag": true
+    },
     "version": {
       "conventionalCommits": true,
       "message": "chore(release): %s",
@@ -53,9 +56,6 @@
         "compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",
         "userUrlFormat": "{{host}}/{{user}}"
       }
-    },
-    "publish": {
-      "conventionalCommits": true
     }
   }
 }
