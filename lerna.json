@@ -5,7 +5,7 @@
   "command": {
     "version": {
       "conventionalCommits": true,
-      "message": "publish `%s`",
+      "message": "publish %s",
       "noPush": true,
       "changelogPreset": {
         "name": "conventional-changelog-conventionalcommits",
