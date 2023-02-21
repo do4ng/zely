@@ -9,7 +9,15 @@ const regex_template = /<template>(.*?)<\/template>/s;
 export default defineConfig({
   routes: './pages',
   middlewares: [Message],
+
+  error(req, res) {
+    res.statusCode = 404;
+    res.end('Page Not Found');
+  },
+
   plugins: [
+    // example plugin
+    // see - https://prext.netlify.app/prexty/lang-custom
     {
       name: 'hello',
       transform(id, code) {
