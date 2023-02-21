@@ -41,16 +41,19 @@ export function handles(
   let isSended = false;
 
   routes.forEach((page) => {
+    // debug
+    console.log(page.file, isSended);
+
     if (isSended) {
       return;
     }
 
     const { pattern, params } = pathToRegexp(page.file, false);
 
-    isSended = true;
-
     if (pattern.test(parsed.pathname)) {
       // match!
+
+      isSended = true;
 
       if (page.type === 'html') {
         // html
