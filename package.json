@@ -32,7 +32,8 @@
     "test": "jest",
     "lint-fix": "eslint --fix --ext .js,.ts .",
     "dev": "cd web && yarn dev",
-    "release": "yarn lerna version"
+    "release": "yarn lerna version",
+    "publish": "node scripts/publish.js"
   },
   "version": "0.0.0"
 }
