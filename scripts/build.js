@@ -62,3 +62,5 @@ build('prext', 'src/export-config.ts', {
   esm: 'dist/config.esm.js',
 });
 build('create-prext', 'src/bin.ts', { cjs: 'dist/bin.js', esm: 'dist/bin.esm.js' });
+
+build('plugin-kit');

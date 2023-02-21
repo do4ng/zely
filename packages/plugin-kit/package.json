@@ -1,0 +1,7 @@
+{
+  "name": "@prext/plugin-kit",
+  "version": "0.0.0",
+  "devDependencies": {
+    "prext": "*"
+  }
+}
