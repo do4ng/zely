@@ -2,6 +2,12 @@
   "packages": ["packages/*"],
   "useWorkspaces": true,
   "version": "independent",
+  "ignoreChanges": [
+    "**/CHANGELOG.md",
+    "**/node_modules/**",
+    "**/package.json",
+    "**/*.md"
+  ],
   "command": {
     "publish": {
       "tempTag": true
