@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2-beta.3](https://github.com/do4ng/prext/compare/sard.js@0.1.2-beta.2...sard.js@0.1.2-beta.3) (2023-02-21)
+
+
+### Others
+
+* remove unused code ([eab6d1e](https://github.com/do4ng/prext/commit/eab6d1e43471b4fb1ebabeb021b0e3478bdad26d))
+
+
+
 ## [0.1.2-beta.2](https://github.com/do4ng/prext/compare/sard.js@0.1.2...sard.js@0.1.2-beta.2) (2023-02-20)
 
 

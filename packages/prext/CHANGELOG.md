@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.0-beta.5](https://github.com/do4ng/prext/compare/prext@0.1.0-beta.4...prext@0.1.0-beta.5) (2023-02-21)
+
+
+### New Features
+
+* custom path ([#7](https://github.com/do4ng/prext/issues/7)) ([3dd06ba](https://github.com/do4ng/prext/commit/3dd06baf2e7cb8199421c99628098af06705da2e))
+* error handling ([#7](https://github.com/do4ng/prext/issues/7)) ([357daae](https://github.com/do4ng/prext/commit/357daae5e8dfcaf60215ff0f6aca98095e087a6d))
+* handle all request ([#7](https://github.com/do4ng/prext/issues/7)) ([28af851](https://github.com/do4ng/prext/commit/28af85128c15dca684de5de726154bdb21f013ec))
+
+
+### Bug Fix
+
+* fixed custom path bugs ([510f278](https://github.com/do4ng/prext/commit/510f27872d09b58d36bd6715eb83e9989b28289a))
+* fixed handle error ([3ee8320](https://github.com/do4ng/prext/commit/3ee83200fd8f17ebb99a3531a778ec25973b988e))
+* typescript error ([8e88de8](https://github.com/do4ng/prext/commit/8e88de8c3caae2d36a79774edd435a3bcf55b3e3))
+
+
+
 ## [0.1.0-beta.4](https://github.com/do4ng/prext/compare/prext@0.1.0-beta.2...prext@0.1.0-beta.4) (2023-02-20)
 
 
