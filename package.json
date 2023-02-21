@@ -33,5 +33,6 @@
     "lint-fix": "eslint --fix --ext .js,.ts .",
     "dev": "cd web && yarn dev",
     "release": "yarn lerna version"
-  }
+  },
+  "version": "0.0.0"
 }
