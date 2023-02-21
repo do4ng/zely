@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1-beta.6](https://github.com/do4ng/prext/compare/web@1.0.1-beta.5...web@1.0.1-beta.6) (2023-02-21)
+
+
+### Documentation
+
+* 0.1 ([23cd2bf](https://github.com/do4ng/prext/commit/23cd2bfd1df5d9513b04346962b588e529b9ed05))
+
+
+
 ## [1.0.1-beta.5](https://github.com/do4ng/prext/compare/web@1.0.1-beta.4...web@1.0.1-beta.5) (2023-02-21)
 
 
