@@ -6,6 +6,8 @@ Prext is a backend framework for Node.js
 
 ---
 
+> v0.1 is here!
+
 ## Features
 
 - **🚧 File-based routing.** Prext.js creates routes automatically with filenames.
