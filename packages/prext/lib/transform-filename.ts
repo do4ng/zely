@@ -3,5 +3,5 @@
  * @param filename filename
  */
 export function transformFilename(filename: string): string {
-  return filename.replace(/\$/g, ':');
+  return filename.replace(/\&\&/g, '*').replace(/\$/g, ':');
 }
