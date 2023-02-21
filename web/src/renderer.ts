@@ -7,7 +7,11 @@ import page404 from './pages/404';
 import '../styles/documents.scss';
 import prexty from './pages/prexty';
 
-(zit as any).useRouter(
+if (window.location.pathname === '/announce/0.1') {
+  window.location.replace('https://github.com/do4ng/prext/issues/7');
+}
+
+zit.useRouter(
   {
     '/': MainPage,
     // @ts-ignore
