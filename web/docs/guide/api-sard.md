@@ -26,6 +26,19 @@ app.get('/', (req, res) => {
 app.listen(3000);
 ```
 
+## Error Handling
+
+```ts
+app.get('/', (req, res) => {
+  res.end('Hello World!');
+});
+
+app.use((req, res, next) => {
+  res.statusCode = 404;
+  res.end('page not found');
+});
+```
+
 ## APIs
 
 Table
