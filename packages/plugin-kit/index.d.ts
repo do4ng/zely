@@ -1,3 +1,5 @@
+import { Plugin } from 'prext';
+/*
 import 'prext';
 import 'sard.js';
 
@@ -11,3 +13,6 @@ declare module 'prext' {
     status: (code: number) => this;
   }
 }
+*/
+
+export function kit(): Plugin;
