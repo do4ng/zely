@@ -2947,7 +2947,7 @@ esbuild@^0.15.12, esbuild@^0.15.9:
     esbuild-windows-64 "0.15.18"
     esbuild-windows-arm64 "0.15.18"
 
-esbuild@^0.17.4, esbuild@^0.17.6:
+esbuild@^0.17.6:
   version "0.17.7"
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.17.7.tgz#a7ace55f2bf82fdb1c9013a924620ce2596984fa"
   integrity sha512-+5hHlrK108fT6C6/40juy0w4DYKtyZ5NjfBlTccBdsFutR7WBxpIY633JzZJewdsCy8xWA/u2z0MSniIJwufYg==
@@ -5957,36 +5957,23 @@ pretty-format@^29.0.0, pretty-format@^29.4.2:
     ansi-styles "^5.0.0"
     react-is "^18.0.0"
 
-prext@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/prext/-/prext-0.0.10.tgz#a75e5024fbf1b7ca2df6f72eb38b3730791dad8a"
-  integrity sha512-j9Xhjln/ZTYZFLlFA9c3LsgEDAelKSFb5kXw19pKYi55Jm3yJAmse69R53sraLBl8+zBUbBBViz7Ll0RAxHYKA==
+prext-analyst@latest:
+  version "0.0.1-beta.3"
+  resolved "https://registry.yarnpkg.com/prext-analyst/-/prext-analyst-0.0.1-beta.3.tgz#f4a1c5ebe44d0d49e06ff7c8a30529dfa61cbbc4"
+  integrity sha512-ybftF5h1R30Zhu/MoVE4D/0qZdF7x3/btXEG0+iXlZmGF/q7VgIHMDAzM+kMzid4j6aK1Jm9qbVuBR4UjBeBlw==
   dependencies:
-    animaux "^0.0.4"
-    chokidar "^3.5.3"
-    esbuild "^0.17.4"
-    esbuild-node-externals "^1.6.0"
-    sard.js "*"
+    colors "^1.4.0"
+    prext "*"
 
-prext@^0.0.15-beta.0:
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/prext/-/prext-0.0.15.tgz#12f3bca77af1c4703f80350ad16e0ed17e89222b"
-  integrity sha512-eFfKCKzxrNyS11ed9ctFknnWpbiCzWXXOgu5SR+CHfjwyVv2unRhGx17zGXr2smFIGSIZbhBg/c0WD8qm4It7A==
+prext@*:
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/prext/-/prext-0.0.16.tgz#c674058dcad84f0876a4cc8b6cf1bb349188dca4"
+  integrity sha512-mm1feYPE6dQc8tGeJ4zjbvf2Q1Wi6me5d8htVHCqtVOI0Pdn1nHeQ6OqgCw3TzdRNprY1SfTkVBC5ONrY6wcnQ==
   dependencies:
     animaux "^0.0.4"
     chokidar "^3.5.3"
     esbuild "^0.17.6"
     esbuild-node-externals "^1.6.0"
-    sard.js "*"
-
-prexty@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/prexty/-/prexty-0.0.3.tgz#7e106b2812d2f437d6de6f241f9c350277803b38"
-  integrity sha512-llmnXdD5p0gQnXgJtutt3LBmkpm7IhQxFPfEL4dUD+A5QPmt8TPONHMUFuazc3ioKYBB/GV1tjciZp6iMRbL2g==
-  dependencies:
-    esbuild "^0.17.6"
-    esbuild-node-externals "^1.6.0"
-    react-dom "^18.2.0"
     sard.js "*"
 
 proc-log@^2.0.0, proc-log@^2.0.1:
@@ -6356,6 +6343,20 @@ safe-regex-test@^1.0.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
+
+sard.js@*:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/sard.js/-/sard.js-0.1.1.tgz#2bf8ab7e7e54aa8f3229faab498e2d5c05e11cfe"
+  integrity sha512-teGK8k+kLT2AgyLmIvM/Vd5w2fMo06O8E/pNqC0KTinpEvnSTDNlBkqn8KbIM5QHSwNcQx8YuGMWy8HLGBUMgA==
+  dependencies:
+    colors "^1.4.0"
+
+sard.js@latest:
+  version "0.1.2-beta.2"
+  resolved "https://registry.yarnpkg.com/sard.js/-/sard.js-0.1.2-beta.2.tgz#08fe00061873080df56e947cc99465f0ce667159"
+  integrity sha512-9RKsxy8CQz81iKIZL++roFqtEBsSw+j8l2loZ+ZUa58c+wbU2DfqjCMVpKEibe5NqTtgIHskE1TWUzc+2KbCcA==
+  dependencies:
+    colors "^1.4.0"
 
 sass@^1.56.0:
   version "1.58.0"

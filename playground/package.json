@@ -8,9 +8,5 @@
   "scripts": {
     "dev": "prext dev",
     "build": "prext build"
-  },
-  "dependencies": {
-    "prext": "^0.0.15-beta.0",
-    "prexty": "^0.0.3"
   }
 }
