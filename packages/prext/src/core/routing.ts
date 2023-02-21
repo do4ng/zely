@@ -32,9 +32,18 @@ export async function getPages(config: Config): Promise<FileData> {
 
       // already compiled
       if (cache.has(target)) {
+        // load module
+        const pageModule = require(relative(
+          __dirname,
+          join(CACHE_DIRECTORY, cache.get(target))
+        ));
+
+        // custom path
+        const pagePath = pageModule?.$page?.path;
+
         return {
-          file,
-          m: require(relative(__dirname, join(CACHE_DIRECTORY, cache.get(target)))),
+          file: pagePath || file,
+          m: pageModule,
           modulePath: join(CACHE_DIRECTORY, cache.get(target)),
           type: 'module',
         };
@@ -84,9 +93,11 @@ export async function getPages(config: Config): Promise<FileData> {
 
       try {
         const output = await typescriptLoader(target, config);
+
         // https://github.com/do4ng/prext/issues/7
         // custom path feature
         const customPage = output?.m?.$page?.path;
+        // console.log(customPage);
 
         cache.set(target, parse(output.filename).base);
 

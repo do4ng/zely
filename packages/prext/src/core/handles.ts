@@ -42,7 +42,7 @@ export function handles(
 
   routes.forEach((page) => {
     // debug
-    console.log(page.file, isSended);
+    // console.log(page.file, isSended);
 
     if (isSended) {
       return;
