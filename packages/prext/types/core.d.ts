@@ -26,7 +26,12 @@ export function Handler(
   config: Config
 ): Promise<void>;
 
-export function handles(req: SardRequest, res: SardResponse, routes: FileData[]): void;
+export function handles(
+  req: SardRequest,
+  res: SardResponse,
+  routes: FileData[],
+  config: Config
+): void;
 
 /**
  * load typescript file

@@ -49,6 +49,7 @@ export interface Config {
     options?: WatchOptions;
   };
   build?: {};
+  error(req: SardRequest, res: SardResponse): void | Promise<void>;
 }
 
 export function assign(c: Config): Config {

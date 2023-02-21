@@ -5,6 +5,7 @@ import { join } from 'path';
 import { CACHE_DIRECTORY } from '../constants';
 import { ObjectkeysMap } from '../../lib/chageKeys';
 import { error } from '../logger';
+import { Config } from '../config';
 
 export function handles(
   req: SardRequest,
@@ -14,7 +15,8 @@ export function handles(
     m: any;
     modulePath: string;
     type: string;
-  }[]
+  }[],
+  config: Config
 ) {
   const parsed = url.parse(req.url);
 
@@ -35,8 +37,17 @@ export function handles(
     }
   }
 
+  // is sended
+  let isSended = false;
+
   routes.forEach((page) => {
+    if (isSended) {
+      return;
+    }
+
     const { pattern, params } = pathToRegexp(page.file, false);
+
+    isSended = true;
 
     if (pattern.test(parsed.pathname)) {
       // match!
@@ -71,4 +82,10 @@ export function handles(
       }
     }
   });
+
+  // 404
+  if (!isSended) {
+    if (config.error) config.error(req, res);
+    else res.statusCode = 404;
+  }
 }

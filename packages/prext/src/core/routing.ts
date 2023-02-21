@@ -141,7 +141,7 @@ export async function Handler(req: SardRequest, res: SardResponse, config: Confi
     // console.log(routes);
 
     if (config.handler) config.handler(req, res, routes);
-    else handles(req, res, routes);
+    else handles(req, res, routes, config);
   } catch (e) {
     error(e);
   }

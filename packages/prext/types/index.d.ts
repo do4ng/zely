@@ -32,6 +32,9 @@ export interface Config {
     options?: WatchOptions;
   };
   build?: {};
+  // https://github.com/do4ng/prext/issues/7
+  // error handling
+  error(req: SardRequest, res: SardResponse): void | Promise<void>;
 }
 
 export * from './config';
