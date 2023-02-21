@@ -6,6 +6,7 @@
     "publish": {
       "tempTag": true
     },
+
     "version": {
       "conventionalCommits": true,
       "message": "chore(release): publish",
