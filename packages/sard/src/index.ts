@@ -68,7 +68,7 @@ class Server {
   handler(req: SardRequest, res: SardResponse) {
     let index = -1;
 
-    const parsed = parse(req.url);
+    // const parsed = parse(req.url);
 
     const loop = () => {
       if (index < this.handles.length && !res.writableEnded) {
