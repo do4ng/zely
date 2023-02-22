@@ -5036,6 +5036,11 @@ markdown-it-anchor@^8.6.6:
   resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-8.6.6.tgz#4a12e358c9c2167ee28cb7a5f10e29d6f1ffd7ca"
   integrity sha512-jRW30YGywD2ESXDc+l17AiritL0uVaSnWsb26f+68qaW9zgbIIr1f4v2Nsvc0+s0Z2N3uX6t/yAw7BwCQ1wMsA==
 
+markdown-it-header-sections@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/markdown-it-header-sections/-/markdown-it-header-sections-1.0.0.tgz#f9097fbe15188f671beff362c22e706b4d286090"
+  integrity sha512-GndZbs+iTo7NkNRf00VmT4mtFql7VoJNnSwB7hP5xkomGUTdQ78siVZIuRco4fbiWJd45JUemLxUS9vO8luPSA==
+
 markdown-it@^13.0.1:
   version "13.0.1"
   resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-13.0.1.tgz#c6ecc431cacf1a5da531423fc6a42807814af430"
@@ -5965,17 +5970,6 @@ prext-analyst@latest:
     colors "^1.4.0"
     prext "*"
 
-prext@*:
-  version "0.0.16"
-  resolved "https://registry.yarnpkg.com/prext/-/prext-0.0.16.tgz#c674058dcad84f0876a4cc8b6cf1bb349188dca4"
-  integrity sha512-mm1feYPE6dQc8tGeJ4zjbvf2Q1Wi6me5d8htVHCqtVOI0Pdn1nHeQ6OqgCw3TzdRNprY1SfTkVBC5ONrY6wcnQ==
-  dependencies:
-    animaux "^0.0.4"
-    chokidar "^3.5.3"
-    esbuild "^0.17.6"
-    esbuild-node-externals "^1.6.0"
-    sard.js "*"
-
 proc-log@^2.0.0, proc-log@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/proc-log/-/proc-log-2.0.1.tgz#8f3f69a1f608de27878f91f5c688b225391cb685"
@@ -6343,13 +6337,6 @@ safe-regex-test@^1.0.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
-
-sard.js@*:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/sard.js/-/sard.js-0.1.1.tgz#2bf8ab7e7e54aa8f3229faab498e2d5c05e11cfe"
-  integrity sha512-teGK8k+kLT2AgyLmIvM/Vd5w2fMo06O8E/pNqC0KTinpEvnSTDNlBkqn8KbIM5QHSwNcQx8YuGMWy8HLGBUMgA==
-  dependencies:
-    colors "^1.4.0"
 
 sard.js@latest:
   version "0.1.2-beta.2"

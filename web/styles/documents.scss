@@ -67,6 +67,16 @@
   .category-post:not(.active):hover {
     border-left: 1px solid #919191c5;
   }
+  .footer {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    .footer-container {
+      font-size: 0.85rem;
+      color: var(--grey-dark);
+      text-align: center;
+    }
+  }
 }
 
 .post-container {
@@ -74,15 +84,61 @@
   color: var(--text);
   width: 100%;
   position: relative;
-  overflow-y: scroll;
+  overflow: scroll;
   height: calc((100vh - 65px));
+}
+
+.table-active {
+  color: var(--grey-darker) !important;
+  // padding-left: 50px;
 }
 
 .post {
   width: 72%;
   font-size: 17px;
+  margin-left: 55px;
 
-  margin: 55px auto;
+  .post-p {
+    display: flex;
+  }
+  .post-main {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .table-of-contents {
+    position: fixed;
+    margin-top: 75px;
+    margin-left: 45px;
+
+    .table-item-child-container {
+      padding-top: 1px;
+    }
+    .table-item-child {
+      padding: 2px 10px;
+    }
+
+    .table-item {
+      border-left: 1px solid var(--grey-light);
+      padding: 1px 12px;
+
+      a {
+        font-size: 0.885rem;
+        color: var(--grey-light-dark);
+        p {
+          margin: 0;
+          padding-right: 20px;
+        }
+      }
+      a:hover {
+        color: var(--dark);
+      }
+    }
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
   h1,
   h2,
   h3,
