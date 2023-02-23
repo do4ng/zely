@@ -12,3 +12,9 @@
 ## Introduction
 
 Prext.js (previous + next) is a node.js backend framework inspired by [next](https://nextjs.org/). This project aims to be the lightest Nodejs backend framework.
+
+## Why you made it?
+
+Express or Node HTTP module is a awesome backend package, but it is so bothering to set routes.
+
+To solve this problem I created this package.
