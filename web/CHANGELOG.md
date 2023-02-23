@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.0-beta.0](https://github.com/do4ng/prext/compare/web@1.0.1-beta.6...web@1.1.0-beta.0) (2023-02-23)
+
+
+### New Features
+
+* add table of contents ([#8](https://github.com/do4ng/prext/issues/8)) ([0fc897a](https://github.com/do4ng/prext/commit/0fc897aca85f0cc0edfbba076b8c0c0305fccc97))
+
+
+### Documentation
+
+* edit stylesheet ([c0de421](https://github.com/do4ng/prext/commit/c0de4218d52254ce440aca9c48dc718046af7f2d))
+* update announcer ([f6dcff6](https://github.com/do4ng/prext/commit/f6dcff64dac5a72ade9713a9819bc395248074f9))
+
+
+
 ## [1.0.1-beta.6](https://github.com/do4ng/prext/compare/web@1.0.1-beta.5...web@1.0.1-beta.6) (2023-02-21)
 
 
