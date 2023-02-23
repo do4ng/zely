@@ -115,9 +115,14 @@
     }
     .table-item-child {
       padding: 2px 10px;
+      transition: all ease 0.15s 0s;
+    }
+    .table-item-child:has(.table-active) {
+      padding: 2px 14px;
     }
 
     .table-item {
+      transition: all ease 0.15s 0s;
       border-left: 1px solid var(--grey-light);
       padding: 1px 12px;
 
@@ -132,6 +137,9 @@
       a:hover {
         color: var(--dark);
       }
+    }
+    .table-item:has(.table-active) {
+      padding: 1px 17px;
     }
   }
 
