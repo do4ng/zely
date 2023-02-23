@@ -5,7 +5,6 @@
   "dependencies": {
     "esbuild": "^0.17.6",
     "esbuild-node-externals": "^1.6.0",
-    "prext": "0.1.2",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
