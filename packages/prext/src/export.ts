@@ -1,6 +1,7 @@
 import { build } from 'esbuild';
 import { rmSync, writeFileSync } from 'fs';
 import { join, relative } from 'path';
+import { performance } from 'perf_hooks';
 import { Config, configDev } from './config';
 import { CACHE_DIRECTORY, DEFAULT_CONFIG } from './constants';
 import { filenameToRoute, getPages } from './core';

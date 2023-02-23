@@ -2,6 +2,8 @@
 
 import program from 'animaux';
 
+import { performance } from 'perf_hooks';
+
 import pkg from '../../package.json';
 import { getConfig } from '../config';
 import { Watch } from '../core/watch';
