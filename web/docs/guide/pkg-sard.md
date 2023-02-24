@@ -1,5 +1,8 @@
 # Sard.js
 
+[github](https://github.com/do4ng/prext/tree/main/packages/sard),
+[npm](https://npmjs.com/package/sard.js)
+
 Sard.js is a tiny Http Server Module. It was made for speed and size.
 
 ## Features

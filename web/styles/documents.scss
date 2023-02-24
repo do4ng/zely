@@ -227,3 +227,23 @@
     border: 1px solid #646cff;
   }
 }
+
+// custom container
+.block {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  margin: 30px 0px;
+  font-weight: 300;
+}
+.warning {
+  background-color: #fde18d2a;
+  color: #eab308;
+  border: 1px solid #ffe083;
+}
+
+.info {
+  background-color: #8d8ffd28;
+  color: #0862eaa2;
+  border: 1px solid #8396ffa6;
+}

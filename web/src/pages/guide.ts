@@ -15,6 +15,9 @@ posts.forEach((post) => {
     titleList.push(p[1]);
   });
 });
+if (window.location.pathname === '/guide/api-sard') {
+  window.location.replace('/guide/pkg-sard');
+}
 
 let sliced = window.location.pathname.split('/');
 let now = sliced[sliced.length - 1];

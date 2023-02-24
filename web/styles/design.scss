@@ -8,15 +8,14 @@ blockquote {
 hr {
   margin: 35px 0;
   border: 2px solid #b1b3b656;
-  border-radius: 2px;
 }
 table {
-  width: 100%;
   border: 1px solid hsla(0, 0%, 84%, 0.698);
   border-collapse: collapse;
 }
 td,
 th {
+  min-width: 90px;
   border: 1px solid hsla(0, 0%, 84%, 0.698);
   padding: 3px 10px;
 }
@@ -45,6 +44,7 @@ pre {
 pre.shiki {
   margin-bottom: 35px;
   padding: 15px 20px;
+  border: 1px solid var(--grey);
   border-radius: 5px;
   overflow: auto;
 }

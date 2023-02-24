@@ -15,8 +15,16 @@
     "posts": [
       ["api-server", "Server API"],
       ["api-plugin", "Plugin API"],
-      ["api-config", "Config Reference"],
-      ["api-sard", "Sard.js"]
+      ["api-config", "Config Reference"]
+    ]
+  },
+  {
+    "category": "Packages",
+    "posts": [
+      ["pkg-create-prext-app", "create prext app"],
+      ["pkg-prexty", "prexty"],
+      ["pkg-sard", "sard.js"],
+      ["pkg-prext-analyst", "prext analyst"]
     ]
   }
 ]
