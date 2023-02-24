@@ -15,5 +15,6 @@
   "files": [
     "dist",
     "index.d.ts"
-  ]
+  ],
+  "homepage": "https://prext.netlify.app/l/prexty"
 }

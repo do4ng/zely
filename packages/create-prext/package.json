@@ -4,7 +4,7 @@
   "bin": {
     "create-prext": "dist/bin.js"
   },
-  "homepage": "https://prext.netlify.app/",
+  "homepage": "https://prext.netlify.app/l/create-prext-app",
   "files": [
     "assets",
     "dist"

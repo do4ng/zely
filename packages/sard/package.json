@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
   "types": "./types/index.d.ts",
-  "homepage": "https://prext.netlify.app/guide/api-sard",
+  "homepage": "https://prext.netlify.app/l/sard",
   "files": [
     "dist",
     "types"
