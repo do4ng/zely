@@ -4,6 +4,7 @@
   "dependencies": {
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.6",
+    "markdown-it-header-sections": "^1.0.0",
     "sass": "^1.56.0",
     "shiki": "^0.12.1",
     "vite": "^3.2.3",
@@ -13,5 +14,8 @@
     "build": "npm run docs && vite build",
     "dev": "npm run docs && vite",
     "docs": "node helper/index.js"
+  },
+  "devDependencies": {
+    "markdown-it-container": "^3.0.0"
   }
 }
