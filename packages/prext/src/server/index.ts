@@ -3,6 +3,7 @@ import { Server, server } from 'sard.js';
 import { Config } from '../config';
 import { CACHE_DIRECTORY } from '../constants';
 import { Handler } from '../core';
+import { kit } from '../plugins/kit';
 
 export function Prext(config: Config): Server {
   rmSync(CACHE_DIRECTORY, { recursive: true, force: true });
@@ -18,7 +19,13 @@ export function Prext(config: Config): Server {
     if (plugin.server) plugin.server(app);
   });
 
-  app.all('*', (req, res) => Handler(req, res, config));
+  // @prext/plugin-kit
+
+  kit().server(app);
+
+  app.all('*', (req, res) => {
+    Handler(req, res, config);
+  });
 
   return app;
 }
