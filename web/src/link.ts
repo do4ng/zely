@@ -7,6 +7,8 @@ export const LINK_MAP = {
   'prext-analyst': '/guide/pkg-prext-analyst',
   prexty: '/guide/pkg-prexty',
   'prexty-doc': '/prexty/introduction',
+  changelog:
+    'https://github.com/do4ng/prext/blob/main/packages/prext/CHANGELOG.md#010-2023-02-21',
 };
 
 export default {

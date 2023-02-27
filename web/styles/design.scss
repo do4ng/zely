@@ -66,3 +66,31 @@ li::marker {
   margin-top: 100px;
   text-align: center;
 }
+
+.announcement-card {
+  width: calc(100% - 30px);
+  height: 120px;
+
+  border-radius: 15px;
+  padding: 25px 0 0 30px;
+
+  color: #fff;
+
+  background: linear-gradient(70deg, #3b46e6be, #ffc8e2b6);
+
+  a {
+    color: inherit !important;
+  }
+
+  .announcement-card-container {
+    padding-top: 50px;
+
+    .announcement-card-title {
+      font-size: 1.15rem;
+    }
+    .announcement-card-content {
+      font-size: 0.95rem;
+      color: var(--grey-lighter);
+    }
+  }
+}

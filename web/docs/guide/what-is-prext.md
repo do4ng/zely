@@ -1,3 +1,6 @@
+<app-announcement>
+</app-announcement>
+
 # What is Prext
 
 🛰️ Prext is a backend framework for Node.js.
