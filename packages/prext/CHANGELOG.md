@@ -71,7 +71,7 @@ v0.1 is here!
 - prelease ([e00d74b](https://github.com/do4ng/prext/commit/e00d74bcaa5eca141f30867ae2ad6b77b10b8313))
 - remove` v1.0.3` ([4efc809](https://github.com/do4ng/prext/commit/4efc80918752d3b4f276b700f4a4254c75d79d2d))
 
-## 0.1.0 (2023-02-20)
+## 0.0.0 (2023-02-20)
 
 ### Bug Fix
 
