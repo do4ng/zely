@@ -65,7 +65,7 @@ export function handles(
 
         page.m = ObjectkeysMap(page.m, (key) => key.toLowerCase());
 
-        Object.keys(page.m).forEach((pageHandler) => {
+        Object.keys(page.m).forEach(async (pageHandler) => {
           if (pageHandler === req.method.toLowerCase() || pageHandler === 'all') {
             const execd = new URL(req.url, `http://${req.headers.host}`).pathname.match(
               pattern
@@ -76,7 +76,14 @@ export function handles(
             });
 
             try {
-              page.m[pageHandler](req, res);
+              const target = page.m;
+              const $page = page.m.$page || {};
+
+              if ($page.before) await $page.before(req, res);
+
+              await target[pageHandler](req, res);
+
+              if ($page.after) await $page.after(req, res);
             } catch (e) {
               error(new Error(e));
             }
