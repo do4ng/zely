@@ -40,7 +40,7 @@ export default defineConfig({
 ---
 
 <section align="center">
-  <h3>💡 Prext is beta version and needs help</h3>
+  <h3>💡 Prext is a recently created package and needs help</h3>
 </section>
 
 ---
