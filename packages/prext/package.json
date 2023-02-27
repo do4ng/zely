@@ -1,6 +1,6 @@
 {
   "name": "prext",
-  "version": "0.2.0",
+  "version": "1.0.0-beta.1",
   "types": "./types/index.d.ts",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
