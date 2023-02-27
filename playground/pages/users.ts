@@ -2,7 +2,7 @@ import { PrextRequest, PrextResponse } from 'prext';
 
 export function get(req: PrextRequest, res: PrextResponse) {
   res.setHeader('Content-Type', 'text/html');
-  res.end(`
+  res.status(200).end(`
   <div class="users">
     <h1>User List - ${(req as any).message}</h1>
     <a href="/users/user1">User 1</a>
