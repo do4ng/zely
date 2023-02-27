@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.0-beta.3](https://github.com/do4ng/prext/compare/prext-analyst@0.1.0-beta.2...prext-analyst@0.1.0-beta.3) (2023-02-27)
+
+
+### Others
+
+* **homepage:** add homepage links ([9cae295](https://github.com/do4ng/prext/commit/9cae295c2153a267a4e57a5588235d8d4c507833))
+
+
+
+
 ## [0.1.0-beta.2](https://github.com/do4ng/prext/compare/prext-analyst@0.1.0-beta.1...prext-analyst@0.1.0-beta.2) (2023-02-23)
 
 **Note:** Version bump only for package prext-analyst

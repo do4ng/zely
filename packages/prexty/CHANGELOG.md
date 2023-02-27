@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.4](https://github.com/do4ng/prext/compare/prexty@1.1.2...prexty@1.1.4) (2023-02-27)
+
+
+### Others
+
+* 1.1.3 ([969f972](https://github.com/do4ng/prext/commit/969f972b33dbdd1ec170d085d5772331a785d640))
+* **deps:** remove prext from dependencies ([6cb96de](https://github.com/do4ng/prext/commit/6cb96dea27fe50b51aea06ccc75c5f8d71544023))
+* **homepage:** add homepage links ([9cae295](https://github.com/do4ng/prext/commit/9cae295c2153a267a4e57a5588235d8d4c507833))
+
+
+
+
 ## [1.1.2](https://github.com/do4ng/prext/compare/prexty@1.1.0-beta.4...prexty@1.1.2) (2023-02-23)
 
 ## 1.1.1 (2023-02-20)

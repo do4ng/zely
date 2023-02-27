@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.0](https://github.com/do4ng/prext/compare/prext@0.1.2...prext@0.2.0) (2023-02-27)
+
+
+### New Features
+
+* `$page` typescript supported [#11](https://github.com/do4ng/prext/issues/11) ([99731f3](https://github.com/do4ng/prext/commit/99731f3a284898074ce623fc7005f27f3d3b57a7))
+* extend `request`, `response` ([#11](https://github.com/do4ng/prext/issues/11)) ([d218b96](https://github.com/do4ng/prext/commit/d218b96eaefae426ad573177a7b15cc71b9f1f89))
+* update `$page` ([#11](https://github.com/do4ng/prext/issues/11)) ([68a5483](https://github.com/do4ng/prext/commit/68a5483baed8ea2a5dd189a53b3e65bd3abbbf72))
+
+
+### Documentation
+
+* update changelog ([941bf24](https://github.com/do4ng/prext/commit/941bf249a3f63506786613f783d374625bb639ef))
+* update web([#11](https://github.com/do4ng/prext/issues/11)) ([b4f48d1](https://github.com/do4ng/prext/commit/b4f48d1cd77c9dc2897e3377d93ff87bb899efc3))
+
+
+
+
 ## [0.1.2](https://github.com/do4ng/prext/compare/prext@0.1.0-beta.6...prext@0.1.2) (2023-02-23)
 
 

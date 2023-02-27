@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/do4ng/prext/compare/playground@1.2.1...playground@1.2.2) (2023-02-27)
+
+
+### Documentation
+
+* add description ([5da6c2e](https://github.com/do4ng/prext/commit/5da6c2e0560d0789e1f511095d25d14c693743c9))
+* update documentation ([f9e13bc](https://github.com/do4ng/prext/commit/f9e13bc5b0eb2cb17d198352f11e287c547f0ae8))
+
+
+### Others
+
+* add example (`req`, `res`) ([fb6d501](https://github.com/do4ng/prext/commit/fb6d50126f44f155a4bf5d974b7698792cfa94eb))
+
+
+
+
 ## [1.2.1](https://github.com/do4ng/prext/compare/playground@1.2.0...playground@1.2.1) (2023-02-23)
 
 **Note:** Version bump only for package playground

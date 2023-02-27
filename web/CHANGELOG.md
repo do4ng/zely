@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.0-beta.1](https://github.com/do4ng/prext/compare/web@1.1.0-beta.0...web@1.1.0-beta.1) (2023-02-27)
+
+
+### Others
+
+* **deps:** markdown-it-container ([d16c176](https://github.com/do4ng/prext/commit/d16c1766040bcd06f2c1d76d9d91128085c5fe21))
+
+
+### Documentation
+
+* add link page ([e7c7c98](https://github.com/do4ng/prext/commit/e7c7c98bd444463ac75f6f2d8a55eafb74486012))
+* update `what is prext` ([fb5c0b2](https://github.com/do4ng/prext/commit/fb5c0b25b567b2ff5f49dea8a6f26f85dc81eadd))
+* update documentation ([f9e13bc](https://github.com/do4ng/prext/commit/f9e13bc5b0eb2cb17d198352f11e287c547f0ae8))
+* update web([#11](https://github.com/do4ng/prext/issues/11)) ([b4f48d1](https://github.com/do4ng/prext/commit/b4f48d1cd77c9dc2897e3377d93ff87bb899efc3))
+
+
+
+
 ## [1.1.0-beta.0](https://github.com/do4ng/prext/compare/web@1.0.1-beta.6...web@1.1.0-beta.0) (2023-02-23)
 
 

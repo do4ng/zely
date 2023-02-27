@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/do4ng/prext/compare/@prext/plugin-kit@0.2.1...@prext/plugin-kit@0.2.2) (2023-02-27)
+
+
+### Documentation
+
+* add plugin-kit description ([84b4c18](https://github.com/do4ng/prext/commit/84b4c18df365fa067d3a4dc3e8f06e7d0ca5d5c3))
+
+
+### Bug Fix
+
+* fixed loop bug ([700d5e8](https://github.com/do4ng/prext/commit/700d5e8d5fcd39a3db889e1bd59b3f1d7808e194))
+
+
+
+
 ## [0.2.1](https://github.com/do4ng/prext/compare/@prext/plugin-kit@0.2.0...@prext/plugin-kit@0.2.1) (2023-02-23)
 
 **Note:** Version bump only for package @prext/plugin-kit
