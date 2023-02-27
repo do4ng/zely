@@ -1,5 +1,5 @@
 import { SardRequest, SardResponse } from 'sard.js';
-import { Config } from '.';
+import { Config, PrextRequest, PrextResponse } from '.';
 
 /*
 
@@ -38,3 +38,9 @@ export function handles(
  * @param target
  */
 export function typescriptLoader(target: string): Promise<{ filename: string; m: any }>;
+
+export interface Page {
+  before?(req: PrextRequest, res: PrextResponse): void | Promise<void>;
+  after?(req: PrextRequest, res: PrextResponse): void | Promise<void>;
+  path?: string;
+}
