@@ -5,44 +5,32 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.0.0-beta.2](https://github.com/do4ng/prext/compare/prext@0.2.0...prext@1.0.0-beta.2) (2023-02-28)
 
+### New Features
+
+- auto middleware mode ([#11](https://github.com/do4ng/prext/issues/11)) ([41263dd](https://github.com/do4ng/prext/commit/41263ddf4adad961fffb58c120fb28c376a5370a))
+
+## [1.0.0-beta.1](https://github.com/do4ng/prext/compare/prext@0.1.2...prext@0.2.0) (2023-02-27)
 
 ### New Features
 
-* auto middleware mode ([#11](https://github.com/do4ng/prext/issues/11)) ([41263dd](https://github.com/do4ng/prext/commit/41263ddf4adad961fffb58c120fb28c376a5370a))
-
-
-
-## [0.2.0](https://github.com/do4ng/prext/compare/prext@0.1.2...prext@0.2.0) (2023-02-27)
-
-
-### New Features
-
-* `$page` typescript supported [#11](https://github.com/do4ng/prext/issues/11) ([99731f3](https://github.com/do4ng/prext/commit/99731f3a284898074ce623fc7005f27f3d3b57a7))
-* extend `request`, `response` ([#11](https://github.com/do4ng/prext/issues/11)) ([d218b96](https://github.com/do4ng/prext/commit/d218b96eaefae426ad573177a7b15cc71b9f1f89))
-* update `$page` ([#11](https://github.com/do4ng/prext/issues/11)) ([68a5483](https://github.com/do4ng/prext/commit/68a5483baed8ea2a5dd189a53b3e65bd3abbbf72))
-
+- `$page` typescript supported [#11](https://github.com/do4ng/prext/issues/11) ([99731f3](https://github.com/do4ng/prext/commit/99731f3a284898074ce623fc7005f27f3d3b57a7))
+- extend `request`, `response` ([#11](https://github.com/do4ng/prext/issues/11)) ([d218b96](https://github.com/do4ng/prext/commit/d218b96eaefae426ad573177a7b15cc71b9f1f89))
+- update `$page` ([#11](https://github.com/do4ng/prext/issues/11)) ([68a5483](https://github.com/do4ng/prext/commit/68a5483baed8ea2a5dd189a53b3e65bd3abbbf72))
 
 ### Documentation
 
-* update changelog ([941bf24](https://github.com/do4ng/prext/commit/941bf249a3f63506786613f783d374625bb639ef))
-* update web([#11](https://github.com/do4ng/prext/issues/11)) ([b4f48d1](https://github.com/do4ng/prext/commit/b4f48d1cd77c9dc2897e3377d93ff87bb899efc3))
-
-
-
+- update changelog ([941bf24](https://github.com/do4ng/prext/commit/941bf249a3f63506786613f783d374625bb639ef))
+- update web([#11](https://github.com/do4ng/prext/issues/11)) ([b4f48d1](https://github.com/do4ng/prext/commit/b4f48d1cd77c9dc2897e3377d93ff87bb899efc3))
 
 ## [0.1.2](https://github.com/do4ng/prext/compare/prext@0.1.0-beta.6...prext@0.1.2) (2023-02-23)
 
-
 ### Others
 
-* 0.1.1 ([a88b99e](https://github.com/do4ng/prext/commit/a88b99e1a4c5510d259d65cca0560068435a30c5))
-
+- 0.1.1 ([a88b99e](https://github.com/do4ng/prext/commit/a88b99e1a4c5510d259d65cca0560068435a30c5))
 
 ### Bug Fix
 
-* fixed performance error ([#9](https://github.com/do4ng/prext/issues/9)) ([51d9bf1](https://github.com/do4ng/prext/commit/51d9bf13c71f286eb1f75c252b3347851a95fd90))
-
-
+- fixed performance error ([#9](https://github.com/do4ng/prext/issues/9)) ([51d9bf1](https://github.com/do4ng/prext/commit/51d9bf13c71f286eb1f75c252b3347851a95fd90))
 
 ## [0.1.0](https://github.com/do4ng/prext/compare/prext@0.1.0-beta.5...prext@0.1.0-beta.6) (2023-02-21)
 
