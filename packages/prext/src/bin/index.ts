@@ -30,7 +30,6 @@ app
         console.log(` ${'├─'.gray} http://localhost:${String(port).cyan}`.bold);
         console.log(` ${'└─'.gray} http://127.0.0.1:${String(port).cyan}`.bold);
         console.log();
-        info(`Done in ${((performance.now() - startTime) / 1000).toFixed(2)}s`);
 
         if (config?.watch?.enable === true || !config?.watch) {
           Watch(config);
@@ -38,6 +37,8 @@ app
         } else {
           warn('Observer has been disabled.');
         }
+
+        info(`Done in ${(performance.now() - startTime).toFixed()}ms`);
       });
     } catch (e) {
       error(e);
