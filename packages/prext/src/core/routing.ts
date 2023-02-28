@@ -18,7 +18,7 @@ export async function getPages(config: Config): Promise<FileData> {
 
     if (cacheFile.__CACHE_VERSION === CACHE_VERSION.toString()) __cache = cacheFile;
   } else {
-    success('success to create cache file.');
+    success('success to create page cache file.');
   }
 
   const cache = new Map(Object.entries(__cache));

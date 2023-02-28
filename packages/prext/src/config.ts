@@ -50,6 +50,8 @@ export interface Config {
   };
   build?: {};
   error?(req: SardRequest, res: SardResponse): void | Promise<void>;
+  middlewareDirectory?: string;
+  allowAutoMiddlewares?: boolean;
 }
 
 export function assign(c: Config): Config {

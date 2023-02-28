@@ -11,4 +11,5 @@ export const DEFAULT_CONFIG: Config = {
 };
 
 export const CACHE_FILE = join(CACHE_DIRECTORY, 'cache.json');
+export const MIDDLEWARE_CACHE_FILE = join(CACHE_DIRECTORY, 'cache.middleware.json');
 export const CACHE_VERSION = '220124';

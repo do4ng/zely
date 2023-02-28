@@ -3,7 +3,7 @@ import { BuildOptions } from 'esbuild';
 import { SardRequest, SardResponse, Server } from 'sard.js';
 import { FileData } from './core';
 
-export type Middleware = (req: SardRequest, res: SardResponse) => void;
+export type Middleware = (req: SardRequest, res: SardResponse, next: any) => void;
 
 export type HandlerType = (
   req: SardRequest,
@@ -35,6 +35,11 @@ export interface Config {
   // https://github.com/do4ng/prext/issues/7
   // error handling
   error?(req: SardRequest, res: SardResponse): void | Promise<void>;
+
+  // auto middleware
+
+  middlewareDirectory?: string;
+  allowAutoMiddlewares?: boolean;
 }
 
 export * from './config';
