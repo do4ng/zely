@@ -1,6 +1,5 @@
 import { writeFileSync } from 'fs';
 import { defineConfig } from 'prext/config';
-import { Message } from './middlewares/message';
 import { join, parse, relative } from 'path';
 
 const regex_script = /<script>(.*?)<\/script>/s;
@@ -8,12 +7,14 @@ const regex_template = /<template>(.*?)<\/template>/s;
 
 export default defineConfig({
   routes: './pages',
-  middlewares: [Message],
 
   error(req, res) {
     res.statusCode = 404;
     res.end('Page Not Found');
   },
+
+  allowAutoMiddlewares: true,
+  middlewareDirectory: 'middlewares',
 
   plugins: [
     // example plugin
