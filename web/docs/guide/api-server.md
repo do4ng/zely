@@ -7,7 +7,7 @@ If you want information of [sard.js](https://www.npmjs.com/package/sard.js), vis
 ```ts
 import { Prext } from 'prext';
 
-const server = Prext({
+const server = await Prext({
   /* config */
 });
 
