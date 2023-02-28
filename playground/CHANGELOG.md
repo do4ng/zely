@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/do4ng/prext/compare/playground@1.2.2...playground@1.2.3) (2023-02-28)
+
+
+### Others
+
+* test auto middleware mode ([11669ee](https://github.com/do4ng/prext/commit/11669eec17d4581d2ed47e894386df6becb9bb7b))
+
+
+
 ## [1.2.2](https://github.com/do4ng/prext/compare/playground@1.2.1...playground@1.2.2) (2023-02-27)
 
 

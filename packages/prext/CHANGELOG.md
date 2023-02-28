@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0-beta.2](https://github.com/do4ng/prext/compare/prext@0.2.0...prext@1.0.0-beta.2) (2023-02-28)
+
+
+### New Features
+
+* auto middleware mode ([#11](https://github.com/do4ng/prext/issues/11)) ([41263dd](https://github.com/do4ng/prext/commit/41263ddf4adad961fffb58c120fb28c376a5370a))
+
+
+
 ## [0.2.0](https://github.com/do4ng/prext/compare/prext@0.1.2...prext@0.2.0) (2023-02-27)
 
 
