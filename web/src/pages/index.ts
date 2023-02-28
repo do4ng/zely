@@ -43,6 +43,17 @@ export default {
       </div>
 
       <div id="example">
+        <app-announcement></app-announcement>
+
+        <div class="feature-animation">
+          <div class="ex-bash">
+            <pre class="bash-container">~root npm dev</pre>
+          </div>
+          <div class="feature-animation-des">
+            <h2>👋 Good Bye to waiting time</h2>
+          </div>
+        </div>
+
         <div class="ex-container">
           <div class="ex-des">
             <h2>File Based Routing</h2>
@@ -111,6 +122,8 @@ export default {
     <div class="footer-main">Copyright © 2023-present do4ng</div>
   `,
   js: () => {
+    document.title = 'prext';
+
     const header = document.getElementById('header');
     header.setAttribute('style', 'border: #ffffff00; background-color: #ffffff00;');
 
@@ -122,6 +135,45 @@ export default {
       }
     });
 
+    // bash
+
+    const bash = document.querySelector('.bash-container');
+    const bashScripts = [
+      'Compiling Typescript...',
+      'Compiling Assets...',
+      'Starting Server...',
+    ];
+    const errorReaction = 'what the *!@!#$%';
+
+    bash.innerHTML =
+      '<code class="bash">~root npm dev</code><br><code class="bash">$ damn framework@1.2.3</code><br>';
+
+    let count = 0;
+    const view = setInterval(() => {
+      bash.innerHTML += `<br><code class="bash">${bashScripts[count]}</code>`;
+      count += 1;
+      if (count === bashScripts.length) {
+        clearInterval(view);
+
+        setTimeout(() => {
+          bash.innerHTML +=
+            '<br><br><code class="bash" style="color: red">ERROR: cannot read properties of undefined</code><br><code class="bash">Done in 7s!</code><br><br><code class="bash">~root</code>';
+
+          count = 0;
+
+          setTimeout(() => {
+            const reaction = setInterval(() => {
+              bash.innerHTML += errorReaction[count];
+              count += 1;
+
+              if (count === errorReaction.length) {
+                clearInterval(reaction);
+              }
+            }, 50);
+          }, 500);
+        }, 1000);
+      }
+    }, 2500);
     // browser view
     const el = document.getElementById('view-reload');
 

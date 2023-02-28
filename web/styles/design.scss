@@ -94,3 +94,29 @@ li::marker {
     }
   }
 }
+.feature-animation {
+  width: 100%;
+  margin-bottom: 200px;
+  display: flex;
+}
+.ex-bash {
+  width: calc(60% - 75px);
+  height: 200px;
+}
+.bash-container {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  border-radius: 10px;
+
+  .bash {
+    overflow: auto;
+    margin: 30px;
+  }
+}
+.feature-animation-des {
+  margin-left: 35px;
+  margin-top: 100px;
+}

@@ -24,8 +24,8 @@
     "posts": [
       ["pkg-create-prext-app", "create prext app"],
       ["pkg-prexty", "prexty"],
-      ["pkg-sard", "sard.js"],
       ["pkg-prext-analyst", "prext analyst"],
+      ["pkg-sard", "sard.js"],
       ["pkg-kit", "@prext/plugin-kit"]
     ]
   },
