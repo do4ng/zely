@@ -26,28 +26,33 @@ const build = (
     ],
     external: ['esbuild'],
   };
-  // @ts-ignore
-  esbuild.build({
-    outfile: join(process.cwd(), 'packages', pkg, out.cjs),
-    ...pkgBase,
-    ...base,
-    ...cfg,
-    format: 'cjs',
-    define: {
-      __ESM__: 'false',
-    },
-  });
-  // @ts-ignore
-  esbuild.build({
-    outfile: join(process.cwd(), 'packages', pkg, out.esm),
-    ...pkgBase,
-    ...base,
-    ...cfg,
-    format: 'esm',
-    define: {
-      __ESM__: 'true',
-    },
-  });
+  if (out.cjs) {
+    // @ts-ignore
+    esbuild.build({
+      outfile: join(process.cwd(), 'packages', pkg, out.cjs),
+      ...pkgBase,
+      ...base,
+      ...cfg,
+      format: 'cjs',
+      define: {
+        __ESM__: 'false',
+      },
+    });
+  }
+
+  if (out.esm) {
+    // @ts-ignore
+    esbuild.build({
+      outfile: join(process.cwd(), 'packages', pkg, out.esm),
+      ...pkgBase,
+      ...base,
+      ...cfg,
+      format: 'esm',
+      define: {
+        __ESM__: 'true',
+      },
+    });
+  }
 };
 
 build('sard');
