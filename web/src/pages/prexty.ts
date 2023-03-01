@@ -76,11 +76,6 @@ export default {
               </div>`
           )
           .join('')}
-        <div class="footer">
-          <div class="footer-container">
-            <a href="https://github.com/do4ng/documentation">Made with 🛰️</a>
-          </div>
-        </div>
       `
     );
 
