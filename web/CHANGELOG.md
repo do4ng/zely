@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.0-beta.4](https://github.com/do4ng/prext/compare/web@1.1.0-beta.3...web@1.1.0-beta.4) (2023-03-02)
+
+
+### Documentation
+
+* add `create-prext` doc ([b607576](https://github.com/do4ng/prext/commit/b60757619f861ae50a81e4ffb479d6b63931a18c))
+* update announcement ([9104aed](https://github.com/do4ng/prext/commit/9104aed784a9a80fe050b28d206895bab03e20e5))
+
+
+### Others
+
+* add link (create-prext) ([a022b16](https://github.com/do4ng/prext/commit/a022b1655473488569e2d85025b09d570891f1d7))
+* remove footer (doc) ([697c17f](https://github.com/do4ng/prext/commit/697c17fd5d9fca922c5b0c89acdd021f5e6d9d26))
+
+
+
+
 ## [1.1.0-beta.3](https://github.com/do4ng/prext/compare/web@1.1.0-beta.2...web@1.1.0-beta.3) (2023-02-28)
 
 

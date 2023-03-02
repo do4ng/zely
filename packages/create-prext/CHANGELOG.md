@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/do4ng/prext/compare/create-prext-app@0.1.0-beta.2...create-prext-app@0.1.2) (2023-03-02)
+
+
+### Others
+
+* 0.1.0 ([9085f95](https://github.com/do4ng/prext/commit/9085f95a104f58de3a475951b400a0b5e67b097a))
+* **homepage:** add homepage links ([9cae295](https://github.com/do4ng/prext/commit/9cae295c2153a267a4e57a5588235d8d4c507833))
+
+
+### Documentation
+
+* add deprecated message ([cc8ef7c](https://github.com/do4ng/prext/commit/cc8ef7c5aa691f89bdbddb39d1f117720bc481bb))
+
+
+
 ## [0.1.0-beta.2](https://github.com/do4ng/prext/compare/create-prext-app@0.1.0...create-prext-app@0.1.0-beta.2) (2023-02-20)
 
 
