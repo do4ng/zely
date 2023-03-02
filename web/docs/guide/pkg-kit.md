@@ -4,6 +4,10 @@
 This package is a test plugin. Not for production.
 :::
 
+::: warning
+This package has a lot of bugs.
+:::
+
 ## Installation
 
 ```bash

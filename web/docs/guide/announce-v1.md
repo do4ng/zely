@@ -1,9 +1,20 @@
 # Announcement v1
 
+We are really excited to introduce prext v1.
+
+---
+
 > [original](https://github.com/do4ng/prext/issues/11)
 
 It's been less than a week since prext v1 was released, but I think prext can be officially released now.
 We still lack a lot, but we will make more after the official release.
+
+## Our Goals
+
+1. stability.
+2. optimization.
+3. speed.
+4. weight.
 
 ## Features
 
@@ -22,6 +33,9 @@ export function get(req, res) {
 ---
 
 - more options `$page`
+
+We are aware of the problem of not being able to set the page only by file name.  
+Thus, we're going to change it so that we can set more page data via `$page`.
 
 ```js
 export const $page = {
@@ -46,6 +60,10 @@ import { Page } from 'prext';
 export const $page: Page = {};
 ```
 
+---
+
+This is all that has been added so far. More features will be added in the future.
+
 thank you😊😋😚
 
 ## Migration from v0.x
@@ -62,3 +80,7 @@ import { Prext } from "prext";
 - const app = Prext();
 + const app = await Prext();
 ```
+
+## Conclusion
+
+There are still many areas missing. If you find a bug, make a [pull request](https://github.com/do4ng/prext/pulls).
