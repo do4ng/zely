@@ -16,6 +16,14 @@ We still lack a lot, but we will make more after the official release.
 3. speed.
 4. weight.
 
+## News
+
+1. End of `create-prext-app`
+
+`create-prext-app` was created early and decided to create a new package instead of an update.
+
+Now use `create-prext` instead of `create-prext-app`.
+
 ## Features
 
 - req, res
@@ -62,13 +70,7 @@ export const $page: Page = {};
 
 ---
 
-This is all that has been added so far. More features will be added in the future.
-
-thank you😊😋😚
-
 ## Migration from v0.x
-
-### Javascript Api
 
 1. `Prext()`
 
@@ -83,4 +85,8 @@ import { Prext } from "prext";
 
 ## Conclusion
 
-There are still many areas missing. If you find a bug, make a [pull request](https://github.com/do4ng/prext/pulls).
+This is all that has been added so far. More features will be added in the future.
+
+If you find a bug, make a [pull request](https://github.com/do4ng/prext/pulls).
+
+thank you😊😋😚
