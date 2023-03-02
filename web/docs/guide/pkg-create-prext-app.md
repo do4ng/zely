@@ -5,6 +5,10 @@
 
 `create-prext-app` is a tool that helps you create prext app easily.
 
+::: warning
+This package is no longer maintained. Use [create-prext](/guide/pkg-create-prext) instead.
+:::
+
 ## Usage
 
 ```bash

@@ -22,6 +22,7 @@
   {
     "category": "Packages",
     "posts": [
+      ["pkg-create-prext", "create prext"],
       ["pkg-create-prext-app", "create prext app"],
       ["pkg-prexty", "prexty"],
       ["pkg-prext-analyst", "prext analyst"],
