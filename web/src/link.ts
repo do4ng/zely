@@ -9,6 +9,7 @@ export const LINK_MAP = {
   'prexty-doc': '/prexty/introduction',
   changelog:
     'https://github.com/do4ng/prext/blob/main/packages/prext/CHANGELOG.md#010-2023-02-21',
+  'create-prext': '/guide/pkg-create-prext',
 };
 
 export default {
