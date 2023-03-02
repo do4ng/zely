@@ -15,10 +15,10 @@
 
 ## Installation
 
-- use create-prext-app
+- use create-prext
 
 ```sh
-> npx create-prext-app my-app --with-typescript
+> npx create-prext
 ```
 
 - Manual installation

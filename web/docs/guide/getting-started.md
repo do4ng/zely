@@ -9,13 +9,12 @@ You can create prext application easily with [create-prext-app](https://npmjs.co
 1. Download Template
 
 ```bash
-> npx create-prext-app my-app
+> npx create-prext
 ```
 
 2. Install Dependencies
 
 ```bash
-> cd my-app
 > npm i # install dependencies
 ```
 
@@ -23,14 +22,6 @@ You can create prext application easily with [create-prext-app](https://npmjs.co
 
 ```bash
 > npm dev # start app
-```
-
-### with typescript
-
-add `--with-typescript` flag.
-
-```bash
-> npx create-prext-app my-app --with-typescript
 ```
 
 ## Manual Installation

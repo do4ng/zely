@@ -8,6 +8,18 @@ Prext fully supports typescript. Most of tests (while development) were run with
 > npx create-prext-app my-ts-app --with-typescript
 ```
 
+## Using [create-prext](https://npmjs.com/package/create-prext)
+
+Select Typescript Option
+
+```bash
+> npx create-prext
+
+? Project name: my-app
+? Directory: backend
+? Template: typescript
+```
+
 ## Migrantion Javascript to Typescript
 
 ```diff
