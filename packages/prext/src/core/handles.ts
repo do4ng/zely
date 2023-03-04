@@ -87,7 +87,8 @@ export function handles(
             } catch (e) {
               error(new Error(e));
             }
-          }
+          } /* page not found */ else if (config.error) config.error(req, res);
+          else res.statusCode = 404;
         });
       }
     }
