@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0-beta.4](https://github.com/do4ng/prext/compare/prext@1.0.0-beta.3...prext@1.0.0-beta.4) (2023-03-04)
+
+
+### Documentation
+
+* replace `create-prext-app` ([#12](https://github.com/do4ng/prext/issues/12)) ([4471776](https://github.com/do4ng/prext/commit/447177619e7fe8d567c2a797cea4d547363b2a3e))
+
+
+### Bug Fix
+
+* fixed 404 page bug ([f406b2d](https://github.com/do4ng/prext/commit/f406b2dba9286185e6f45fc6a675bd41df19ee81))
+
+
+
+
 ## [1.0.0-beta.3](https://github.com/do4ng/prext/compare/prext@1.0.0-beta.2...prext@1.0.0-beta.3) (2023-02-28)
 
 

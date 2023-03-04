@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.0-beta.5](https://github.com/do4ng/prext/compare/web@1.1.0-beta.4...web@1.1.0-beta.5) (2023-03-04)
+
+
+### Documentation
+
+* add news ([72c19c0](https://github.com/do4ng/prext/commit/72c19c09dd107ff5e1912eee173eed1fd56cd5ea))
+* replace `create-prext-app` ([#12](https://github.com/do4ng/prext/issues/12)) ([4471776](https://github.com/do4ng/prext/commit/447177619e7fe8d567c2a797cea4d547363b2a3e))
+
+
+
 ## [1.1.0-beta.4](https://github.com/do4ng/prext/compare/web@1.1.0-beta.3...web@1.1.0-beta.4) (2023-03-02)
 
 
