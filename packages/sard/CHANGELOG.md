@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.0-beta.0](https://github.com/do4ng/prext/compare/sard.js@0.1.2-beta.3...sard.js@0.2.0-beta.0) (2023-03-04)
+
+
+### Others
+
+* **homepage:** add homepage links ([9cae295](https://github.com/do4ng/prext/commit/9cae295c2153a267a4e57a5588235d8d4c507833))
+
+
+### New Features
+
+* `req.body` ([#13](https://github.com/do4ng/prext/issues/13)) ([2d1b452](https://github.com/do4ng/prext/commit/2d1b45245216858193232c9ab699334781ca7125))
+
+
+
 ## [0.1.2-beta.3](https://github.com/do4ng/prext/compare/sard.js@0.1.2-beta.2...sard.js@0.1.2-beta.3) (2023-02-21)
 
 
