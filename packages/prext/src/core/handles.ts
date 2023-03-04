@@ -50,9 +50,9 @@ export function handles(
 
     const { pattern, params } = pathToRegexp(page.file, false);
 
-    if (pattern.test(parsed.pathname)) {
-      // match!
+    // matched page
 
+    if (pattern.test(parsed.pathname)) {
       isSended = true;
 
       if (page.type === 'html') {
@@ -65,11 +65,16 @@ export function handles(
 
         page.m = ObjectkeysMap(page.m, (key) => key.toLowerCase());
 
+        // check method
+
         Object.keys(page.m).forEach(async (pageHandler) => {
+          // "all"
           if (pageHandler === req.method.toLowerCase() || pageHandler === 'all') {
             const execd = new URL(req.url, `http://${req.headers.host}`).pathname.match(
               pattern
             );
+
+            // assign parameters.
 
             params.forEach((param, index) => {
               req.params[param] = execd[index + 1] || null;
