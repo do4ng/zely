@@ -113,7 +113,22 @@ class Server {
       else loop();
     };
 
-    loop();
+    // req.body
+
+    let body = '';
+
+    req.on('data', (chunk) => {
+      body += chunk.toString();
+    });
+
+    req.on('end', () => {
+      if (body === '') {
+        body = '{}';
+      }
+
+      req.body = JSON.parse(body);
+      loop();
+    });
 
     if (res.writableEnded && this.options.logging) {
       console.log(
