@@ -53,8 +53,6 @@ export function handles(
     // matched page
 
     if (pattern.test(parsed.pathname)) {
-      isSended = true;
-
       if (page.type === 'html') {
         // html
 
@@ -70,6 +68,8 @@ export function handles(
         Object.keys(page.m).forEach(async (pageHandler) => {
           // "all"
           if (pageHandler === req.method.toLowerCase() || pageHandler === 'all') {
+            isSended = true;
+
             const execd = new URL(req.url, `http://${req.headers.host}`).pathname.match(
               pattern
             );
@@ -92,8 +92,7 @@ export function handles(
             } catch (e) {
               error(new Error(e));
             }
-          } /* page not found */ else if (config.error) config.error(req, res);
-          else res.statusCode = 404;
+          }
         });
       }
     }
