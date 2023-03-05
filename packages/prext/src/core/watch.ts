@@ -16,11 +16,18 @@ export function Watch(config: Config) {
     if (!existsSync(CACHE_FILE)) {
       return;
     }
-    const { ext } = parse(path);
+    const { ext, name } = parse(path);
 
     // console.log(ext);
 
     if (ext === '.ts' || ext === '.js') {
+      if (name === 'prext.config') {
+        console.log(`${'•'.cyan} Config file changed. Please restart app.`);
+      } else {
+        const { dir, base } = parse(path.replace(/\\/g, '/'));
+        console.log(`${'•'.green} ${`${dir}/`.gray}${base.bold}`);
+      }
+
       const { filename } = await typescriptLoader(
         join(process.cwd(), config.base || '.', path),
         config
