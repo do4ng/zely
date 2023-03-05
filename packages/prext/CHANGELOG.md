@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0-beta.6](https://github.com/do4ng/prext/compare/prext@1.0.0-beta.5...prext@1.0.0-beta.6) (2023-03-05)
+
+
+### Bug Fix
+
+* fixed 404 page handling ([cb4abcc](https://github.com/do4ng/prext/commit/cb4abcc32aeb666d016f49781ccf15202cff623a))
+
+
+### Others
+
+* beautiful cli ([bf91957](https://github.com/do4ng/prext/commit/bf91957903ee611f074ad54c93810e8c2cbce4f0))
+
+
+
 ## [1.0.0-beta.5](https://github.com/do4ng/prext/compare/prext@1.0.0-beta.4...prext@1.0.0-beta.5) (2023-03-04)
 
 
