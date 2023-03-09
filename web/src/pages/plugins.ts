@@ -1,7 +1,7 @@
 import { createElement, html } from '../zitjs';
 
-import posts from '../../config/prexty.json';
-import docs from './prexty.json';
+import posts from '../../config/plugins.json';
+import docs from './plugins.json';
 // import global from '../../config/global.json';
 
 import { header } from './index';
@@ -17,7 +17,7 @@ posts.forEach((post) => {
 });
 
 const pageData = {
-  url: 'prexty',
+  url: 'plugins',
 };
 
 let sliced = window.location.pathname.split('/');

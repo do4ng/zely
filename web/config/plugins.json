@@ -1,0 +1,10 @@
+[
+  {
+    "category": "Guide",
+    "posts": [
+      ["introduction", "Introduction"],
+      ["guide", "Plugin Guide"],
+      ["official-plugins", "Official Plugins"]
+    ]
+  }
+]

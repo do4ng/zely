@@ -8,6 +8,7 @@ import '../styles/documents.scss';
 
 import prexty from './pages/prexty';
 import link from './link';
+import plugins from './pages/plugins';
 
 if (window.location.pathname === '/announce/0.1') {
   window.location.replace('https://github.com/do4ng/prext/issues/7');
@@ -45,6 +46,7 @@ zit.useRouter(
     '/': MainPage,
     // @ts-ignore
     '/guide/:slug': docs,
+    '/plugins/:slug': plugins,
     '/prexty/:slug': prexty,
     '/announce/version0-1': version01,
     '/link/:slug': link,

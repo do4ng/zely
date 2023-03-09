@@ -15,9 +15,14 @@ posts.forEach((post) => {
     titleList.push(p[1]);
   });
 });
+
 if (window.location.pathname === '/guide/api-sard') {
   window.location.replace('/guide/pkg-sard');
 }
+
+const pageData = {
+  url: 'guide',
+};
 
 let sliced = window.location.pathname.split('/');
 let now = sliced[sliced.length - 1];
@@ -69,7 +74,7 @@ export default {
                       class="category-post ${post[0] === params.slug ? 'active' : ''}"
                     >
                       <a
-                        href="/guide/${post[0]}"
+                        href="/${pageData.url}/${post[0]}"
                         class="${post[0] === params.slug ? 'active' : ''}"
                         ><p>${post[1]}</p></a
                       >
@@ -143,14 +148,14 @@ export default {
     return {
       text: text.html,
       prePage: pre
-        ? `<a href="/guide/${pre}" pre>
+        ? `<a href="/${pageData.url}/${pre}" pre>
       <div class="prext">
         <div class="prext-title">Previous Page</div>
         <div class="prext-content">${titleList[postList.indexOf(pre)]}</div>
       </div></a>`
         : '',
       nextPage: next
-        ? `<a href="/guide/${next}" next>
+        ? `<a href="/${pageData.url}/${next}" next>
         <div class="prext">
           <div class="prext-title">Next Page</div>
           <div class="prext-content">${titleList[postList.indexOf(next)]}</div>

@@ -11,10 +11,27 @@ async function parseMarkdown(md, raw) {
   };
 }
 
-const posts = fs.readdirSync(join(__dirname, '../docs/guide'));
-const prextyPosts = fs.readdirSync(join(__dirname, '../docs/prexty'));
-
 let result = {};
+
+async function buildDoc(md, target, output) {
+  result = {};
+  const posts = fs.readdirSync(join(__dirname, `../docs/${target}`));
+
+  for await (const post of posts) {
+    console.log(`Parsing ${target}/${post}`);
+    const parsed = await parseMarkdown(
+      md,
+      fs.readFileSync(join(__dirname, `../docs/${target}`, post)).toString()
+    );
+
+    result[post] = parsed;
+  }
+
+  fs.writeFileSync(
+    join(__dirname, `../src/pages/${output}.json`),
+    JSON.stringify(result)
+  );
+}
 
 async function main() {
   // material-palenight
@@ -41,33 +58,11 @@ async function main() {
   });
   md.use(require('markdown-it-header-sections'));
 
-  // parser
-
-  for await (const post of posts) {
-    console.log(`Parsing ${post}`);
-    const parsed = await parseMarkdown(
-      md,
-      fs.readFileSync(join(__dirname, '../docs/guide', post)).toString()
-    );
-
-    result[post] = parsed;
-  }
-
-  fs.writeFileSync(join(__dirname, '../src/pages/posts.json'), JSON.stringify(result));
-
-  result = {};
-
-  for await (const post of prextyPosts) {
-    console.log(`Parsing ${post}`);
-    const parsed = await parseMarkdown(
-      md,
-      fs.readFileSync(join(__dirname, '../docs/prexty', post)).toString()
-    );
-
-    result[post] = parsed;
-  }
-
-  fs.writeFileSync(join(__dirname, '../src/pages/prexty.json'), JSON.stringify(result));
+  await buildDoc(md, 'guide', 'posts');
+  await buildDoc(md, 'prexty', 'prexty');
+  await buildDoc(md, 'plugins', 'plugins');
 }
 
 main();
+
+console.log('');

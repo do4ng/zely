@@ -27,6 +27,12 @@ To clone javascript template, add `--with-javascript` flag.
 
 ### react
 
+::: info
+
+React Template is only available in `create-prext-app`.
+
+:::
+
 To clone react template, add `--react` flag.
 
 ### All Commands

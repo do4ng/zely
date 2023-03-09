@@ -19,6 +19,15 @@ will be
 ["/", "/users", "/users/:id"]
 ```
 
+More examples:
+
+```txt
+/pages/index.ts => /
+/pages/dashboard.ts => /dashboard
+/pages/foo/bar.ts => /foo/bar
+/pages/user/$user.ts => /user/:user
+```
+
 ## Custom Path
 
 If you don't like routes based on filename, just export `$page`!
@@ -55,18 +64,83 @@ export function post(req, res) {}
 // etc...
 ```
 
-- `req.params`: page parameters.
-- ~~`req.query`: page query. <span style="color: red">(removed)</span>~~
-- etc...
+### request
+
+Prext Server is based on `node:http` module.
 
 > reference: [http.req](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/#request-body)
 
-- `res.json`: send json.
-- `res.end`: send data.
-- `res.setHeader`: set header.
-- etc...
+### req.params
+
+Page Parameters.
+
+- type: `any`
+- example: `/item/$id` => `req.params.id`
+
+```js
+export function get(req, res) {
+  res.end(`item: ${req.params.id}!`);
+}
+```
+
+### req.query
+
+Page Querystring.
+
+- type: `object`
+- example: `/abc?foo=bar` => `req.query.foo`
+
+### response
+
+Prext Server is based on `node:http` module.
 
 > reference: [http.res](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/#http-status-code)
+
+### res.json
+
+Send json data.
+
+```js
+export function get(req, res) {
+  res.json({ id: 1 });
+}
+```
+
+### res.end
+
+Send data
+
+```js
+export function get(req, res) {
+  res.end('Hello World!');
+}
+```
+
+### res.send
+
+Send data
+
+::: info
+
+same as "req.end"
+
+:::
+
+### res.setHeader
+
+Set header
+
+### res.status
+
+Set status
+
+- added: [1.0.0-beta.1](https://github.com/do4ng/prext/blob/main/packages/prext/CHANGELOG.md#100-beta1-2023-02-27)
+
+```js
+export function get(req, res) {
+  res.status(200).end('Hello World!');
+}
+```
 
 ## 404 page
 
