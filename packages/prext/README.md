@@ -8,6 +8,8 @@ Prext is a backend framework for Node.js
 
 > v1 is here! - [announcement](https://prext.netlify.app/guide/announce-v1)
 
+---
+
 ## Features
 
 - **🚧 File-based routing.** Prext.js creates routes automatically with filenames.
