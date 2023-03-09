@@ -10,6 +10,7 @@ import { Watch } from '../core/watch';
 import { exportServer } from '../export';
 import { error, info, warn } from '../logger';
 import { Prext } from '../server/index';
+import { showListen } from '../show-listen';
 
 const app = program('prext');
 
@@ -26,10 +27,7 @@ app
 
     try {
       (await Prext(config)).listen(port, () => {
-        console.log('\nServer is Running~!'.green);
-        console.log(` ${'├─'.gray} http://localhost:${String(port).cyan}`.bold);
-        console.log(` ${'└─'.gray} http://127.0.0.1:${String(port).cyan}`.bold);
-        console.log();
+        showListen(port);
 
         if (config?.watch?.enable === true || !config?.watch) {
           Watch(config);

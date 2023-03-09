@@ -42,6 +42,8 @@ export interface Config {
   allowAutoMiddlewares?: boolean;
 }
 
+export function showListen(port: string | number): void;
+
 export * from './config';
 export * from './constants';
 export * from './core';
