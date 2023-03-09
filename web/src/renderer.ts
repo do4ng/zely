@@ -31,7 +31,7 @@ class Announcement extends zit.ZitComponent {
         attributes: { class: 'announcement-card' },
       },
       zit.html`<div class="announcement-card-container">
-        <div class="announcement-card-title">Prext v1.0 is in beta!</div>
+        <div class="announcement-card-title">Prext v1.0 is live!</div>
         <div class="announcement-card-content">see Announcement!</div>
       </div></a>`
     )}`;
