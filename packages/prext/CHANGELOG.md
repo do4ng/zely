@@ -3,66 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.0.0-beta.7](https://github.com/do4ng/prext/compare/prext@1.0.0-beta.6...prext@1.0.0-beta.7) (2023-03-09)
-
+## [1.0.0](https://github.com/do4ng/prext/compare/prext@1.0.0-beta.6...prext@1.0.0-beta.7) (2023-03-09)
 
 ### New Features
 
-* add `showListen` ([7358401](https://github.com/do4ng/prext/commit/7358401048a9af6a226a7cff72413c849d0850c8))
-
-
+- add `showListen` ([7358401](https://github.com/do4ng/prext/commit/7358401048a9af6a226a7cff72413c849d0850c8))
 
 ## [1.0.0-beta.6](https://github.com/do4ng/prext/compare/prext@1.0.0-beta.5...prext@1.0.0-beta.6) (2023-03-05)
 
-
 ### Bug Fix
 
-* fixed 404 page handling ([cb4abcc](https://github.com/do4ng/prext/commit/cb4abcc32aeb666d016f49781ccf15202cff623a))
-
+- fixed 404 page handling ([cb4abcc](https://github.com/do4ng/prext/commit/cb4abcc32aeb666d016f49781ccf15202cff623a))
 
 ### Others
 
-* beautiful cli ([bf91957](https://github.com/do4ng/prext/commit/bf91957903ee611f074ad54c93810e8c2cbce4f0))
-
-
+- beautiful cli ([bf91957](https://github.com/do4ng/prext/commit/bf91957903ee611f074ad54c93810e8c2cbce4f0))
 
 ## [1.0.0-beta.5](https://github.com/do4ng/prext/compare/prext@1.0.0-beta.4...prext@1.0.0-beta.5) (2023-03-04)
 
-
 ### Others
 
-* clean code ([0222dd1](https://github.com/do4ng/prext/commit/0222dd193d726143c13ebf9f22b943918d593003))
-
-
+- clean code ([0222dd1](https://github.com/do4ng/prext/commit/0222dd193d726143c13ebf9f22b943918d593003))
 
 ## [1.0.0-beta.4](https://github.com/do4ng/prext/compare/prext@1.0.0-beta.3...prext@1.0.0-beta.4) (2023-03-04)
 
-
 ### Documentation
 
-* replace `create-prext-app` ([#12](https://github.com/do4ng/prext/issues/12)) ([4471776](https://github.com/do4ng/prext/commit/447177619e7fe8d567c2a797cea4d547363b2a3e))
-
+- replace `create-prext-app` ([#12](https://github.com/do4ng/prext/issues/12)) ([4471776](https://github.com/do4ng/prext/commit/447177619e7fe8d567c2a797cea4d547363b2a3e))
 
 ### Bug Fix
 
-* fixed 404 page bug ([f406b2d](https://github.com/do4ng/prext/commit/f406b2dba9286185e6f45fc6a675bd41df19ee81))
-
-
-
+- fixed 404 page bug ([f406b2d](https://github.com/do4ng/prext/commit/f406b2dba9286185e6f45fc6a675bd41df19ee81))
 
 ## [1.0.0-beta.3](https://github.com/do4ng/prext/compare/prext@1.0.0-beta.2...prext@1.0.0-beta.3) (2023-02-28)
 
-
 ### Documentation
 
-* update changelog ([2cb5ad4](https://github.com/do4ng/prext/commit/2cb5ad4496a400afb0ae1314623ed9f2f3a853f2))
-
+- update changelog ([2cb5ad4](https://github.com/do4ng/prext/commit/2cb5ad4496a400afb0ae1314623ed9f2f3a853f2))
 
 ### Others
 
-* s to ms ([d1de2ce](https://github.com/do4ng/prext/commit/d1de2ce7e3f748756bbabc12a6ebbc50ecfe9b85))
-
-
+- s to ms ([d1de2ce](https://github.com/do4ng/prext/commit/d1de2ce7e3f748756bbabc12a6ebbc50ecfe9b85))
 
 ## [1.0.0-beta.2](https://github.com/do4ng/prext/compare/prext@0.2.0...prext@1.0.0-beta.2) (2023-02-28)
 
