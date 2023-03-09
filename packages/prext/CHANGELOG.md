@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0-beta.7](https://github.com/do4ng/prext/compare/prext@1.0.0-beta.6...prext@1.0.0-beta.7) (2023-03-09)
+
+
+### New Features
+
+* add `showListen` ([7358401](https://github.com/do4ng/prext/commit/7358401048a9af6a226a7cff72413c849d0850c8))
+
+
+
 ## [1.0.0-beta.6](https://github.com/do4ng/prext/compare/prext@1.0.0-beta.5...prext@1.0.0-beta.6) (2023-03-05)
 
 
