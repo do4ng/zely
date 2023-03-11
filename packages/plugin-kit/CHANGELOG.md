@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/do4ng/prext/compare/@prext/plugin-kit@0.2.2...@prext/plugin-kit@0.2.3) (2023-03-11)
+
+
+### Others
+
+* fixed dep version ([fb5156b](https://github.com/do4ng/prext/commit/fb5156badca1c5d20ff5ec4d381bd954ed0f0f78))
+
+
+
 ## [0.2.2](https://github.com/do4ng/prext/compare/@prext/plugin-kit@0.2.1...@prext/plugin-kit@0.2.2) (2023-02-27)
 
 

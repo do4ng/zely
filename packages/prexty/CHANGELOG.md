@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/do4ng/prext/compare/prexty@1.1.4...prexty@1.1.5) (2023-03-11)
+
+
+### Others
+
+* fixed dep version ([7d13bab](https://github.com/do4ng/prext/commit/7d13babb051dc809fd7286384ecee9cb928470b8))
+
+
+
 ## [1.1.4](https://github.com/do4ng/prext/compare/prexty@1.1.2...prexty@1.1.4) (2023-02-27)
 
 

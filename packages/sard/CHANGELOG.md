@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.0-beta.1](https://github.com/do4ng/prext/compare/sard.js@0.2.0-beta.0...sard.js@0.2.0-beta.1) (2023-03-11)
+
+
+### Others
+
+* fixed typescript ([5c05558](https://github.com/do4ng/prext/commit/5c0555833c8ef862ec171da07865105ec8f0dec8))
+
+
+
 ## [0.2.0-beta.0](https://github.com/do4ng/prext/compare/sard.js@0.1.2-beta.3...sard.js@0.2.0-beta.0) (2023-03-04)
 
 
