@@ -19,16 +19,14 @@ export type FileData = {
 
 export type Middleware = (req: SardRequest, res: SardResponse) => void;
 
-export type HandlerType = (
-  req: SardRequest,
-  res: SardResponse,
-  routes: {
-    file: string;
-    m: any;
-    modulePath: string;
-    type: string;
-  }[]
-) => void;
+export type Routes = {
+  file: string;
+  m: any;
+  modulePath: string;
+  type: string;
+}[];
+
+export type HandlerType = (req: SardRequest, res: SardResponse, routes: Routes) => void;
 
 export interface Plugin {
   name: string;

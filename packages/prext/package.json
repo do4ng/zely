@@ -48,6 +48,7 @@
     "sard.js": "latest"
   },
   "devDependencies": {
+    "@prext/plugin-cors": "*",
     "prext-analyst": "latest"
   }
 }

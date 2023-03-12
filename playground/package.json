@@ -3,11 +3,15 @@
   "version": "1.2.4",
   "devDependencies": {
     "@prext/plugin-kit": "0.2.3",
+    "cors": "^2.8.5",
     "prext": "1.0.1",
     "prexty": "1.1.5"
   },
   "scripts": {
     "dev": "prext dev",
     "build": "prext build"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
   }
 }
