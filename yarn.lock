@@ -1306,6 +1306,11 @@
   dependencies:
     esquery "^1.0.1"
 
+"@prext/plugin-cors@^0.0.0":
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/@prext/plugin-cors/-/plugin-cors-0.0.0.tgz#93b43a9b70bf7e82acc79c63aa98def4a90db4b8"
+  integrity sha512-nczV+rE3PuuyDo61a7HZQOCI9CtoTumZ8eY2TmYRkWe8WD8hIrTyWq/aiK9ELodQpCOpWFR8Q11s2rUVtAq9kA==
+
 "@sinclair/typebox@^0.25.16":
   version "0.25.24"
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.25.24.tgz#8c7688559979f7079aacaf31aa881c3aa410b718"
