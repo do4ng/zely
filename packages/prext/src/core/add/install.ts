@@ -8,23 +8,23 @@ export function installEngine() {
   return 'npm';
 }
 
-export function installDependencies(devDependencies: string[]): Promise<void> {
+export function installDependencies(devDependencies: string[] = []): Promise<void> {
   return new Promise((resolve) => {
     if (installEngine() === 'yarn') {
-      const pro = spawn(`${/^win/.test(process.platform) ? 'yarn.cmd' : 'yarn'}`, [
-        'add',
-        '-D',
-        devDependencies.join(' '),
-      ]);
+      const pro = spawn(
+        `${/^win/.test(process.platform) ? 'yarn.cmd' : 'yarn'}`,
+        ['add', '-D', ...devDependencies],
+        { cwd: process.cwd() }
+      );
       pro.on('exit', () => {
         resolve();
       });
     } else {
-      const pro = spawn(`${/^win/.test(process.platform) ? 'npm.cmd' : 'npm'}`, [
-        'i',
-        '--save-dev',
-        devDependencies.join(' '),
-      ]);
+      const pro = spawn(
+        `${/^win/.test(process.platform) ? 'npm.cmd' : 'npm'}`,
+        ['i', '--save-dev', ...devDependencies],
+        { cwd: process.cwd() }
+      );
 
       pro.on('exit', () => {
         resolve();
