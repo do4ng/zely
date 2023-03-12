@@ -6,6 +6,7 @@ import { performance } from 'perf_hooks';
 
 import pkg from '../../package.json';
 import { getConfig } from '../config';
+import { add } from '../core/add';
 import { Watch } from '../core/watch';
 import { exportServer } from '../export';
 import { error, info, warn } from '../logger';
@@ -65,6 +66,17 @@ app
           '$'.grey
         } npm i --save-dev prext-analyst\n`
       );
+    }
+  });
+
+app
+  .command('add')
+  .describe('Add Plugin')
+  .action(async (command) => {
+    try {
+      add(command);
+    } catch (e) {
+      error(e);
     }
   });
 
