@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.5](https://github.com/do4ng/prext/compare/playground@1.2.4...playground@1.2.5) (2023-03-12)
+
+
+### Others
+
+* **deps:** cors ([8ac5720](https://github.com/do4ng/prext/commit/8ac5720c6de4e914d540e07c3aea61737dbc4239))
+
+
+
 ## [1.2.4](https://github.com/do4ng/prext/compare/playground@1.2.3...playground@1.2.4) (2023-03-11)
 
 **Note:** Version bump only for package playground

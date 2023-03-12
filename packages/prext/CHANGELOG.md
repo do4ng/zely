@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.0](https://github.com/do4ng/prext/compare/prext@1.0.1...prext@1.1.0) (2023-03-12)
+
+
+### New Features
+
+* "add" feature ([3f6b261](https://github.com/do4ng/prext/commit/3f6b26102658e76a06001926b10070e34e6e4c9a))
+
+
+### Others
+
+* **deps:** cors ([8ac5720](https://github.com/do4ng/prext/commit/8ac5720c6de4e914d540e07c3aea61737dbc4239))
+
+
+
 ## [1.0.1](https://github.com/do4ng/prext/compare/prext@1.0.0-beta.7...prext@1.0.1) (2023-03-11)
 
 
