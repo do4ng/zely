@@ -56,6 +56,8 @@ export function handles(
       if (page.type === 'html') {
         // html
 
+        isSended = true;
+
         res.setHeader('Content-Type', 'text/html');
         res.end(page.m);
       } else {
@@ -99,7 +101,7 @@ export function handles(
   });
 
   // 404
-  if (!isSended) {
+  if (!isSended && res.writable) {
     if (config.error) config.error(req, res);
     else res.statusCode = 404;
   }
