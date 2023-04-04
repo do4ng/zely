@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.6](https://github.com/do4ng/prext/compare/playground@1.2.5...playground@1.2.6) (2023-04-04)
+
+
+### Others
+
+* preview mode ([553dc61](https://github.com/do4ng/prext/commit/553dc61d74c728a3eb21d86f05735f41f76a8e9b))
+* preview mode ([f97b2b7](https://github.com/do4ng/prext/commit/f97b2b7d900bc0b0fffd064a6d266dc0e3dd0cda))
+
+
+
 ## [1.2.5](https://github.com/do4ng/prext/compare/playground@1.2.4...playground@1.2.5) (2023-03-12)
 
 

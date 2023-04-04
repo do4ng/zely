@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/do4ng/prext/compare/sard.js@0.2.0-beta.1...sard.js@0.2.2) (2023-04-04)
+
+
+### Documentation
+
+* deprecated ([7cd2465](https://github.com/do4ng/prext/commit/7cd2465da964baa2bfe89cd53a77d2f2b77c1c8e))
+
+
+
 ## [0.2.0-beta.1](https://github.com/do4ng/prext/compare/sard.js@0.2.0-beta.0...sard.js@0.2.0-beta.1) (2023-03-11)
 
 

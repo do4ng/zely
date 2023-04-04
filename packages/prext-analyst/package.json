@@ -1,9 +1,9 @@
 {
   "name": "prext-analyst",
-  "version": "0.1.0-beta.5",
+  "version": "0.1.0-beta.6",
   "dependencies": {
     "colors": "^1.4.0",
-    "prext": "1.1.0"
+    "prext": "1.2.0"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",

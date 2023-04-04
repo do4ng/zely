@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/do4ng/prext/compare/prext@1.1.0...prext@1.2.0) (2023-04-04)
+
+
+### New Features
+
+* preview mode ([c6b69f9](https://github.com/do4ng/prext/commit/c6b69f975c97f4f6a7d3d0ad4abd2202f220d7cb))
+
+
+### Bug Fix
+
+* fixed 404 page error ([5e91d8c](https://github.com/do4ng/prext/commit/5e91d8c745b1c2d0d841ad02354937d0d929d8d8))
+* fixed install error ([a6646b2](https://github.com/do4ng/prext/commit/a6646b2563dd13261d4c80026e7d263650f1f878))
+
+
+### Others
+
+* **deps:** osik, etc modules ([818cbd9](https://github.com/do4ng/prext/commit/818cbd9598e6fbf13a1075f5dbcaedfe34856a66))
+* rewrite core with osik ([#17](https://github.com/do4ng/prext/issues/17)) ([c126697](https://github.com/do4ng/prext/commit/c1266973f1b5fdd0cdfd19e149c1e9d30119ebb2))
+* rewrite declaration with osik ([#17](https://github.com/do4ng/prext/issues/17)) ([11e0bfa](https://github.com/do4ng/prext/commit/11e0bfa2472e6d695c60129133d68feedf68275b))
+
+
+
 ## [1.1.0](https://github.com/do4ng/prext/compare/prext@1.0.1...prext@1.1.0) (2023-03-12)
 
 
