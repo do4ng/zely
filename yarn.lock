@@ -1306,11 +1306,6 @@
   dependencies:
     esquery "^1.0.1"
 
-"@prext/plugin-cors@^0.0.0":
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/@prext/plugin-cors/-/plugin-cors-0.0.0.tgz#93b43a9b70bf7e82acc79c63aa98def4a90db4b8"
-  integrity sha512-nczV+rE3PuuyDo61a7HZQOCI9CtoTumZ8eY2TmYRkWe8WD8hIrTyWq/aiK9ELodQpCOpWFR8Q11s2rUVtAq9kA==
-
 "@sinclair/typebox@^0.25.16":
   version "0.25.24"
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.25.24.tgz#8c7688559979f7079aacaf31aa881c3aa410b718"
@@ -2486,14 +2481,6 @@ core-util-is@~1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.3.tgz#a6042d3634c2b27e9328f837b965fac83808db85"
   integrity sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==
-
-cors@^2.8.5:
-  version "2.8.5"
-  resolved "https://registry.yarnpkg.com/cors/-/cors-2.8.5.tgz#eac11da51592dd86b9f06f6e7ac293b3df875d29"
-  integrity sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==
-  dependencies:
-    object-assign "^4"
-    vary "^1"
 
 cosmiconfig-typescript-loader@^4.0.0:
   version "4.3.0"
@@ -5590,11 +5577,6 @@ nx@15.7.2, "nx@>=15.5.2 < 16":
     "@nrwl/nx-win32-arm64-msvc" "15.7.2"
     "@nrwl/nx-win32-x64-msvc" "15.7.2"
 
-object-assign@^4:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
-  integrity sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==
-
 object-inspect@^1.12.2, object-inspect@^1.9.0:
   version "1.12.3"
   resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.12.3.tgz#ba62dffd67ee256c8c086dfae69e016cd1f198b9"
@@ -5687,6 +5669,11 @@ os-tmpdir@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
   integrity sha512-D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g==
+
+osik@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/osik/-/osik-0.0.2.tgz#7a047db8b89f4377fc0bec544b0fa17ee05eaabd"
+  integrity sha512-5D98yJiYZwtjiHxFpILkC6GGmhCezClYLj2ykhVrrWG9TvwN4UpVZq4jQUHEtvGlE3ybB7zwLmCYqWG442dVQQ==
 
 p-finally@^1.0.0:
   version "1.0.0"
@@ -6373,13 +6360,6 @@ safe-regex-test@^1.0.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
-
-sard.js@latest:
-  version "0.1.2-beta.3"
-  resolved "https://registry.yarnpkg.com/sard.js/-/sard.js-0.1.2-beta.3.tgz#23c96ee325ef54bd92006395a12ad8fec61e6f60"
-  integrity sha512-9RksSOdkfdG/YzYCvN9JiTGr54PYQgZiuz0zunCJ6o4GaQYS8s8+kTHSSy0wYzL4Oiv4OdavGhdL/Wkq7LWJ4w==
-  dependencies:
-    colors "^1.4.0"
 
 sass@^1.56.0:
   version "1.58.3"
@@ -7071,11 +7051,6 @@ validate-npm-package-name@^3.0.0:
   integrity sha512-M6w37eVCMMouJ9V/sdPGnC5H4uDr73/+xdq0FBLO3TFFX1+7wiUY6Es328NN+y43tmY+doUdN9g9J21vqB7iLw==
   dependencies:
     builtins "^1.0.3"
-
-vary@^1:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
-  integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
 
 vite@^3.2.3:
   version "3.2.5"
