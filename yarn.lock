@@ -1291,6 +1291,11 @@
   dependencies:
     "@octokit/openapi-types" "^16.0.0"
 
+"@osik/path-regexp@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@osik/path-regexp/-/path-regexp-0.0.1.tgz#38a8f27dc37230251d4d522ec183c288dcac0658"
+  integrity sha512-A5b+nXY4Qg95T0P9RNTyBxPOh2ghKRoW3qtYXtSFo06x3/aMd+BaryVCegk5hReOY/a4zroPca3ndoS7YgGWGA==
+
 "@parcel/watcher@2.0.4":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@parcel/watcher/-/watcher-2.0.4.tgz#f300fef4cc38008ff4b8c29d92588eced3ce014b"

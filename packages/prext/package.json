@@ -11,7 +11,8 @@
   },
   "files": [
     "dist",
-    "types"
+    "types",
+    "assets"
   ],
   "exports": {
     ".": {
@@ -45,9 +46,10 @@
     "chokidar": "^3.5.3",
     "esbuild": "^0.17.6",
     "esbuild-node-externals": "^1.6.0",
-    "sard.js": "latest"
+    "osik": "^0.0.2"
   },
   "devDependencies": {
+    "@osik/path-regexp": "^0.0.1",
     "@prext/plugin-cors": "0.1.0",
     "prext-analyst": "latest"
   }
