@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 import program from 'animaux';
+import { readFileSync, writeFileSync } from 'fs';
+import { join } from 'path';
 
 import { performance } from 'perf_hooks';
 
@@ -75,6 +77,25 @@ app
   .action(async (command) => {
     try {
       add(command);
+    } catch (e) {
+      error(e);
+    }
+  });
+
+app
+  .command('preview')
+  .describe('generate Preview Server')
+  .action(async () => {
+    try {
+      const file = readFileSync(join(__dirname, '../assets/preview.js'));
+      writeFileSync('prext.preview.js', file);
+
+      console.log();
+      console.log('Preview executable file has been created.'.green);
+      console.log();
+      console.log('Please enter the command below'.gray);
+      console.log(`${'$'.gray} node prext.preview.js`);
+      console.log();
     } catch (e) {
       error(e);
     }
