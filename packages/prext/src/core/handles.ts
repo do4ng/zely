@@ -1,5 +1,6 @@
 import url from 'url';
-import { pathToRegexp, SardRequest, SardResponse } from 'sard.js';
+import { Request, Response } from 'osik';
+import { pathToRegexp } from '@osik/path-regexp';
 import { existsSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { CACHE_DIRECTORY } from '../constants';
@@ -8,8 +9,8 @@ import { error } from '../logger';
 import { Config } from '../config';
 
 export function handles(
-  req: SardRequest,
-  res: SardResponse,
+  req: Request,
+  res: Response,
   routes: {
     file: string;
     m: any;
@@ -77,6 +78,8 @@ export function handles(
             );
 
             // assign parameters.
+
+            if (!req.params) req.params = {};
 
             params.forEach((param, index) => {
               req.params[param] = execd[index + 1] || null;

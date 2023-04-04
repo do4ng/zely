@@ -8,49 +8,9 @@ import { WatchOptions } from 'chokidar';
 import { CACHE_DIRECTORY, DEFAULT_CONFIG } from './constants';
 import { typescriptLoader } from './loader';
 
-export type FileType = 'html' | 'module';
+import type { Config, Plugin, FileData } from '../types/index.d';
 
-export type FileData = {
-  file: string;
-  m: any;
-  type: FileType;
-  modulePath: string;
-};
-
-export type Middleware = (req: SardRequest, res: SardResponse) => void;
-
-export type Routes = {
-  file: string;
-  m: any;
-  modulePath: string;
-  type: string;
-}[];
-
-export type HandlerType = (req: SardRequest, res: SardResponse, routes: Routes) => void;
-
-export interface Plugin {
-  name: string;
-  transform?: (id: string, code: string) => FileData;
-  server?: (server: Server) => void;
-}
-
-export interface Config {
-  port?: number;
-  routes?: string;
-  middlewares?: Middleware[];
-  base?: string;
-  handler?: HandlerType;
-  esbuild?: BuildOptions;
-  plugins?: Plugin[];
-  watch?: {
-    enable: boolean;
-    options?: WatchOptions;
-  };
-  build?: {};
-  error?(req: SardRequest, res: SardResponse): void | Promise<void>;
-  middlewareDirectory?: string;
-  allowAutoMiddlewares?: boolean;
-}
+export { Config, Plugin, FileData };
 
 export function assign(c: Config): Config {
   return {

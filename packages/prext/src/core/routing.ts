@@ -1,6 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { join, parse, relative } from 'path';
-import { SardRequest, SardResponse } from 'sard.js';
+import { Request, Response } from 'osik';
 import { Config, FileData } from '../config';
 import { CACHE_DIRECTORY, CACHE_FILE, CACHE_VERSION } from '../constants';
 import { typescriptLoader } from '../loader';
@@ -18,7 +18,7 @@ export async function getPages(config: Config): Promise<FileData> {
 
     if (cacheFile.__CACHE_VERSION === CACHE_VERSION.toString()) __cache = cacheFile;
   } else {
-    success('success to create page cache file.');
+    success('success to create page cache file.\n');
   }
 
   const cache = new Map(Object.entries(__cache));
@@ -144,7 +144,7 @@ export function filenameToRoute(map: Array<FileData>) {
   });
 }
 
-export async function Handler(req: SardRequest, res: SardResponse, config: Config) {
+export async function Handler(req: Request, res: Response, config: Config) {
   try {
     const pages = await getPages(config);
     const routes = filenameToRoute(pages as any);

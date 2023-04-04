@@ -1,15 +1,15 @@
 import { rmSync } from 'fs';
-import { Server, server } from 'sard.js';
+import { OsikServer, osik } from 'osik';
 import { Config } from '../config';
 import { CACHE_DIRECTORY } from '../constants';
 import { Handler } from '../core';
 import { kit } from '../plugins/kit';
 import { loadMiddlewares } from './load-middlewares';
 
-export async function Prext(config: Config): Promise<Server> {
+export async function Prext(config: Config): Promise<OsikServer> {
   rmSync(CACHE_DIRECTORY, { recursive: true, force: true });
 
-  const app = server({ logging: false });
+  const app = osik(config.osik);
 
   // plugins
 
@@ -38,7 +38,7 @@ export async function Prext(config: Config): Promise<Server> {
 
   // handle
 
-  app.all('*', (req, res) => {
+  app.use((req, res) => {
     Handler(req, res, config);
   });
 

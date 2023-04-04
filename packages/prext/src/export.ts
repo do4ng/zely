@@ -9,9 +9,8 @@ import { success } from './logger';
 
 export function exportsCode(config: Config) {
   return {
-    import:
-      'var { handles } = require("prext/server");var { server } = require("sard.js");',
-    init: 'var app = server();',
+    import: 'var { handles } = require("prext/server");var { osik } = require("osik");',
+    init: 'var app = osik();',
     listen: `app.listen(${config.port}, () => {console.log("Prext Server is running.".grey + " - " + "http://localhost:${config.port}".cyan)});`,
   };
 }
@@ -65,7 +64,7 @@ ${code.import}
 ${code.init}
 const prext_pages = [${pagesJSONCode.join(',')}];
 (__userconfig.default.middlewares || []).forEach((middleware) => app.use(middleware));
-app.all("*", (req,res) => {handles(req,res, prext_pages)});
+app.use((req,res) => {handles(req,res, prext_pages)});
 ${code.listen}`
   );
 

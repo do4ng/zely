@@ -1,6 +1,6 @@
 import { WatchOptions } from 'chokidar';
 import { BuildOptions } from 'esbuild';
-import { Request, Response, OsikServer } from 'osik';
+import { Request, Response, OsikServer, ServerOptions } from 'osik';
 import { FileData } from './core';
 
 export type Middleware = (req: Request, res: Response, next: any) => void;
@@ -36,6 +36,10 @@ export interface Config {
 
   middlewareDirectory?: string;
   allowAutoMiddlewares?: boolean;
+
+  // osik options
+
+  osik?: ServerOptions;
 }
 
 export function showListen(port: string | number): void;
