@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/do4ng/prext/compare/prext@1.2.0...prext@1.2.3) (2023-04-04)
+
+
+### Others
+
+* **release:** publish 1.2.2 ([ecb441b](https://github.com/do4ng/prext/commit/ecb441b9b2fa5a6cd876a4330945bede26109221))
+
+
+### Bug Fix
+
+* fixed export html bugs ([3a26288](https://github.com/do4ng/prext/commit/3a262886a00b1a1e469d0a9fbe7647a96c922d81))
+
+
+
 ## [1.2.0](https://github.com/do4ng/prext/compare/prext@1.1.0...prext@1.2.0) (2023-04-04)
 
 
