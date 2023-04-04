@@ -1,8 +1,8 @@
-import { SardRequest, SardResponse } from 'sard.js';
+import { Request, Response } from 'osik';
 
 export function handles(
-  req: SardRequest,
-  res: SardResponse,
+  req: Request,
+  res: Response,
   routes: {
     file: string;
     m: any;

@@ -1,22 +1,18 @@
 import { WatchOptions } from 'chokidar';
 import { BuildOptions } from 'esbuild';
-import { SardRequest, SardResponse, Server } from 'sard.js';
+import { Request, Response, OsikServer } from 'osik';
 import { FileData } from './core';
 
-export type Middleware = (req: SardRequest, res: SardResponse, next: any) => void;
+export type Middleware = (req: Request, res: Response, next: any) => void;
 
-export type HandlerType = (
-  req: SardRequest,
-  res: SardResponse,
-  routes: FileData[]
-) => void;
+export type HandlerType = (req: Request, res: Response, routes: FileData[]) => void;
 
 export type PluginOutput = FileData | null | undefined | void;
 
 export interface Plugin {
   name: string;
   transform?: (id: string, code: string) => PluginOutput | Promise<PluginOutput>;
-  server?: (server: Server) => void;
+  server?: (server: OsikServer) => void;
 }
 
 export interface Config {
@@ -34,7 +30,7 @@ export interface Config {
   build?: {};
   // https://github.com/do4ng/prext/issues/7
   // error handling
-  error?(req: SardRequest, res: SardResponse): void | Promise<void>;
+  error?(req: Request, res: Response): void | Promise<void>;
 
   // auto middleware
 
@@ -49,3 +45,4 @@ export * from './constants';
 export * from './core';
 export * from './server';
 export * from './method';
+export * from './dependencies';

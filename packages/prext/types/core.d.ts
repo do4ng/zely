@@ -1,4 +1,4 @@
-import { SardRequest, SardResponse } from 'sard.js';
+import { Request, Response } from 'osik';
 import { Config, PrextRequest, PrextResponse } from '.';
 
 /*
@@ -20,15 +20,11 @@ export function getPages(config: Config): Promise<FileData[]>;
 
 export function filenameToRoute(map: FileData[]): FileData[];
 
-export function Handler(
-  req: SardRequest,
-  res: SardResponse,
-  config: Config
-): Promise<void>;
+export function Handler(req: Request, res: Response, config: Config): Promise<void>;
 
 export function handles(
-  req: SardRequest,
-  res: SardResponse,
+  req: Request,
+  res: Response,
   routes: FileData[],
   config: Config
 ): void;

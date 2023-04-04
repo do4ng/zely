@@ -1,5 +1,5 @@
-import { Server } from 'sard.js';
+import { OsikServer } from 'osik';
 
 import { Config } from '.';
 
-export function Prext(config: Config): Promise<Server>;
+export function Prext(config: Config): Promise<OsikServer>;
