@@ -2,7 +2,7 @@
 
 ## Using tool
 
-You can create prext application easily with [create-prext-app](https://npmjs.com/package/create-prext-app).
+You can create prext application easily with [create-prext](https://npmjs.com/package/create-prext).
 
 ---
 
@@ -26,9 +26,15 @@ You can create prext application easily with [create-prext-app](https://npmjs.co
 
 ## Manual Installation
 
+You can also add prext to a project that already exists.
+
+Enter the command below:
+
 ```bash
 > npm install --save-dev prext
 ```
+
+Add the configuration file (`prext.config.ts`).
 
 ```js
 // prext.config.ts

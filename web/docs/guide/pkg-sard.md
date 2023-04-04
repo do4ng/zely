@@ -5,6 +5,10 @@
 
 Sard.js is a tiny Http Server Module. It was made for speed and size.
 
+::: warning
+no longer update. use [osik](https://github.com/do4ng/osik) instead
+:::
+
 ## Features
 
 - **Very** tiny. (`10.5 kB (in v0.1.1)`)

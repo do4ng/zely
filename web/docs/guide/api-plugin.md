@@ -1,5 +1,7 @@
 # Plugin
 
+A plugin document has been created. [visit here!](/plugins/introduction)
+
 ---
 
 1. **Example** Simple Plugin
