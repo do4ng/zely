@@ -1,6 +1,6 @@
 # Sard.js
 
-> This package is very experimental.
+> no longer update. use [osik](https://github.com/do4ng/osik) instead
 
 Very Tiny Http Server Module
 
