@@ -6,7 +6,7 @@ import { kitMiddleware } from '../plugins/kit';
 import { loadMiddlewares } from './load-middlewares';
 import { CACHE_DIRECTORY } from '../constants';
 
-export async function generateMiddleware(config: Config): Promise<pureMiddleware[]> {
+export async function middleware(config: Config): Promise<pureMiddleware[]> {
   if (!config.server?.middlewareMode) {
     error(
       'This function is not available when config.server.middlewareMode is disabled.'

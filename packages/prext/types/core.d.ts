@@ -41,4 +41,4 @@ export interface Page {
   path?: string;
 }
 
-export function generateMiddleware(config: Config): Promise<pureMiddleware[]>;
+export function middleware(config: Config): Promise<pureMiddleware[]>;
