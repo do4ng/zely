@@ -8,9 +8,9 @@ import { WatchOptions } from 'chokidar';
 import { CACHE_DIRECTORY, DEFAULT_CONFIG } from './constants';
 import { typescriptLoader } from './loader';
 
-import type { Config, Plugin, FileData } from '../types/index.d';
+import type { Config, Plugin, FileData, pureMiddleware } from '../types/index.d';
 
-export { Config, Plugin, FileData };
+export { Config, Plugin, FileData, pureMiddleware };
 
 export function assign(c: Config): Config {
   return {

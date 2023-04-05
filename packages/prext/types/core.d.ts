@@ -1,5 +1,5 @@
 import { Request, Response } from 'osik';
-import { Config, PrextRequest, PrextResponse } from '.';
+import { Config, PrextRequest, PrextResponse, pureMiddleware } from '.';
 
 /*
 
@@ -40,3 +40,5 @@ export interface Page {
   after?(req: PrextRequest, res: PrextResponse): void | Promise<void>;
   path?: string;
 }
+
+export function generateMiddleware(config: Config): Promise<pureMiddleware[]>;

@@ -1,6 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { join, parse, relative } from 'path';
-import { Request, Response } from 'osik';
+import { IncomingMessage, ServerResponse } from 'http';
 import { Config, FileData } from '../config';
 import { CACHE_DIRECTORY, CACHE_FILE, CACHE_VERSION } from '../constants';
 import { typescriptLoader } from '../loader';
@@ -144,7 +144,7 @@ export function filenameToRoute(map: Array<FileData>) {
   });
 }
 
-export async function Handler(req: Request, res: Response, config: Config) {
+export async function Handler(req: IncomingMessage, res: ServerResponse, config: Config) {
   try {
     const pages = await getPages(config);
     const routes = filenameToRoute(pages as any);

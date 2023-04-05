@@ -1,5 +1,5 @@
 import url from 'url';
-import { Request, Response } from 'osik';
+import { IncomingMessage, ServerResponse } from 'http';
 import { pathToRegexp } from '@osik/path-regexp';
 import { existsSync, readFileSync } from 'fs';
 import { join } from 'path';
@@ -9,8 +9,8 @@ import { error } from '../logger';
 import { Config } from '../config';
 
 export function handles(
-  req: Request,
-  res: Response,
+  req: IncomingMessage,
+  res: ServerResponse,
   routes: {
     file: string;
     m: any;

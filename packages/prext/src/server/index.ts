@@ -9,7 +9,7 @@ import { loadMiddlewares } from './load-middlewares';
 export async function Prext(config: Config): Promise<OsikServer> {
   rmSync(CACHE_DIRECTORY, { recursive: true, force: true });
 
-  const app = osik(config.osik);
+  const app = osik(config.server?.osik);
 
   // plugins
 

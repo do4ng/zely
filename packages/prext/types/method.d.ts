@@ -1,6 +1,5 @@
 import { Request, Response } from 'osik';
 import './';
-import 'sard.js';
 
 export interface PrextRequest extends Request {
   query: object;
