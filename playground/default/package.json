@@ -2,9 +2,9 @@
   "name": "playground",
   "version": "1.2.6",
   "devDependencies": {
-    "@prext/plugin-kit": "0.2.5",
-    "prext": "1.2.0",
-    "prexty": "1.1.7"
+    "@prext/plugin-kit": "*",
+    "prext": "*",
+    "prexty": "*"
   },
   "scripts": {
     "dev": "prext dev",
