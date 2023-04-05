@@ -94,7 +94,7 @@ app
       console.log('Preview executable file has been created.'.green);
       console.log();
       console.log('Please enter the command below'.gray);
-      console.log(`${'$'.gray} node prext.preview.js`);
+      console.log(`${'$'.gray} node ./prext.preview.js`);
       console.log();
     } catch (e) {
       error(e);
