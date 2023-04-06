@@ -1,9 +1,9 @@
 <section align="center">
   <h1>🛰️ prext</h1>
   
-[![FOSSA Status](fossa-link)](fossa-img)
-[![download-badge](download-link)](download-img)
-[![version](download-link)](version-badge)
+[![FOSSA Status](https://app.fossa.com/projects/git%2Bgithub.com%2Fdo4ng%2Fprext?ref=badge_small)](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdo4ng%2Fprext.svg?type=small)
+[![download-badge](https://www.npmjs.com/search?q=prext)](https://img.shields.io/npm/dt/prext.svg)
+[![version](dhttps://www.npmjs.com/search?q=prext)](https://img.shields.io/npm/v/prext)
 
 Prext is a backend framework for Node.js
 
@@ -55,7 +55,8 @@ export default defineConfig({
 MIT
 
 [download-link]: https://www.npmjs.com/search?q=prext
-[fossa-link]: https://app.fossa.com/projects/git%2Bgithub.com%2Fdo4ng%2Fprext?ref=badge_small
-[download-img]: https://img.shields.io/npm/dt/prext.svg
-[fossa-img]: https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdo4ng%2Fprext.svg?type=small
-[version-badge]: https://img.shields.io/npm/v/prext
+
+[fossa-link]:
+[download-img]:
+[fossa-img]:
+[version-badge]:
