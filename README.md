@@ -1,9 +1,11 @@
 <section align="center">
   <h1>🛰️ prext</h1>
   
-[![FOSSA Status](fossa-img)](fossa-link)
-[![download-badge](download-img)](download-link)
-[![version](version-badge)](download-link)
+[![FOSSA Status][fossa-img]][fossa-link]
+
+[![]()]()
+[![download-badge][download-img]][download-link]
+[![version][version-badge]][download-link]
 
 Prext is a backend framework for Node.js
 
