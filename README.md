@@ -7,6 +7,8 @@
 </section>
 
 ## Features
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdo4ng%2Fprext.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdo4ng%2Fprext?ref=badge_shield)
+
 
 - **🚧 File-based routing.** Prext.js creates routes automatically with filenames.
 - **🚀 Server Reload.** You don't have to restart server to apply changes.
@@ -48,3 +50,6 @@ export default defineConfig({
 ## License
 
 MIT
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdo4ng%2Fprext.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdo4ng%2Fprext?ref=badge_large)
