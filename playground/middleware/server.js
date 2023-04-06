@@ -4,7 +4,7 @@ const prext = require('prext');
 async function main() {
   const app = osik.osik();
 
-  const middlewares = await prext.generateMiddleware(await prext.getConfig());
+  const middlewares = await prext.middleware(await prext.getConfig());
   console.log(middlewares);
   app.use(...middlewares);
 
