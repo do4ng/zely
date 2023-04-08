@@ -36,7 +36,8 @@
     "lint-fix": "eslint --fix --ext .js,.ts .",
     "release": "yarn lerna version",
     "publish": "node scripts/publish.js",
-    "docs:dev": "cd docs && yarn dev"
+    "docs:dev": "cd docs && yarn dev",
+    "docs:build": "cd docs && yarn build"
   },
   "version": "0.0.0"
 }
