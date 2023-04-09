@@ -34,4 +34,4 @@ Taking express as an example again, I want to create an sns backend system, but 
 
 ### Solution
 
-Prext solves these problems. It has many characteristics such as file based routing, fastest server, etc,
+Prext solves these problems. It has many features such as file based routing, fastest server, etc,
