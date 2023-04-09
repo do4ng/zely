@@ -12,8 +12,9 @@ export const $page = {};
 
 Provide custom path.
 
-```ts
-// pages/my-about.ts
+::: code-group
+
+```ts [page/my-about.ts]
 export function get(req, res) {
   res.end('About Page');
 }
@@ -22,6 +23,8 @@ export const $page = {
   path: '/about',
 };
 ```
+
+:::
 
 ---
 

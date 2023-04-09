@@ -4,8 +4,9 @@
 
 1. **Example** Simple Plugin
 
-```ts
-// plugins/simple.ts
+::: code-group
+
+```ts [plugins/simple.ts]
 import { Plugin } from 'prext';
 
 export function SimplePlugin(): Plugin {
@@ -15,7 +16,11 @@ export function SimplePlugin(): Plugin {
 }
 ```
 
-```ts
+:::
+
+::: code-group
+
+```ts [prext.config.ts]
 // prext.config.ts
 import { defineConfig } from 'prext/config';
 import { SimplePlugin } from './plugins/simple';
@@ -25,11 +30,11 @@ export default defineConfig({
 });
 ```
 
-2. custom html loader
+:::
 
 ---
 
-3. transform guide
+2. transform guide
 
 ```ts
 export function MyPlugin(): Plugin {
@@ -66,7 +71,7 @@ export function MyPlugin(): Plugin {
 }
 ```
 
-4. server guide
+3. server guide
 
 You can apply middlewares or custom handlers.
 

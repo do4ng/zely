@@ -22,25 +22,32 @@ $ npx create-prext
 
 ## Migrantion from Javascript
 
-```diff
-// pages/index.ts
+::: code-group
 
-+ import { PrextRequest, PrextResponse } from 'prext';
+```ts [page/index.ts]
 
-- module.exports.get = function(req, res) {
-+ export function get(req: PrextRequest, res: PrextResponse) {
+import { PrextRequest, PrextResponse } from 'prext';
+
+module.exports.get = function(req, res) {  // [!code --];
+export function get(req: PrextRequest, res: PrextResponse) { // [!code ++];
 
   res.end("I love typescript!");
 }
 ```
 
+:::
+
 rename `prext.config.js` to `prext.config.ts`
 
-```diff
-// prext.config.js => prext.config.ts
-- const { defineConfig } = require("prext");
-+ import { defineConfig } from "prext";
+::: code-group
 
-- module.exports = defineConfig({});
-+ export default defineConfig({});
+```ts [prext.config.ts]
+// prext.config.js => prext.config.ts
+const { defineConfig } = require('prext'); // [!code --];
+module.exports = defineConfig({}); // [!code --];
+
+import { defineConfig } from 'prext'; // [!code ++];
+export default defineConfig({}); // [!code ++];
 ```
+
+:::

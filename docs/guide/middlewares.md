@@ -2,8 +2,9 @@
 
 ## Usage
 
-```ts
-// middlewares/message.ts
+::: code-group
+
+```ts [middlewares/message.ts]
 import { Middleware } from 'prext';
 
 export const Message: Middleware = (req, res, next) => {
@@ -12,8 +13,11 @@ export const Message: Middleware = (req, res, next) => {
 };
 ```
 
-```ts
-// pages/index.ts
+:::
+
+::: code-group
+
+```ts [pages/index.ts]
 import { PrextRequest, PrextResponse } from 'prext';
 
 export function get(req: PrextRequest, res: PrextResponse) {
@@ -21,13 +25,15 @@ export function get(req: PrextRequest, res: PrextResponse) {
 }
 ```
 
+:::
+
 ### Regists
 
 Add them to `config.middlewares`.
 
-```ts
-// prext.config.ts
+::: code-group
 
+```ts [prext.config.ts]
 import { Message } from './middlewares/message';
 
 export default defineConfig({
@@ -35,6 +41,8 @@ export default defineConfig({
   // ...
 });
 ```
+
+:::
 
 ## Auto Mode
 
@@ -44,8 +52,9 @@ export default defineConfig({
 
 To use auto middleware mode, edit config value.
 
-```ts
-// middlewares/message.ts
+::: code-group
+
+```ts [middlewares/message.ts]
 import { Middleware } from 'prext';
 
 const Message: Middleware = (req, res, next) => {
@@ -59,10 +68,15 @@ const Message: Middleware = (req, res, next) => {
 export default Message;
 ```
 
-```ts
-// prext.config.ts
+:::
+
+::: code-group
+
+```ts [prext.config.ts]
 export default defineConfig({
   allowAutoMiddlewares: true,
   middlewareDirectory: 'middlewares',
 });
 ```
+
+:::

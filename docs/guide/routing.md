@@ -42,15 +42,17 @@ export const $page = {
 
 You can access the current page parameters by `req.params`.
 
-```ts
-// pages/user/$id.ts
+::: code-group
 
+```ts [pages/user/$id.ts]
 import { PrextRequest, PrextResponse } from 'prext';
 
 export function get(req: PrextRequest, res: PrextResponse) {
   res.json({ id: req.params.id });
 }
 ```
+
+:::
 
 ## Method
 

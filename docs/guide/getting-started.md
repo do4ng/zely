@@ -68,11 +68,14 @@ $ yarn add -D prext
 
 Add the configuration file (`prext.config.ts`).
 
-```js
-// prext.config.ts
+::: code-group
+
+```ts [prext.config.ts]
 import { defineConfig } from 'prext/config';
 
 export default defineConfig({
   // options
 });
 ```
+
+:::

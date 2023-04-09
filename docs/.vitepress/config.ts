@@ -23,7 +23,7 @@ export default defineConfig({
       { text: 'Guide', link: '/guide/what-is-prext' },
       { text: 'APIs', link: '/apis/introduction' },
       { text: 'Config', link: '/apis/config' },
-      { text: 'Blog', link: sidebarBlog()[0].items[0].link },
+      { text: 'Blog', link: '/blog/introduction' },
       {
         text: `v${pkg.version}`,
         items: [
@@ -47,13 +47,15 @@ export default defineConfig({
 
 function sidebarBlog() {
   return [
+    { text: 'Intro', items: [{ text: 'Introduction', link: '/blog/introduction' }] },
     {
       text: 'Posts',
-      collapsed: false,
+      collapsed: true,
       items: [
-        { text: 'v1.3', link: '/blog/v1-3' },
-        { text: 'v1.2', link: '/blog/v1-2' },
-        { text: 'v1.0', link: '/blog/v1-0' },
+        { text: 'New Docs', link: '/blog/new-docs' },
+        { text: 'Introduce v1.3', link: '/blog/v1-3' },
+        { text: 'Introduce v1.2', link: '/blog/v1-2' },
+        { text: 'Introduce v1.0', link: '/blog/v1-0' },
       ],
     },
   ];

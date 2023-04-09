@@ -6,13 +6,23 @@ Create `prext.config.js` or `prext.config.ts` to define config.
 
 1. Default
 
-```ts
+::: code-group
+
+```ts [prext.config.ts]
 export default {};
 ```
 
-2. Using `config.defineConfig` ( recommended )
+```js [prext.config.js]
+module.exports = {};
+```
 
-```ts
+:::
+
+2. Using `defineConfig()`
+
+::: code-group
+
+```ts [prext.config.ts]
 import { defineConfig } from 'prext/config';
 
 export default defineConfig({
@@ -20,15 +30,15 @@ export default defineConfig({
 });
 ```
 
-3. Using `main.defineConfig` ( not recommended )
+```js [prext.config.js]
+const { defineConfig } = require('prext/config');
 
-```ts
-import { defineConfig } from 'prext';
-
-export default defineConfig({
+module.exports = defineConfig({
   /* config */
 });
 ```
+
+:::
 
 ## Types
 

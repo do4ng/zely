@@ -9,11 +9,14 @@ This feature creates a ready-to-run javascript file like an executable (such as 
 ## Before Build
 
 You have to update configure file (`prext.config.js` or `prext.config.ts`).
+::: code-group
 
-```diff
-- import { defineConfig } from "prext";
-+ import { defineConfig } from "prext/config";
+```ts [prext.config.ts]
+import { defineConfig } from 'prext'; // [!code --];
+import { defineConfig } from 'prext/config'; // [!code ++];
 ```
+
+:::
 
 This step helps reduce the size of the output.
 
