@@ -4,7 +4,7 @@ import pkg from '../../packages/prext/package.json';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'prext',
+  title: 'Prext',
   description: 'a Backend Framework for Node.js',
 
   cleanUrls: true,
@@ -20,8 +20,10 @@ export default defineConfig({
     editLink: { pattern: 'https://github.com/do4ng/prext/edit/main/docs/:path' },
 
     nav: [
-      { text: 'Guide', link: '/guide/what-is-prext', activeMatch: '/guide/' },
+      { text: 'Guide', link: '/guide/what-is-prext' },
       { text: 'APIs', link: '/apis/introduction' },
+      { text: 'Config', link: '/apis/config' },
+      { text: 'Blog', link: sidebarBlog()[0].items[0].link },
       {
         text: `v${pkg.version}`,
         items: [
@@ -33,11 +35,30 @@ export default defineConfig({
       },
     ],
 
-    sidebar: { '/guide/': sidebarGuide(), '/apis/': sidebarApis() },
+    sidebar: {
+      '/guide/': sidebarGuide(),
+      '/apis/': sidebarApis(),
+      '/blog/': sidebarBlog(),
+    },
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/do4ng/prext' }],
   },
 });
+
+function sidebarBlog() {
+  return [
+    {
+      text: 'Posts',
+      collapsed: false,
+      items: [
+        { text: 'v1.3', link: '/blog/v1-3' },
+        { text: 'v1.2', link: '/blog/v1-2' },
+        { text: 'v1.0', link: '/blog/v1-0' },
+      ],
+    },
+  ];
+}
+
 function sidebarApis() {
   return [
     {
@@ -77,14 +98,6 @@ function sidebarGuide() {
       text: 'Community',
       collapsed: false,
       items: [{ text: 'Contributing', link: '/guide/contributing' }],
-    },
-    {
-      text: 'Versions',
-      collapsed: true,
-      items: [
-        { text: 'v1.2', link: '/guide/v1-2' },
-        { text: 'v1.0', link: '/guide/v1-0' },
-      ],
     },
   ];
 }

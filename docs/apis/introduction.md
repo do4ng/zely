@@ -1,5 +1,14 @@
 # Javascript Apis
 
+## Packages
+
+- [prext](https://www.npmjs.com/package/prext) - core package <Badge type="tip" text="stable" />
+- [create-prext](https://www.npmjs.com/package/create-prext) - a tool creating prext app <Badge type="tip" text="stable" />
+- [create-prext-app](https://www.npmjs.com/package/create-prext-app) - <Badge type="danger" text="deprecated" />
+- [prexty](https://www.npmjs.com/package/prexty) - a frontend plugin for prext <Badge type="warning" text="no longer update" />
+- [prext-analyst](https://www.npmjs.com/package/prext-analyst) - <Badge type="danger" text="deprecated" />
+- [@prext/plugin-kit](https://www.npmjs.com/package/@prext/plugin-kit) - (applied to prext by default) <Badge type="danger" text="deprecated" />
+
 ## `package.exports`
 
 ```json

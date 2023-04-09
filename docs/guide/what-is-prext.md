@@ -7,9 +7,9 @@
 
 ## Features
 
-- **🚧 File-based routing.** Prext.js creates routes automatically with filenames. - [**see more**](/guide/routing)
+- **🚧 File-based routing.** Prext.js creates routes automatically with filenames.
 - **🚀 Server Reload.** You don't have to restart server to apply changes.
-- **✅ Typescript Supported.** - [**see more**](/guide/typescript)
+- **✅ Typescript Supported.**
 - **⚡ Lightning fast.** Prext uses [esbuild](https://esbuild.github.io/) as javascript loader.
 
 ## Introduction

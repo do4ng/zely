@@ -8,21 +8,45 @@ You can create prext application easily with [create-prext](https://npmjs.com/pa
 
 1. Download Template
 
-```bash
+::: code-group
+
+```bash [npx]
 $ npx create-prext
 ```
 
+```bash [yarn]
+$ yarn create prext
+```
+
+:::
+
 2. Install Dependencies
 
-```bash
-$ npm i # install dependencies
+::: code-group
+
+```bash [npm]
+$ npm install
 ```
+
+```bash [yarn]
+$ yarn
+```
+
+:::
 
 3. Run!
 
-```bash
+::: code-group
+
+```bash [npm]
 $ npm dev # start app
 ```
+
+```bash [yarn]
+$ npm dev # start app
+```
+
+:::
 
 ## Manual Installation
 
@@ -30,9 +54,17 @@ You can also add prext to a project that already exists.
 
 Enter the command below:
 
-```bash
+::: code-group
+
+```bash [npm]
 $ npm install --save-dev prext
 ```
+
+```bash [yarn]
+$ yarn add -D prext
+```
+
+:::
 
 Add the configuration file (`prext.config.ts`).
 
