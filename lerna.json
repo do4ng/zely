@@ -2,7 +2,17 @@
   "packages": ["packages/*"],
   "useWorkspaces": true,
   "version": "independent",
-  "ignoreChanges": ["**/CHANGELOG.md", "**/node_modules/**", "**/package.json"],
+  "ignoreChanges": [
+    "**/CHANGELOG.md",
+    "**/node_modules/**",
+    "**/package.json",
+    "docs",
+    "packages/plugin-cors",
+    "packages/plugin-kit",
+    "packages/prext-analyst",
+    "packages/prexty",
+    "packages/sard"
+  ],
   "command": {
     "publish": {
       "tempTag": true
