@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/do4ng/prext/compare/prext@1.2.3...prext@1.3.0) (2023-04-09)
+
+
+### New Features
+
+* server.middlewareMode ([#18](https://github.com/do4ng/prext/issues/18)) ([2285d9a](https://github.com/do4ng/prext/commit/2285d9a74cb54ec53b9324f95ff525af2c5e1ac0))
+
+
+### Others
+
+* modify logs ([8ef73e9](https://github.com/do4ng/prext/commit/8ef73e9e3cf8b54f46d41589d6d8264602adf3d0))
+* rename function ([d4a3814](https://github.com/do4ng/prext/commit/d4a381422a0a735b80c18c3ccf010aad4ed5fe71))
+
+
+
 ## [1.2.3](https://github.com/do4ng/prext/compare/prext@1.2.0...prext@1.2.3) (2023-04-04)
 
 

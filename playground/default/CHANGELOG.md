@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.7](https://github.com/do4ng/prext/compare/playground@1.2.6...playground@1.2.7) (2023-04-09)
+
+
+### Others
+
+* playground monorepo ([ca84742](https://github.com/do4ng/prext/commit/ca8474245e506a01b933418993eb5308b4ca12b8))
+
+
+
 ## [1.2.6](https://github.com/do4ng/prext/compare/playground@1.2.5...playground@1.2.6) (2023-04-04)
 
 
