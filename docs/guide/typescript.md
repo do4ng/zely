@@ -28,8 +28,8 @@ $ npx create-prext
 
 import { PrextRequest, PrextResponse } from 'prext';
 
-module.exports.get = function(req, res) {  // [!code --];
-export function get(req: PrextRequest, res: PrextResponse) { // [!code ++];
+module.exports.get = function(req, res) {  // [!code --]
+export function get(req: PrextRequest, res: PrextResponse) { // [!code ++]
 
   res.end("I love typescript!");
 }
@@ -43,11 +43,11 @@ rename `prext.config.js` to `prext.config.ts`
 
 ```ts [prext.config.ts]
 // prext.config.js => prext.config.ts
-const { defineConfig } = require('prext'); // [!code --];
-module.exports = defineConfig({}); // [!code --];
+const { defineConfig } = require('prext'); // [!code --]
+module.exports = defineConfig({}); // [!code --]
 
-import { defineConfig } from 'prext'; // [!code ++];
-export default defineConfig({}); // [!code ++];
+import { defineConfig } from 'prext'; // [!code ++]
+export default defineConfig({}); // [!code ++]
 ```
 
 :::
