@@ -1,6 +1,6 @@
 {
   "name": "prext-analyst",
-  "version": "0.1.0-beta.6",
+  "version": "1.0.0",
   "dependencies": {
     "colors": "^1.4.0",
     "prext": "1.2.0"

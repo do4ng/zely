@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/do4ng/prext/compare/prext@1.4.0...prext@2.0.0) (2023-04-11)
+
+
+### Documentation
+
+* update readme.md ([3431ad7](https://github.com/do4ng/prext/commit/3431ad717156931000b5f15c6f7fe03fd50bfecc))
+
+
+
+
 ## [1.4.0](https://github.com/do4ng/prext/compare/prext@1.3.0...prext@1.4.0) (2023-04-11)
 
 

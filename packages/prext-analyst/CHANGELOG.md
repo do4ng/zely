@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0](https://github.com/do4ng/prext/compare/prext-analyst@0.1.0-beta.6...prext-analyst@1.0.0) (2023-04-11)
+
+**Note:** Version bump only for package prext-analyst
+
+
+
+
+
 ## [0.1.0-beta.6](https://github.com/do4ng/prext/compare/prext-analyst@0.1.0-beta.5...prext-analyst@0.1.0-beta.6) (2023-04-04)
 
 **Note:** Version bump only for package prext-analyst
