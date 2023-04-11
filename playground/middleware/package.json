@@ -1,8 +1,8 @@
 {
   "name": "middleware",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
-    "prext": "1.3.0"
+    "prext": "1.4.0"
   },
   "scripts": {
     "dev": "prext dev",

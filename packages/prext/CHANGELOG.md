@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/do4ng/prext/compare/prext@1.3.0...prext@1.4.0) (2023-04-11)
+
+
+### New Features
+
+* public directory ([#25](https://github.com/do4ng/prext/issues/25)) ([6010a4f](https://github.com/do4ng/prext/commit/6010a4fdb705a89a0138e98030aa28081c4f9c3e))
+* snatch feature 🚀 ([08bfa3b](https://github.com/do4ng/prext/commit/08bfa3b283dd1236f789c211135f4545520f2cee))
+* zero-config ([#25](https://github.com/do4ng/prext/issues/25)) ([00061d7](https://github.com/do4ng/prext/commit/00061d7748614d58a0a6665d4a68ad3015bfc8f6))
+
+
+
+
 ## [1.3.0](https://github.com/do4ng/prext/compare/prext@1.2.3...prext@1.3.0) (2023-04-09)
 
 
