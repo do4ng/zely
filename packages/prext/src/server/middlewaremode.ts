@@ -5,6 +5,7 @@ import { error, warn } from '../logger';
 import { kitMiddleware } from '../plugins/kit';
 import { loadMiddlewares } from './load-middlewares';
 import { CACHE_DIRECTORY } from '../constants';
+import { Static } from '../plugins/public';
 
 export async function middleware(config: Config): Promise<pureMiddleware[]> {
   if (!config.server?.middlewareMode) {
@@ -34,6 +35,10 @@ export async function middleware(config: Config): Promise<pureMiddleware[]> {
   middlewares.push(kitMiddleware);
 
   // @prext/plugin-kit
+
+  // @osik/static
+
+  if (config.public) middlewares.push(Static(config.public, config.publicOptions));
 
   // auto middleware mode
 

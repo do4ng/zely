@@ -56,9 +56,22 @@ export interface Config {
     // osik options
     osik?: ServerOptions;
   };
+
+  // public directory
+
+  public?: string;
+  publicOptions?: StaticOptions;
 }
 
 export function showListen(port: string | number): void;
+
+export interface StaticOptions {
+  prefix?: string;
+
+  ignored?: string[];
+
+  charset?: string;
+}
 
 export * from './config';
 export * from './constants';

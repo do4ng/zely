@@ -6,9 +6,15 @@ import { join, relative } from 'path';
 import { CACHE_DIRECTORY, DEFAULT_CONFIG } from './constants';
 import { typescriptLoader } from './loader';
 
-import type { Config, Plugin, FileData, pureMiddleware } from '../types/index.d';
+import type {
+  Config,
+  Plugin,
+  FileData,
+  pureMiddleware,
+  StaticOptions,
+} from '../types/index.d';
 
-export { Config, Plugin, FileData, pureMiddleware };
+export { Config, Plugin, FileData, pureMiddleware, StaticOptions };
 
 export function assign(c: Config): Config {
   return {
