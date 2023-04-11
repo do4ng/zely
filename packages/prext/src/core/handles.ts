@@ -51,6 +51,8 @@ export function handles(
 
     const { pattern, params } = pathToRegexp(page.file, false);
 
+    // console.log(pattern, parsed.pathname, pattern.test(parsed.pathname), page);
+
     // matched page
 
     if (pattern.test(parsed.pathname)) {
@@ -88,6 +90,8 @@ export function handles(
             try {
               const target = page.m;
               const $page = page.m.$page || {};
+
+              // console.log('response1');
 
               if ($page.before) await $page.before(req, res);
 

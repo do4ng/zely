@@ -66,3 +66,4 @@ export * from './core';
 export * from './server';
 export * from './method';
 export * from './dependencies';
+export * from './snatcher';
