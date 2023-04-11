@@ -8,8 +8,17 @@ export const DEFAULT_CONFIG: Config = {
   middlewares: [],
   base: '.',
   esbuild: {},
+
+  // auto middleware mode
+  middlewareDirectory: './middlewares/',
+  allowAutoMiddlewares: true,
+
+  server: {
+    middlewareMode: false,
+    osik: { useApi: true },
+  },
 };
 
 export const CACHE_FILE = join(CACHE_DIRECTORY, 'cache.json');
 export const MIDDLEWARE_CACHE_FILE = join(CACHE_DIRECTORY, 'cache.middleware.json');
-export const CACHE_VERSION = '220124';
+export const CACHE_VERSION = '230411';
