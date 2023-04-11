@@ -23,26 +23,38 @@ Until now, you had to set up a public directory with an external library, such a
 
 2. **frontend ✨**
 
-We are going to strengthen the prexy even more.
+We are going to strengthen the prexty even more.
 
 3. **zero-config**
 
 We will make it work well without the config file!
 
-4. **for deploy 🚀**
+4. **snatcher 🚀**
 
-If the build function is the concept of exporting prext servers, then the deploy function is the concept of exporting middleware.
+A snatcher, like fetch, carries data between pages.
 
-```bash
-$ prext deploy -output=dist/deploy.js
+However, it does not use http, such as fetch, but receives data directly from the file that corresponds to the page.
+
+::: code-group
+
+```ts [pages/index.ts]
+import { snatcher } from 'prext';
+
+export async function get(req, res) {
+  const snatch = snatcher(req, res);
+  const { body } = await snatch('/user');
+
+  res.send(`users: ${body}`);
+}
 ```
 
-```js
-const http = require('http');
-const { handler } = require('./dist/deploy');
-
-http.createServer(handler).listen(3000);
+```ts [pages/users.ts]
+export function get(req, res) {
+  res.json({ cat: '🐱' });
+}
 ```
+
+:::
 
 ## Conclusion
 
