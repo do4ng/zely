@@ -12,6 +12,7 @@
 
 ## Release Notes
 
+- [Introduce v2.0](/blog/v2-0) <Badge type="tip" text="release" />
 - [Introduce v1.3](/blog/v1-3) <Badge type="tip" text="release" />
 - [Introduce v1.2](/blog/v1-2) <Badge type="tip" text="release" />
 - [Introduce v1.0](/blog/v1-0) <Badge type="tip" text="release" />

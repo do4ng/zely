@@ -17,19 +17,17 @@ Before I say a plan, everything I say is just a "plan."
 
 ### Features
 
-1. **public directory**
+1. **public directory** <Badge type="tip" text="done" />
 
 Until now, you had to set up a public directory with an external library, such as serve.. But you don't have to do that anymore.
 
-2. **frontend ✨**
+2. **frontend** <Badge type="danger" text="canceled" />
 
-We are going to strengthen the prexty even more.
-
-3. **zero-config**
+3. **zero-config** <Badge type="tip" text="done" />
 
 We will make it work well without the config file!
 
-4. **snatcher 🚀**
+4. **snatcher 🚀** <Badge type="tip" text="done" />
 
 A snatcher, like fetch, carries data between pages.
 

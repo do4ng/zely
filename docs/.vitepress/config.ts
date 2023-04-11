@@ -64,6 +64,7 @@ function sidebarBlog() {
       text: 'Posts',
       collapsed: true,
       items: [
+        { text: 'Introduce v2.0', link: '/blog/v2-0' },
         { text: 'v2.0 is coming', link: '/blog/dev-v2-0' },
         { text: 'New Docs', link: '/blog/new-docs' },
         { text: 'Introduce v1.3', link: '/blog/v1-3' },
