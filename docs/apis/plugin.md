@@ -1,87 +1,17 @@
-# Plugin
+# Plugin Guide
 
----
+In this chapter, we will create a simple plugin.
 
-1. **Example** Simple Plugin
+## Middleware Plugin
 
-::: code-group
-
-```ts [plugins/simple.ts]
-import { Plugin } from 'prext';
-
-export function SimplePlugin(): Plugin {
-  return {
-    name: 'simple-plugin',
-  };
-}
-```
-
-:::
-
-::: code-group
-
-```ts [prext.config.ts]
-// prext.config.ts
-import { defineConfig } from 'prext/config';
-import { SimplePlugin } from './plugins/simple';
-
-export default defineConfig({
-  plugins: [SimplePlugin()],
-});
-```
-
-:::
-
----
-
-2. transform guide
+You can apply middlewares or custom handlers using `plugin.server`.
 
 ```ts
-export function MyPlugin(): Plugin {
-  return {
-    name: 'my-plugin',
-
-    transform(id, code) {
-      // id: file name
-      // code: source
-
-      return {
-        // path
-        // like /about, /user/hello
-        file: parse(id).name,
-
-        /*
-          module.
-          See - https://prext.netlify.app/guide/routing
-        */
-        m: {
-          get(req, res) {
-            res.end('Hello World!');
-          },
-        },
-        /* 
-          "build" feature requires modulePath. 
-          If you don't want to support build feature, you don't have to provide this value.
-        */
-        modulePath: '',
-        type: 'module', // html or js
-      };
-    },
-  };
-}
-```
-
-3. server guide
-
-You can apply middlewares or custom handlers.
-
-```ts
-export function MyPlugin(): Plugin {
+export function myPlugin() {
   return {
     name: 'my-plugin',
 
     server(server) {
-      // middleware
       server.use((req, res, next) => {
         next();
       });
@@ -90,12 +20,65 @@ export function MyPlugin(): Plugin {
 }
 ```
 
-## Typescript
+## Transform
+
+You can transform files using `plugin.transform`.
+
+::: warning
+
+Files that are converted by default (such as typescript, javascript) will not be called.
+
+:::
+
+`plugin.transform` will return `routes`.
+
+### Concept of Routes
+
+- `file`: path (such as `/`, `/about`, `/foo/bar`)
+
+- `m`: module
 
 ```ts
-export interface Plugin {
-  name: string;
-  transform?: (id: string, code: string) => PluginOutput | Promise<PluginOutput>;
-  server?: (server: Server) => void;
+return {
+  m: {
+    get(req, res) {
+      res.end('get');
+    },
+    post(req, res) {
+      res.end('post');
+    },
+  },
+};
+```
+
+- `modulePath`: built file directory
+
+[build](/guide/build) feature requires `modulePath`.  
+If you don't want to support build feature, you don't have to provide this value.
+
+- `type`: `module` or `html`
+
+### Transform Example
+
+```ts
+import { parse } from 'path';
+
+export function myPlugin() {
+  return {
+    name: 'my-plugin',
+
+    transform(id, code) {
+      return {
+        file: parse(id).name,
+        m: {
+          get(req, res) {
+            res.end('Hello World!');
+          },
+        },
+        modulePath: '',
+        type: 'module', // html or module
+      };
+    },
+  };
 }
 ```

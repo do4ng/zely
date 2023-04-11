@@ -31,6 +31,18 @@ export default defineConfig({
             text: 'CHANGELOG',
             link: 'https://github.com/do4ng/prext/blob/main/packages/prext/CHANGELOG.md',
           },
+          {
+            items: [
+              {
+                text: 'v1 docs',
+                link: 'https://642c254446f3190008a45c8b--prext.netlify.app/',
+              },
+              {
+                text: 'v0 docs',
+                link: 'https://63d5367b5e458b7e0ce3f315--prext.netlify.app/',
+              },
+            ],
+          },
         ],
       },
     ],
@@ -52,6 +64,7 @@ function sidebarBlog() {
       text: 'Posts',
       collapsed: true,
       items: [
+        { text: 'v2.0 is coming', link: '/blog/dev-v2-0' },
         { text: 'New Docs', link: '/blog/new-docs' },
         { text: 'Introduce v1.3', link: '/blog/v1-3' },
         { text: 'Introduce v1.2', link: '/blog/v1-2' },
@@ -92,8 +105,9 @@ function sidebarGuide() {
         { text: 'Routing', link: '/guide/routing' },
         { text: 'Middlewares', link: '/guide/middlewares' },
         { text: 'Typescript', link: '/guide/typescript' },
-        { text: 'Build', link: '/guide/guide-build' },
-        { text: 'Page Data', link: '/guide/guide-page' },
+        { text: 'Build', link: '/guide/build' },
+        { text: 'Page Data', link: '/guide/page' },
+        { text: 'Plugin', link: '/guide/plugin' },
       ],
     },
     {

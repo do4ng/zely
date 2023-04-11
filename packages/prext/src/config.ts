@@ -1,10 +1,8 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-unused-vars */
-import { build, BuildOptions } from 'esbuild';
+import { build } from 'esbuild';
 import { existsSync } from 'fs';
-import { Server, SardRequest, SardResponse } from 'sard.js';
 import { join, relative } from 'path';
-import { WatchOptions } from 'chokidar';
 import { CACHE_DIRECTORY, DEFAULT_CONFIG } from './constants';
 import { typescriptLoader } from './loader';
 

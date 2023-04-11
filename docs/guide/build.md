@@ -12,8 +12,8 @@ You have to update configure file (`prext.config.js` or `prext.config.ts`).
 ::: code-group
 
 ```ts [prext.config.ts]
-import { defineConfig } from 'prext'; // [!code --];
-import { defineConfig } from 'prext/config'; // [!code ++];
+import { defineConfig } from 'prext'; // [!code --]
+import { defineConfig } from 'prext/config'; // [!code ++]
 ```
 
 :::

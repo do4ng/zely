@@ -104,8 +104,30 @@ Esbuild build option.
 
 - Type: `Plugin[]`
 
-Reference: `/guide/api-plugin`
+::: tip
+
+reference: [plugin](/apis/plugin)
+
+:::
 
 ### watch
 
 - Type: `chokidar.WatchOptions`
+
+### error
+
+- Type: `(req: IncomingMessage, res: ServerResponse) => void | Promise<void>;`
+
+### allowAutoMiddlewares
+
+- Type: `boolean`
+
+::: tip
+
+reference: [auto middleware](/guide/middlewares#auto-mode)
+
+:::
+
+### middlewareDirectory
+
+- Type: `string`
