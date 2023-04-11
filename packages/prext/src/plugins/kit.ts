@@ -38,6 +38,7 @@ export function apply(req: Req, res: Res) {
 }
 export function kitMiddleware(req: Req, res: Res, next: () => void) {
   apply(req, res);
+
   next();
 }
 

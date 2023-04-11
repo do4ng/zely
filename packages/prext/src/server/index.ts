@@ -5,6 +5,7 @@ import { CACHE_DIRECTORY } from '../constants';
 import { Handler } from '../core';
 import { kit } from '../plugins/kit';
 import { loadMiddlewares } from './load-middlewares';
+import { Static } from '../plugins/public';
 
 export async function Prext(config: Config): Promise<OsikServer> {
   rmSync(CACHE_DIRECTORY, { recursive: true, force: true });
@@ -25,6 +26,10 @@ export async function Prext(config: Config): Promise<OsikServer> {
   // @prext/plugin-kit
 
   kit().server(app);
+
+  // @osik/static
+
+  if (config.public) app.use(Static(config.public, config.publicOptions));
 
   // auto middleware mode
 
