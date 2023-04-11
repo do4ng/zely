@@ -6,7 +6,7 @@ Prext is a backend framework for Node.js
 
 ---
 
-> v1 is here! - [announcement](https://prext.netlify.app/guide/announce-v1)
+> v2 is here! - [announcement](https://prext.netlify.app/blog/v2-0)
 
 ---
 
