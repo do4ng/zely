@@ -6,13 +6,13 @@
     "**/CHANGELOG.md",
     "**/node_modules/**",
     "**/package.json",
-    "docs",
-    "playground",
-    "packages/plugin-cors",
-    "packages/plugin-kit",
-    "packages/prext-analyst",
-    "packages/prexty",
-    "packages/sard"
+    "./docs",
+    "./playground",
+    "./packages/plugin-cors",
+    "./packages/plugin-kit",
+    "./packages/prext-analyst",
+    "./packages/prexty",
+    "./packages/sard"
   ],
   "command": {
     "publish": {
