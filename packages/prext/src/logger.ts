@@ -5,6 +5,7 @@
 //
 
 import 'colors';
+import { getTime } from '../lib/getTime';
 
 const tab = '  ';
 
@@ -26,11 +27,13 @@ function parseError(err: Error) {
 
 function error(err: Error | string) {
   if (typeof err === 'string') {
-    console.log(`${'error'.red.bold} ${err.bold}`);
+    console.log(`${getTime().gray} ${'error'.red.bold} ${err.bold}`);
   } else {
     const stacks = parseError(err);
 
-    console.log(`\n${' ERROR '.bgRed.black.bold} ${err.message.bold}\n`);
+    console.log(
+      `\n${getTime().gray} ${' ERROR '.bgRed.black.bold} ${err.message.bold}\n`
+    );
 
     stacks?.forEach((stack) => {
       console.log(`${tab}${'at'.gray} ${stack.at}${stack.loc.cyan}`);
@@ -40,15 +43,15 @@ function error(err: Error | string) {
 }
 
 function warn(message: string) {
-  console.log(`${'warning'.yellow.bold} ${message.bold}`);
+  console.log(`${getTime().gray} ${'warning'.yellow.bold} ${message.bold}`);
 }
 
 function success(message: string) {
-  console.log(`${'success'.green.bold} ${message.bold}`);
+  console.log(`${getTime().gray} ${'success'.green.bold} ${message.bold}`);
 }
 
 function info(message: string) {
-  console.log(`${'info'.blue.bold} ${message.bold}`);
+  console.log(`${getTime().gray} ${'info'.blue.bold} ${message.bold}`);
 }
 
 /**

@@ -12,11 +12,18 @@ export function Watch(config: Config) {
     ...(config.watch?.options || {}),
   });
 
+  let isFirst = true;
+
   watcher.on('change', async (path) => {
     if (!existsSync(CACHE_FILE)) {
       return;
     }
     const { ext, name } = parse(path);
+
+    if (isFirst) {
+      console.log();
+      isFirst = false;
+    }
 
     // console.log(ext);
 
