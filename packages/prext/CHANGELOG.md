@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/do4ng/prext/compare/prext@2.0.0...prext@2.0.1) (2023-04-12)
+
+
+### Others
+
+* pretty cli ([4abdc31](https://github.com/do4ng/prext/commit/4abdc31a4563b60636e0d6cf2d79c0d698203d55))
+
+
+
 ## [2.0.0](https://github.com/do4ng/prext/compare/prext@1.4.0...prext@2.0.0) (2023-04-11)
 
 
