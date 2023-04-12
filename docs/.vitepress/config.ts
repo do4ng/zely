@@ -109,6 +109,7 @@ function sidebarGuide() {
         { text: 'Build', link: '/guide/build' },
         { text: 'Page Data', link: '/guide/page' },
         { text: 'Plugin', link: '/guide/plugin' },
+        { text: 'Data Fetching', link: '/guide/fetch' },
       ],
     },
     {
