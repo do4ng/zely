@@ -10,6 +10,8 @@ import { prettyURL } from '../../lib/pretty-url';
 import { error, success } from '../logger';
 import { handles } from './handles';
 
+let globalCache: any = null;
+
 export async function getPages(config: Config): Promise<FileData> {
   let __cache: Record<string, string> = {};
 
@@ -146,14 +148,19 @@ export function filenameToRoute(map: Array<FileData>) {
 
 export async function Handler(req: IncomingMessage, res: ServerResponse, config: Config) {
   try {
-    const pages = await getPages(config);
-    const routes = filenameToRoute(pages as any);
-
+    if (!globalCache) {
+      const pages = await getPages(config);
+      globalCache = filenameToRoute(pages as any);
+    }
     // console.log(routes);
 
-    if (config.handler) config.handler(req, res, routes);
-    else handles(req, res, routes, config);
+    if (config.handler) config.handler(req, res, globalCache as any);
+    else handles(req, res, globalCache, config);
   } catch (e) {
     error(e);
   }
+}
+
+export function resetCache() {
+  globalCache = null;
 }

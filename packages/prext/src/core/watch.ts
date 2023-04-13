@@ -4,6 +4,7 @@ import { join, parse } from 'path';
 import { Config } from '../config';
 import { CACHE_DIRECTORY, CACHE_FILE } from '../constants';
 import { typescriptLoader } from '../loader';
+import { resetCache } from './routing';
 
 export function Watch(config: Config) {
   const watcher = chokidar.watch('.', {
@@ -33,6 +34,7 @@ export function Watch(config: Config) {
       } else {
         const { dir, base } = parse(path.replace(/\\/g, '/'));
         console.log(`${'•'.green} ${`${dir}/`.gray}${base.bold}`);
+        resetCache();
       }
 
       const { filename } = await typescriptLoader(

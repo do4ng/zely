@@ -1,6 +1,6 @@
 import { rmSync } from 'fs';
 import { Config, pureMiddleware } from '../config';
-import { Handler } from '../core';
+import { Handler, getPages } from '../core';
 import { error, warn } from '../logger';
 import { kitMiddleware } from '../plugins/kit';
 import { loadMiddlewares } from './load-middlewares';
@@ -53,6 +53,10 @@ export async function middleware(config: Config): Promise<pureMiddleware[]> {
   if (config.error) {
     warn('config.error is not available when config.server.middlewareMode is enabled.');
   }
+
+  // generate cache files
+
+  getPages(config);
 
   // handle
 
