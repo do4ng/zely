@@ -6095,6 +6095,11 @@ osik@^0.0.2:
   resolved "https://registry.yarnpkg.com/osik/-/osik-0.0.2.tgz#7a047db8b89f4377fc0bec544b0fa17ee05eaabd"
   integrity sha512-5D98yJiYZwtjiHxFpILkC6GGmhCezClYLj2ykhVrrWG9TvwN4UpVZq4jQUHEtvGlE3ybB7zwLmCYqWG442dVQQ==
 
+osik@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/osik/-/osik-0.0.3.tgz#0cc07e0c036376085917153f3fb8ec30b02fe90a"
+  integrity sha512-V3/PpkeMqlFHIhA/0AfO+HgDqgLKrEIrneAaM1j4yMLZHOjG+8uRzkqLZba6Me6INWWU/0Nf6/MFe/zJDp3Ptw==
+
 p-finally@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
