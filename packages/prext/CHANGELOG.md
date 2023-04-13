@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/do4ng/prext/compare/prext@2.0.1...prext@2.0.2) (2023-04-13)
+
+
+### Others
+
+* Optimization ([4e73331](https://github.com/do4ng/prext/commit/4e73331b11dc64f4e42fe8b7be46163f9d41be5a))
+* update core server ([4fcfb29](https://github.com/do4ng/prext/commit/4fcfb29520345c9f5f0f61d4b7ad6ecebde94977))
+
+
+
 ## [2.0.1](https://github.com/do4ng/prext/compare/prext@2.0.0...prext@2.0.1) (2023-04-12)
 
 
