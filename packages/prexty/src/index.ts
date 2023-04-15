@@ -11,7 +11,10 @@ export function prexty(): Plugin {
       // console.log(server);
 
       server.use((req, res, next) => {
-        if (!req.url.startsWith('/.prexty/')) next();
+        if (!req.url.startsWith('/.prexty/')) {
+          next();
+          return;
+        }
         const parsed = url.parse(req.url);
         const target = join(process.cwd(), parsed.pathname);
 
