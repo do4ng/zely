@@ -10,7 +10,8 @@ export function prexty(): Plugin {
     server(server) {
       // console.log(server);
 
-      server.get('/.prexty/*', (req, res) => {
+      server.use((req, res, next) => {
+        if (!req.url.startsWith('/.prexty/')) next();
         const parsed = url.parse(req.url);
         const target = join(process.cwd(), parsed.pathname);
 
@@ -20,8 +21,7 @@ export function prexty(): Plugin {
           res.setHeader('Content-Type', 'text/javascript');
           res.end(readFileSync(target));
         } else {
-          res.statusCode = 404;
-          res.end(`Cannot read ${target}`);
+          next();
         }
       });
     },
