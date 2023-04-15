@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/do4ng/prext/compare/playground@2.0.2...playground@2.0.3) (2023-04-15)
+
+**Note:** Version bump only for package playground
+
+
+
+
+
 ## [2.0.2](https://github.com/do4ng/prext/compare/playground@2.0.1...playground@2.0.2) (2023-04-13)
 
 **Note:** Version bump only for package playground
