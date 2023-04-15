@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/do4ng/prext/compare/prexty@1.2.1...prexty@1.2.2) (2023-04-15)
+
+
+### Others
+
+* minify built file ([eb6e668](https://github.com/do4ng/prext/commit/eb6e6686d8762584fe6e1550db5cdb96b1b2c264))
+
+
+
 ## [1.2.1](https://github.com/do4ng/prext/compare/prexty@1.2.0...prexty@1.2.1) (2023-04-15)
 
 
