@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/do4ng/prext/compare/prexty@1.2.0...prexty@1.2.1) (2023-04-15)
+
+
+### Bug Fix
+
+* fixed readdir error ([e40a810](https://github.com/do4ng/prext/commit/e40a8105cae28104bde3434fc6cd2292a6800252))
+
+
+
 ## [1.2.0](https://github.com/do4ng/prext/compare/prexty@1.1.7...prexty@1.2.0) (2023-04-15)
 
 
