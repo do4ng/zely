@@ -50,7 +50,7 @@ export function react(config: ReactLoaderConfig = {}): Plugin {
           outfile: out,
           format: 'cjs',
           bundle: true,
-          // minify: true,
+          minify: true,
           plugins: [nodeExternalsPlugin() as any],
         });
 
@@ -70,7 +70,7 @@ export function react(config: ReactLoaderConfig = {}): Plugin {
             out
           ).replace(/\\/g, '/')}");res.setHeader('Content-Type', 'text/html');
           var i=require("fs").readFileSync(require("path").join(__dirname, "index.html")).toString();
-          var props = (m.data ? await m.data() : {});
+          var props = (m.data ? await m.data({req, res}) : {});
           /*console.log(props)*/
           res.end(i.replace("<!--body-->", \`<script id="__DATA" type="text/json">\${JSON.stringify(props)}</script><div id="app">\${
             server.renderToString(react.createElement(m.default, props.props))
@@ -98,7 +98,7 @@ export function react(config: ReactLoaderConfig = {}): Plugin {
           allowOverwrite: true,
           bundle: true,
           treeShaking: true,
-          // minify: true,
+          minify: true,
           platform: 'browser',
         });
 
