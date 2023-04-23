@@ -42,6 +42,21 @@ function error(err: Error | string) {
   }
 }
 
+function errorWithStacks(
+  err: string,
+  stacks: {
+    at: string;
+    loc: string;
+  }[]
+) {
+  console.log(`\n${getTime().gray} ${' ERROR '.bgRed.black.bold} ${err.bold}\n`);
+
+  stacks?.forEach((stack) => {
+    console.log(`${tab}${'at'.gray} ${stack.at}${stack.loc.cyan}`);
+  });
+  console.log();
+}
+
 function warn(message: string) {
   console.log(`${getTime().gray} ${'warning'.yellow.bold} ${message.bold}`);
 }
@@ -74,4 +89,4 @@ const a = setInterval(() => {
 }, 100);
 */
 
-export { success, info, error, warn, parseError };
+export { success, info, error, warn, parseError, errorWithStacks };

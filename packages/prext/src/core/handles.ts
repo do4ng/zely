@@ -5,7 +5,7 @@ import { existsSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { CACHE_DIRECTORY } from '../constants';
 import { ObjectkeysMap } from '../../lib/chageKeys';
-import { error } from '../logger';
+import { errorWithStacks, parseError } from '../logger';
 import { Config } from '../config';
 
 export function handles(
@@ -99,7 +99,8 @@ export function handles(
 
               if ($page.after) await $page.after(req, res);
             } catch (e) {
-              error(new Error(e));
+              const stacks = parseError(e);
+              errorWithStacks(e.message, stacks);
             }
           }
         });
