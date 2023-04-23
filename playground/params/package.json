@@ -1,8 +1,8 @@
 {
   "name": "params",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
-    "prext": "*"
+    "prext": "2.0.5"
   },
   "scripts": {
     "dev": "prext dev",

@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5](https://github.com/do4ng/prext/compare/prext@2.0.2...prext@2.0.5) (2023-04-23)
+
+
+### Others
+
+* **deps:** update dependencies ([208910c](https://github.com/do4ng/prext/commit/208910c9825d674ca3bc8d308658828003b3b750))
+
+
+### Bug Fix
+
+* fixed routing order bug ([d2e55f0](https://github.com/do4ng/prext/commit/d2e55f03a8f6597f4a1d0f368f4b26432144b5b8))
+
+
+
 ## [2.0.2](https://github.com/do4ng/prext/compare/prext@2.0.1...prext@2.0.2) (2023-04-13)
 
 

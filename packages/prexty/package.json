@@ -1,6 +1,6 @@
 {
   "name": "prexty",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "",
   "dependencies": {
     "esbuild": "^0.17.6",
@@ -8,7 +8,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "prext": "*"
+    "prext": "2.0.5"
   },
   "main": "./dist/index.js",
   "types": "./index.d.ts",
