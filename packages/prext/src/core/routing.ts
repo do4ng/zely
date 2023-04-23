@@ -128,7 +128,7 @@ export async function getPages(config: Config): Promise<FileData> {
 }
 
 export function filenameToRoute(map: Array<FileData>) {
-  return map.map((page) => {
+  const rawfiles = map.map((page) => {
     let { file } = page;
     // eslint-disable-next-line prefer-const
     let { dir, name } = parse(file);
@@ -144,6 +144,24 @@ export function filenameToRoute(map: Array<FileData>) {
 
     return { file, m: page.m, type: page.type, modulePath: page.modulePath };
   });
+
+  const files = {};
+
+  rawfiles.forEach((file) => {
+    const count = (file.file.match(/:/g) || []).length;
+
+    if (!files[count]) files[count] = [];
+
+    files[count].push(file);
+  });
+
+  const filesResult: FileData[] = [];
+
+  Object.keys(files).forEach((file) => {
+    filesResult.push(...files[file]);
+  });
+
+  return filesResult;
 }
 
 export async function Handler(req: IncomingMessage, res: ServerResponse, config: Config) {
