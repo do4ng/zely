@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.0](https://github.com/do4ng/prext/compare/prext@2.0.5...prext@2.1.0) (2023-04-23)
+
+
+### New Features
+
+* error handling ([e3282f3](https://github.com/do4ng/prext/commit/e3282f31f9128d56f2ba4b4335f9ed2bcccb74dd))
+
+
+
 ## [2.0.5](https://github.com/do4ng/prext/compare/prext@2.0.2...prext@2.0.5) (2023-04-23)
 
 
