@@ -6100,6 +6100,11 @@ osik@^0.0.3:
   resolved "https://registry.yarnpkg.com/osik/-/osik-0.0.3.tgz#0cc07e0c036376085917153f3fb8ec30b02fe90a"
   integrity sha512-V3/PpkeMqlFHIhA/0AfO+HgDqgLKrEIrneAaM1j4yMLZHOjG+8uRzkqLZba6Me6INWWU/0Nf6/MFe/zJDp3Ptw==
 
+osik@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/osik/-/osik-0.0.5.tgz#e156d259bec908ce7aa3c30f19c11c27c6fa3faa"
+  integrity sha512-OKTM9qonZyhiXWqffLGRCgTZKovDk++Icq9if2mnhVxbePIxu6iacdmQBw+ejK/MyVmOH+/dMcy/jYoEO7q03w==
+
 p-finally@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
@@ -6428,6 +6433,18 @@ prext@1.2.0:
     esbuild "^0.17.6"
     esbuild-node-externals "^1.6.0"
     osik "^0.0.2"
+
+prext@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/prext/-/prext-2.0.2.tgz#1e2d6f2e36ff97692c420def7f7950ef2375bd98"
+  integrity sha512-eRuLNf6Y9axflQEgrZRbWGyyBigXhvByeokPfRjOAueZ4bahxb+/juIeC16Lee2MBvAazqv93Lt9RoSJj34kug==
+  dependencies:
+    "@osik/path-regexp" "^0.0.1"
+    animaux "^0.0.4"
+    chokidar "^3.5.3"
+    esbuild "^0.17.6"
+    esbuild-node-externals "^1.6.0"
+    osik "^0.0.3"
 
 proc-log@^2.0.0, proc-log@^2.0.1:
   version "2.0.1"
