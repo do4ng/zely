@@ -16,7 +16,7 @@ export async function getPages(config: Config): Promise<FileData> {
   let __cache: Record<string, string> = {};
 
   if (existsSync(CACHE_FILE)) {
-    const cacheFile = JSON.parse(readFileSync(CACHE_FILE).toString());
+    const cacheFile = JSON.parse(readFileSync(CACHE_FILE).toString()).pages;
 
     if (cacheFile.__CACHE_VERSION === CACHE_VERSION.toString()) __cache = cacheFile;
   } else {
@@ -94,7 +94,7 @@ export async function getPages(config: Config): Promise<FileData> {
       }
 
       try {
-        const output = await typescriptLoader(target, config);
+        const output = await typescriptLoader(target, config, 'pages');
 
         // https://github.com/do4ng/prext/issues/7
         // custom path feature
@@ -108,6 +108,7 @@ export async function getPages(config: Config): Promise<FileData> {
           m: output.m,
           modulePath: output.filename,
           type: 'module',
+          origin: file,
         };
       } catch (e) {
         error(`Occur ERROR while building ${file}\n${e}`);
@@ -117,12 +118,17 @@ export async function getPages(config: Config): Promise<FileData> {
 
   const cacheJSON = Object.fromEntries(cache);
 
-  // cache version
-  cacheJSON.__CACHE_VERSION = CACHE_VERSION.toString();
-
   if (!existsSync(CACHE_DIRECTORY)) mkdirSync(CACHE_DIRECTORY);
 
-  writeFileSync(CACHE_FILE, JSON.stringify(cacheJSON));
+  writeFileSync(
+    CACHE_FILE,
+    JSON.stringify({
+      base: 'pages',
+      routes: { ...cacheJSON },
+      // cache version
+      __CACHE_VERSION: CACHE_VERSION.toString(),
+    })
+  );
 
   return files as any;
 }
@@ -142,7 +148,13 @@ export function filenameToRoute(map: Array<FileData>) {
     file = transformFilename(file);
     file = prettyURL(file);
 
-    return { file, m: page.m, type: page.type, modulePath: page.modulePath };
+    return {
+      file,
+      m: page.m,
+      type: page.type,
+      modulePath: page.modulePath,
+      origin: page.file,
+    };
   });
 
   const files = {};

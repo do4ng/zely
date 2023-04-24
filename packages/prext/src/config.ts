@@ -35,7 +35,11 @@ export async function getConfig(target?: string): Promise<Config> {
   if (existsSync('prext.config.ts')) {
     return assign(
       await (
-        await typescriptLoader(join(process.cwd(), 'prext.config.ts'))
+        await typescriptLoader(
+          join(process.cwd(), 'prext.config.ts'),
+          DEFAULT_CONFIG,
+          'core'
+        )
       ).m.default
     );
   }

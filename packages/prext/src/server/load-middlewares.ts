@@ -13,7 +13,7 @@ export async function loadMiddlewares(config: Config) {
     const modules = [];
 
     for await (const file of files) {
-      const m = await typescriptLoader(join(file));
+      const m = await typescriptLoader(join(file), config, 'middlewares');
 
       modules.push(m.m);
     }

@@ -5,12 +5,14 @@ import randomFilename from '../../lib/random-filename';
 import { CACHE_DIRECTORY } from '../constants';
 import { Config } from '../config';
 import { error } from '../logger';
+import pkg from '../../package.json';
 
 export function typescriptLoader(
   target: string,
-  config: Config = {}
+  config: Config = {},
+  type: 'cache' | 'core' | 'pages' | 'middlewares' = 'cache'
 ): Promise<{ filename: string; m: any }> {
-  const dist = join(CACHE_DIRECTORY, parse(randomFilename(target)).base);
+  const dist = join(join(CACHE_DIRECTORY, type), parse(randomFilename(target)).base);
 
   return new Promise((resolve) => {
     build({
@@ -24,7 +26,9 @@ export function typescriptLoader(
       platform: 'node',
       format: __ESM__ ? 'esm' : 'cjs',
       plugins: [nodeExternalsPlugin() as any],
-      banner: { js: `/*${target} => ${dist}*/` },
+      banner: {
+        js: `/*** ${target}=>${dist} ***/\n/***  version: ${pkg.version}  ***/\n`,
+      },
       ...(config.esbuild || {}),
     })
       .then(() => {

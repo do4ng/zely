@@ -14,6 +14,7 @@ export type FileData = {
   m: any;
   type: FileType;
   modulePath: string;
+  origin: string;
 };
 
 export function getPages(config: Config): Promise<FileData[]>;

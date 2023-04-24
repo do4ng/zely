@@ -2,11 +2,12 @@ import url from 'url';
 import { IncomingMessage, ServerResponse } from 'http';
 import { pathToRegexp } from '@osik/path-regexp';
 import { existsSync, readFileSync } from 'fs';
-import { join } from 'path';
+import { join, relative } from 'path';
 import { CACHE_DIRECTORY } from '../constants';
 import { ObjectkeysMap } from '../../lib/chageKeys';
-import { errorWithStacks, parseError } from '../logger';
+import { error, errorWithStacks, parseError } from '../logger';
 import { Config } from '../config';
+import { prettyURL } from '../../lib/pretty-url';
 
 export function handles(
   req: IncomingMessage,
@@ -16,6 +17,7 @@ export function handles(
     m: any;
     modulePath: string;
     type: string;
+    origin: string;
   }[],
   config: Config
 ) {
@@ -100,7 +102,25 @@ export function handles(
               if ($page.after) await $page.after(req, res);
             } catch (e) {
               const stacks = parseError(e);
+
               errorWithStacks(e.message, stacks);
+
+              const stackedFile = relative(
+                process.cwd(),
+                stacks[0].loc.slice(1, -1).split(':').slice(0, 2).join(':')
+              );
+
+              // console.log(relative(process.cwd(), page.modulePath));
+
+              if (stackedFile === relative(process.cwd(), page.modulePath)) {
+                error(
+                  `[tracer] Error occurred in ${
+                    prettyURL(
+                      join(config.routes || 'pages', page.origin).replace(/\\/g, '/')
+                    ).cyan
+                  }`
+                );
+              }
             }
           }
         });

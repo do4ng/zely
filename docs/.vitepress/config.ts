@@ -61,16 +61,23 @@ function sidebarBlog() {
   return [
     { text: 'Intro', items: [{ text: 'Introduction', link: '/blog/introduction' }] },
     {
-      text: 'Posts',
+      text: 'v2.x',
       collapsed: true,
       items: [
+        { text: 'Introduce v2.1', link: '/blog/v2-1' },
         { text: 'Prexty v1.2', link: '/blog/prexty-v1-2' },
         { text: 'Introduce v2.0', link: '/blog/v2-0' },
         { text: 'v2.0 is coming', link: '/blog/dev-v2-0' },
         { text: 'New Docs', link: '/blog/new-docs' },
-        { text: 'Introduce v1.3', link: '/blog/v1-3' },
-        { text: 'Introduce v1.2', link: '/blog/v1-2' },
-        { text: 'Introduce v1.0', link: '/blog/v1-0' },
+      ],
+    },
+    {
+      text: 'v1.x',
+      collapsed: true,
+      items: [
+        { text: 'Introduce v1.3', link: '/blog/v1/v1-3' },
+        { text: 'Introduce v1.2', link: '/blog/v1/v1-2' },
+        { text: 'Introduce v1.0', link: '/blog/v1/v1-0' },
       ],
     },
   ];

@@ -7,7 +7,7 @@ import { typescriptLoader } from '../loader';
 import { resetCache } from './routing';
 
 export function Watch(config: Config) {
-  const watcher = chokidar.watch('.', {
+  const watcher = chokidar.watch([config.routes], {
     cwd: join(process.cwd(), config.base || '.'),
     ignored: ['node_modules', '.prexty', '.prext'],
     ...(config.watch?.options || {}),
@@ -39,19 +39,21 @@ export function Watch(config: Config) {
 
       const { filename } = await typescriptLoader(
         join(process.cwd(), config.base || '.', path),
-        config
+        config,
+        'pages'
       );
 
       const cache = JSON.parse(readFileSync(CACHE_FILE, 'utf-8'));
 
-      if (cache[path]) {
-        rmSync(join(CACHE_DIRECTORY, cache[path]), {
+      if (cache.routes[path]) {
+        // console.log(join(CACHE_DIRECTORY, cache.base, cache.routes[path]));
+        rmSync(join(CACHE_DIRECTORY, cache.base, cache.routes[path]), {
           force: true,
           recursive: true,
         });
       }
 
-      cache[path] = parse(filename).base;
+      cache.routes[path] = parse(filename).base;
 
       writeFileSync(CACHE_FILE, JSON.stringify(cache));
     }
