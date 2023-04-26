@@ -8,6 +8,7 @@
     "**/package.json",
     "./docs",
     "./playground/**",
+    "./playground",
     "./packages/plugin-cors",
     "./packages/plugin-kit",
     "./packages/prext-analyst",
