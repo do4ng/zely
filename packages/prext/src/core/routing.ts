@@ -12,7 +12,7 @@ import { handles } from './handles';
 
 let globalCache: any = null;
 
-export async function getPages(config: Config): Promise<FileData> {
+export async function getPages(config: Config): Promise<FileData | null> {
   let __cache: Record<string, string> = {};
 
   if (existsSync(CACHE_FILE)) {
@@ -93,26 +93,29 @@ export async function getPages(config: Config): Promise<FileData> {
         return r;
       }
 
-      try {
-        const output = await typescriptLoader(target, config, 'pages');
+      if (target.endsWith('.ts') || target.endsWith('.js')) {
+        try {
+          const output = await typescriptLoader(target, config, 'pages');
 
-        // https://github.com/do4ng/prext/issues/7
-        // custom path feature
-        const customPage = output?.m?.$page?.path;
-        // console.log(customPage);
+          // https://github.com/do4ng/prext/issues/7
+          // custom path feature
+          const customPage = output?.m?.$page?.path;
+          // console.log(customPage);
 
-        cache.set(target, parse(output.filename).base);
+          cache.set(target, parse(output.filename).base);
 
-        return {
-          file: customPage || file,
-          m: output.m,
-          modulePath: output.filename,
-          type: 'module',
-          origin: file,
-        };
-      } catch (e) {
-        error(`Occur ERROR while building ${file}\n${e}`);
+          return {
+            file: customPage || file,
+            m: output.m,
+            modulePath: output.filename,
+            type: 'module',
+            origin: file,
+          };
+        } catch (e) {
+          error(`Occur ERROR while building ${file}\n${e}`);
+        }
       }
+      return null;
     })
   );
 
@@ -135,36 +138,41 @@ export async function getPages(config: Config): Promise<FileData> {
 
 export function filenameToRoute(map: Array<FileData>) {
   const rawfiles = map.map((page) => {
-    let { file } = page;
-    // eslint-disable-next-line prefer-const
-    let { dir, name } = parse(file);
+    if (page) {
+      let { file } = page;
+      // eslint-disable-next-line prefer-const
+      let { dir, name } = parse(file);
 
-    if (name === 'index') {
-      name = '';
+      if (name === 'index') {
+        name = '';
+      }
+
+      file = join(dir, name);
+      file = file.replace(/\\/g, '/');
+      file = transformFilename(file);
+      file = prettyURL(file);
+
+      return {
+        file,
+        m: page.m,
+        type: page.type,
+        modulePath: page.modulePath,
+        origin: page.file,
+      };
     }
-
-    file = join(dir, name);
-    file = file.replace(/\\/g, '/');
-    file = transformFilename(file);
-    file = prettyURL(file);
-
-    return {
-      file,
-      m: page.m,
-      type: page.type,
-      modulePath: page.modulePath,
-      origin: page.file,
-    };
+    return null;
   });
 
   const files = {};
 
   rawfiles.forEach((file) => {
-    const count = (file.file.match(/:/g) || []).length;
+    if (file) {
+      const count = (file.file.match(/:/g) || []).length;
 
-    if (!files[count]) files[count] = [];
+      if (!files[count]) files[count] = [];
 
-    files[count].push(file);
+      files[count].push(file);
+    }
   });
 
   const filesResult: FileData[] = [];
