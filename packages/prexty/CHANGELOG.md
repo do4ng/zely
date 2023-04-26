@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.5](https://github.com/do4ng/prext/compare/prexty@1.2.4...prexty@1.2.5) (2023-04-26)
+
+
+### Others
+
+* for v2.1 ([f2c0435](https://github.com/do4ng/prext/commit/f2c0435a9136ee7a6500ff326ff63ebaf262a17b))
+
+
+
 ## [1.2.4](https://github.com/do4ng/prext/compare/prexty@1.2.3...prexty@1.2.4) (2023-04-23)
 
 **Note:** Version bump only for package prexty

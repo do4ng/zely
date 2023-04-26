@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.0](https://github.com/do4ng/prext/compare/prext@2.1.0...prext@2.2.0) (2023-04-26)
+
+
+### New Features
+
+* add error tracer ([f8cc22f](https://github.com/do4ng/prext/commit/f8cc22f1092d41d1b2027ce1190b65f819976390))
+* ignore uncompiled files ([317041f](https://github.com/do4ng/prext/commit/317041fa64df7830e064588e42f78f16928c484b))
+
+
+
 ## [2.1.0](https://github.com/do4ng/prext/compare/prext@2.0.5...prext@2.1.0) (2023-04-23)
 
 

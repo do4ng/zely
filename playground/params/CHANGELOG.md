@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/do4ng/prext/compare/params@1.1.0...params@1.1.1) (2023-04-26)
+
+**Note:** Version bump only for package params
+
+
+
+
+
 ## [1.1.0](https://github.com/do4ng/prext/compare/params@1.0.1...params@1.1.0) (2023-04-23)
 
 
