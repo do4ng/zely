@@ -109,6 +109,7 @@ export function react(config: ReactLoaderConfig = {}): Plugin {
         return {
           file: parse(id).name,
           modulePath: '',
+          origin: null,
           type: 'module',
           m: require(`./${relative(__dirname, out.replace('.js', '.server.js'))}`),
         };
