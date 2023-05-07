@@ -59,7 +59,10 @@ export async function exportServer(config: Config): Promise<void> {
 
   writeFileSync(
     out,
-    `const __userconfig = require("./${relative(CACHE_DIRECTORY, configData)}");
+    `const __userconfig = require("./${relative(CACHE_DIRECTORY, configData).replace(
+      /\\/g,
+      '/'
+    )}");
 ${code.import}
 ${code.init}
 const prext_pages = [${pagesJSONCode.join(',')}];
