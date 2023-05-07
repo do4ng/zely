@@ -11,7 +11,7 @@ export const DEFAULT_CONFIG: Config = {
 
   // auto middleware mode
   middlewareDirectory: './middlewares/',
-  allowAutoMiddlewares: true,
+  allowAutoMiddlewares: false,
 
   server: {
     middlewareMode: false,
