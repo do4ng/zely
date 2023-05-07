@@ -16,9 +16,11 @@ export async function getPages(config: Config): Promise<FileData | null> {
   let __cache: Record<string, string> = {};
 
   if (existsSync(CACHE_FILE)) {
-    const cacheFile = JSON.parse(readFileSync(CACHE_FILE).toString()).pages;
+    const cacheFile = JSON.parse(readFileSync(CACHE_FILE).toString());
 
-    if (cacheFile.__CACHE_VERSION === CACHE_VERSION.toString()) __cache = cacheFile;
+    if (cacheFile.__CACHE_VERSION === CACHE_VERSION.toString()) {
+      __cache = cacheFile.routes;
+    }
   } else {
     success('success to create page cache file.');
   }
@@ -37,7 +39,7 @@ export async function getPages(config: Config): Promise<FileData | null> {
         // load module
         const pageModule = require(relative(
           __dirname,
-          join(CACHE_DIRECTORY, cache.get(target))
+          join(CACHE_DIRECTORY, 'pages', cache.get(target))
         ));
 
         // custom path
