@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.2](https://github.com/do4ng/prext/compare/prext@2.2.0...prext@2.2.2) (2023-05-07)
+
+
+### Bug Fix
+
+* fixed CACHE_VERSION error ([b6569ef](https://github.com/do4ng/prext/commit/b6569ef851f770864c8b024c342921d4d5796b0c))
+* fixed middleware scandir error ([8f560d9](https://github.com/do4ng/prext/commit/8f560d92a065b63485c013c7578d742df9d6152a))
+
+
+### Others
+
+* **release:** 2.2.1 ([e94a230](https://github.com/do4ng/prext/commit/e94a230bad3c9199166c9ec4f68240df6214b93a))
+
+
+
 ## [2.2.0](https://github.com/do4ng/prext/compare/prext@2.1.0...prext@2.2.0) (2023-04-26)
 
 
