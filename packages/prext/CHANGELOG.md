@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.3](https://github.com/do4ng/prext/compare/prext@2.2.2...prext@2.2.3) (2023-05-07)
+
+
+### Bug Fix
+
+* fixed build error ([a70750d](https://github.com/do4ng/prext/commit/a70750d0b8a604a7245e570d8ae5e913c9ba9f00))
+
+
+
 ## [2.2.2](https://github.com/do4ng/prext/compare/prext@2.2.0...prext@2.2.2) (2023-05-07)
 
 
