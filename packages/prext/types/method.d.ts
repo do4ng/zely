@@ -1,8 +1,10 @@
 import { Request, Response } from 'osik';
 import './';
+import { snatch } from './';
 
 export interface PrextRequest extends Request {
   query: object;
+  snatch: typeof snatch;
 }
 
 // https://github.com/do4ng/prext/issues/11

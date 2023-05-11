@@ -2,6 +2,7 @@ import url from 'url';
 import http from 'http';
 
 import { Plugin } from '../config';
+import { snatcher } from '../snatcher';
 
 // https://github.com/do4ng/prext/issues/11
 // original: https://github.com/do4ng/prext/tree/main/packages/plugin-kit
@@ -35,6 +36,13 @@ export function apply(req: Req, res: Res) {
     res.statusCode = code;
     return res;
   };
+
+  /* snatcher */
+  // https://prext.netlify.app/guide/fetch
+
+  const devSnatch = snatcher(req, res);
+
+  (req as any).snatch = devSnatch;
 }
 export function kitMiddleware(req: Req, res: Res, next: () => void) {
   apply(req, res);
