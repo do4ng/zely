@@ -1,4 +1,6 @@
-# 🛰️ Prext
+[![img](https://raw.githubusercontent.com/do4ng/prext/main/.github/assets/icon.svg)](https://github.com/do4ng/prext)
+
+# Prext
 
 Prext is a backend framework for Node.js
 
