@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.0](https://github.com/do4ng/prext/compare/prext@2.2.3...prext@2.3.0) (2023-05-11)
+
+
+### Documentation
+
+* add icon ([c8f55f9](https://github.com/do4ng/prext/commit/c8f55f9d2c0c9076dcce8a2d1428f9a4de4e426c))
+
+
+### New Features
+
+* req.snatch ([810096f](https://github.com/do4ng/prext/commit/810096fa02f363cb68de4efa8fa95640337726ae))
+
+
+
 ## [2.2.3](https://github.com/do4ng/prext/compare/prext@2.2.2...prext@2.2.3) (2023-05-07)
 
 
