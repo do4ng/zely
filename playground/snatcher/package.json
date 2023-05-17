@@ -2,7 +2,7 @@
   "name": "snatcher-playground",
   "version": "2.0.2",
   "dependencies": {
-    "prext": "2.0.2"
+    "prext": "*"
   },
   "scripts": {
     "dev": "prext dev",
