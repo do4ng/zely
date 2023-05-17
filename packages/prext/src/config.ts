@@ -52,7 +52,7 @@ export async function configDev(): Promise<string> {
     await build({
       entryPoints: ['prext.config.js'],
       outfile: join(CACHE_DIRECTORY, 'core.config.js'),
-      budnle: true,
+      bundle: true,
       minify: true,
     });
 
