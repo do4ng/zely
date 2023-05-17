@@ -8,7 +8,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "prext": "2.2.0"
+    "prext": "latest"
   },
   "main": "./dist/index.js",
   "types": "./index.d.ts",
