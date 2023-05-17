@@ -6,6 +6,7 @@
   "module": "./dist/index.esm.js",
   "homepage": "https://prext.netlify.app/",
   "repository": "https://github.com/do4ng/prext",
+  "description": "a Backend Framework for Node.js",
   "bin": {
     "prext": "./dist/bin.js"
   },
@@ -13,6 +14,13 @@
     "dist",
     "types",
     "assets"
+  ],
+  "keywords": [
+    "node",
+    "backend",
+    "back-end",
+    "server",
+    "routing"
   ],
   "exports": {
     ".": {
