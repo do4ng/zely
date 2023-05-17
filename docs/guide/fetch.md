@@ -15,6 +15,16 @@ export async function get(req, res) {
 }
 ```
 
+After [`^2.3.0`](https://github.com/do4ng/prext/blob/main/packages/prext/CHANGELOG.md#230-2023-05-11), you can use `req.snatch`.
+
+```ts
+export async function get(req, res) {
+  const { body } = await req.snatch('/user');
+
+  res.send(`users: ${body}`);
+}
+```
+
 ## Example
 
 ::: code-group
