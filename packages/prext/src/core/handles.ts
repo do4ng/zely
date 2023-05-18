@@ -74,6 +74,7 @@ export function handles(
 
         Object.keys(page.m).forEach(async (pageHandler) => {
           // "all"
+
           if (pageHandler === req.method.toLowerCase() || pageHandler === 'all') {
             isSended = true;
 

@@ -1,14 +1,16 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { join, parse, relative } from 'path';
 import { IncomingMessage, ServerResponse } from 'http';
+
 import { Config, FileData } from '../config';
 import { CACHE_DIRECTORY, CACHE_FILE, CACHE_VERSION } from '../constants';
 import { typescriptLoader } from '../loader';
+import { error, success } from '../logger';
+import { handles } from './handles';
+
 import { readDirectory } from '../../lib/readDirectory';
 import { transformFilename } from '../../lib/transform-filename';
 import { prettyURL } from '../../lib/pretty-url';
-import { error, success } from '../logger';
-import { handles } from './handles';
 
 let globalCache: any = null;
 
