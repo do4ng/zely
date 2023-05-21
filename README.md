@@ -1,8 +1,8 @@
-[![img](.github/assets/icon.svg)](https://github.com/do4ng/prext)
+[![img](.github/assets/icon-v3.svg)](https://github.com/do4ng/prext)
 
 # Prext
 
-Prext is a backend framework for Node.js
+a Next-Generation backend framework for nodejs
 
 [**github**](https://github.com/do4ng/prext) • [**npm**](https://npmjs.com/package/prext) • [**website**](https://prext.netlify.app/)
 
