@@ -1,4 +1,4 @@
-[![img](.github/assets/icon-v3.svg)](https://github.com/do4ng/prext)
+[![img](.github/assets/icon-v3-white.svg)](https://github.com/do4ng/prext)
 
 # Prext
 
