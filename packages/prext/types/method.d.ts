@@ -13,7 +13,7 @@ export interface PrextResponse extends Response {
   // default supported
   // json: (data: any) => void;
   html: (code: string) => this;
-  send: (code: string) => this;
+  send: (chunk: string | Array<any> | object | number, status?: number) => this;
   status: (code: number) => this;
 }
 

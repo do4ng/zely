@@ -12,7 +12,7 @@ export type HandlerType = (
   routes: FileData[]
 ) => void;
 
-export type PluginOutput = FileData | null | undefined | void;
+export type PluginOutput = FileData | null;
 
 export interface Plugin {
   name: string;
@@ -72,6 +72,11 @@ export interface StaticOptions {
 
   charset?: string;
 }
+
+export function usePrewrite<T>(
+  res: ServerResponse,
+  cb: (chunk: T) => T | Promise<T>
+): void;
 
 export * from './config';
 export * from './constants';
