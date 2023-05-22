@@ -6,6 +6,14 @@ We are really excited to introduce v3.
 
 > [3.0-next](https://github.com/do4ng/prext/tree/3.0-next)
 
+::: code-group
+
+```bash [Try it!]
+npm i prext@next
+```
+
+:::
+
 The v2 update was aimed at adding and modifying features. The v3 update aims to stabilize the prext and provide more APIs.
 
 Before we introduce you to this update, we would like to inform you about the end of support for several packages.
