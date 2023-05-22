@@ -43,7 +43,7 @@ export default defineConfig({
           return {
             file: parse(id).name,
             m: require(relative(__dirname, join(process.cwd(), 'my-html.js'))),
-            modulePath: '',
+            modulePath: './my-html.js',
             type: 'module',
           };
         }

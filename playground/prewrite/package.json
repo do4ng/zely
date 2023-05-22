@@ -1,0 +1,11 @@
+{
+  "name": "prewrite",
+  "version": "1.0.0",
+  "dependencies": {
+    "prext": "*"
+  },
+  "scripts": {
+    "dev": "prext dev",
+    "build": "prext build"
+  }
+}
