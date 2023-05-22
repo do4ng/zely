@@ -15,6 +15,9 @@
   --vp-c-brand-dark: #535bf2;
   --vp-c-brand-darker: #454ce1;
   --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
+
+  --vp-code-tab-bg: #131b2b;
+  --vp-code-block-bg: #1c2635;
 }
 
 /**
@@ -31,6 +34,14 @@
   --vp-button-brand-active-border: var(--vp-c-brand-light);
   --vp-button-brand-active-text: var(--vp-c-white);
   --vp-button-brand-active-bg: var(--vp-button-brand-bg);
+}
+
+.vp-doc [class*='language-'] pre {
+  padding: 15px 0;
+}
+
+.vp-doc [class*='language-'] pre code {
+  padding: 0 20px;
 }
 
 /**

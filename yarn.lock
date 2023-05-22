@@ -1572,6 +1572,11 @@
   dependencies:
     esquery "^1.0.1"
 
+"@prext/plugin-kit@*":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@prext/plugin-kit/-/plugin-kit-0.1.0.tgz#27c11bb6d64cb0f535d9604e7beff30341142a8e"
+  integrity sha512-HxnkYkSP6+x4L0ewIs4787zUmV3LZN6uGUayy4nXmlRVDYolU/SMzvnGH+NZKbIJi85eJm8eEwm3i0M1rsrV0g==
+
 "@sinclair/typebox@^0.25.16":
   version "0.25.24"
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.25.24.tgz#8c7688559979f7079aacaf31aa881c3aa410b718"
@@ -5699,7 +5704,7 @@ mute-stream@0.0.8, mute-stream@~0.0.4:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
 
-nanoid@^3.3.4, nanoid@^3.3.6:
+nanoid@^3.3.4:
   version "3.3.6"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.6.tgz#443380c856d6e9f9824267d960b4236ad583ea4c"
   integrity sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==
@@ -6090,16 +6095,6 @@ os-tmpdir@~1.0.2:
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
   integrity sha512-D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g==
 
-osik@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/osik/-/osik-0.0.2.tgz#7a047db8b89f4377fc0bec544b0fa17ee05eaabd"
-  integrity sha512-5D98yJiYZwtjiHxFpILkC6GGmhCezClYLj2ykhVrrWG9TvwN4UpVZq4jQUHEtvGlE3ybB7zwLmCYqWG442dVQQ==
-
-osik@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/osik/-/osik-0.0.3.tgz#0cc07e0c036376085917153f3fb8ec30b02fe90a"
-  integrity sha512-V3/PpkeMqlFHIhA/0AfO+HgDqgLKrEIrneAaM1j4yMLZHOjG+8uRzkqLZba6Me6INWWU/0Nf6/MFe/zJDp3Ptw==
-
 osik@^0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/osik/-/osik-0.0.5.tgz#e156d259bec908ce7aa3c30f19c11c27c6fa3faa"
@@ -6396,15 +6391,6 @@ postcss@^8.1.10, postcss@^8.4.21:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-postcss@^8.4.23:
-  version "8.4.23"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.23.tgz#df0aee9ac7c5e53e1075c24a3613496f9e6552ab"
-  integrity sha512-bQ3qMcpF6A/YjR55xtoTr0jGOlnPOKAIMdOWiv0EIT6HVPEaJiJB4NLljSbiHoC2RX7DN5Uvjtpbg1NPdwv1oA==
-  dependencies:
-    nanoid "^3.3.6"
-    picocolors "^1.0.0"
-    source-map-js "^1.0.2"
-
 preact@^10.0.0:
   version "10.13.2"
   resolved "https://registry.yarnpkg.com/preact/-/preact-10.13.2.tgz#2c40c73d57248b57234c4ae6cd9ab9d8186ebc0a"
@@ -6431,51 +6417,6 @@ prext-analyst@latest:
   dependencies:
     colors "^1.4.0"
     prext "*"
-
-prext@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/prext/-/prext-1.2.0.tgz#959a6b338e50123ecbed7f7242191d2e332074d7"
-  integrity sha512-kzkLStFGe2zOFcTLclIm312f8kkrzZcQcuwsFgq2+xc48W5VdT31lBEzh7iM5wjVxHtZJUVqoSCO/n0Zfr9IFA==
-  dependencies:
-    animaux "^0.0.4"
-    chokidar "^3.5.3"
-    esbuild "^0.17.6"
-    esbuild-node-externals "^1.6.0"
-    osik "^0.0.2"
-
-prext@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/prext/-/prext-2.0.2.tgz#1e2d6f2e36ff97692c420def7f7950ef2375bd98"
-  integrity sha512-eRuLNf6Y9axflQEgrZRbWGyyBigXhvByeokPfRjOAueZ4bahxb+/juIeC16Lee2MBvAazqv93Lt9RoSJj34kug==
-  dependencies:
-    "@osik/path-regexp" "^0.0.1"
-    animaux "^0.0.4"
-    chokidar "^3.5.3"
-    esbuild "^0.17.6"
-    esbuild-node-externals "^1.6.0"
-    osik "^0.0.3"
-
-prext@2.2.0:
-  version "2.3.0"
-  dependencies:
-    "@osik/path-regexp" "^0.0.1"
-    animaux "^0.0.4"
-    chokidar "^3.5.3"
-    esbuild "^0.17.6"
-    esbuild-node-externals "^1.6.0"
-    osik "^0.0.5"
-
-prext@latest:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/prext/-/prext-2.3.0.tgz#12c665699bcfdcfe2531eb80968d6ab00bf57cff"
-  integrity sha512-GWLnmkFJuDyHjeyjVIPy5lfX3Xl8TwrnOKWw0IrGcCNFRMHWLMhH743IgGSK941LMdsYNQkQwKXehrRrRU4E/w==
-  dependencies:
-    "@osik/path-regexp" "^0.0.1"
-    animaux "^0.0.4"
-    chokidar "^3.5.3"
-    esbuild "^0.17.6"
-    esbuild-node-externals "^1.6.0"
-    osik "^0.0.5"
 
 proc-log@^2.0.0, proc-log@^2.0.1:
   version "2.0.1"
@@ -6559,14 +6500,6 @@ quick-lru@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-4.0.1.tgz#5b8878f113a58217848c6482026c73e1ba57727f"
   integrity sha512-ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==
-
-react-dom@^18.2.0:
-  version "18.2.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"
-  integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
-  dependencies:
-    loose-envify "^1.1.0"
-    scheduler "^0.23.0"
 
 react-is@^18.0.0:
   version "18.2.0"
@@ -6802,13 +6735,6 @@ rollup@^3.18.0:
   optionalDependencies:
     fsevents "~2.3.2"
 
-rollup@^3.21.0:
-  version "3.21.6"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.21.6.tgz#f5649ccdf8fcc7729254faa457cbea9547eb86db"
-  integrity sha512-SXIICxvxQxR3D4dp/3LDHZIJPC8a4anKMHd4E3Jiz2/JnY+2bEjqrOokAauc5ShGVNFHlEFjBXAXlaxkJqIqSg==
-  optionalDependencies:
-    fsevents "~2.3.2"
-
 run-async@^2.4.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.4.1.tgz#8440eccf99ea3e70bd409d49aab88e10c189a455"
@@ -6851,13 +6777,6 @@ safe-regex-test@^1.0.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
-
-scheduler@^0.23.0:
-  version "0.23.0"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.23.0.tgz#ba8041afc3d30eb206a487b6b384002e4e61fdfe"
-  integrity sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==
-  dependencies:
-    loose-envify "^1.1.0"
 
 "semver@2 || 3 || 4 || 5", semver@^5.6.0:
   version "5.7.1"
@@ -7544,17 +7463,6 @@ vite@^4.2.1:
     postcss "^8.4.21"
     resolve "^1.22.1"
     rollup "^3.18.0"
-  optionalDependencies:
-    fsevents "~2.3.2"
-
-vite@^4.3.5:
-  version "4.3.5"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-4.3.5.tgz#3871fe0f4b582ea7f49a85386ac80e84826367d9"
-  integrity sha512-0gEnL9wiRFxgz40o/i/eTBwm+NEbpUeTWhzKrZDSdKm6nplj+z4lKz8ANDgildxHm47Vg8EUia0aicKbawUVVA==
-  dependencies:
-    esbuild "^0.17.5"
-    postcss "^8.4.23"
-    rollup "^3.21.0"
   optionalDependencies:
     fsevents "~2.3.2"
 

@@ -2,6 +2,7 @@ import { build } from 'esbuild';
 import { rmSync, writeFileSync } from 'fs';
 import { join, relative } from 'path';
 import { performance } from 'perf_hooks';
+import { nodeExternalsPlugin } from 'esbuild-node-externals';
 import { Config, configDev } from './config';
 import { CACHE_DIRECTORY, DEFAULT_CONFIG } from './constants';
 import { filenameToRoute, getPages } from './core';
@@ -9,7 +10,8 @@ import { success } from './logger';
 
 export function exportsCode(config: Config) {
   return {
-    import: 'var { handles } = require("prext/server");var { osik } = require("osik");',
+    import:
+      'var { handles, applyPlugins } = require("prext/server");var { osik } = require("osik");',
     init: 'var app = osik();',
     listen: `app.listen(${config.port}, () => {console.log("Prext Server is running.".grey + " - " + "http://localhost:${config.port}".cyan)});`,
   };
@@ -66,6 +68,7 @@ export async function exportServer(config: Config): Promise<void> {
 ${code.import}
 ${code.init}
 const prext_pages = [${pagesJSONCode.join(',')}];
+applyPlugins(app, __userconfig);
 (__userconfig.default.middlewares || []).forEach((middleware) => app.use(middleware));
 app.use((req,res) => {handles(req,res, prext_pages)});
 ${code.listen}`
@@ -80,6 +83,7 @@ ${code.listen}`
     logLevel: 'error',
     platform: 'node',
     minify: true,
+    plugins: [nodeExternalsPlugin() as any],
   });
 
   success('success to export app.');

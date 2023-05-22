@@ -20,6 +20,7 @@ const build = (
   const pkgBase = {
     entryPoints: [join(process.cwd(), 'packages', pkg, entryPoint)],
     plugins: [
+      // @ts-ignore
       nodeExternalsPlugin({
         packagePath: join(process.cwd(), 'packages', pkg, 'package.json'),
       }),
@@ -55,10 +56,7 @@ const build = (
   }
 };
 
-build('sard');
 build('prext');
-build('prext-analyst');
-build('prexty');
 // cli
 build('prext', 'src/bin/index.ts', { cjs: 'dist/bin.js', esm: 'dist/bin.esm.js' });
 build('prext', 'src/server.ts', { cjs: 'dist/server.js', esm: 'dist/server.esm.js' });
@@ -66,6 +64,3 @@ build('prext', 'src/export-config.ts', {
   cjs: 'dist/config.js',
   esm: 'dist/config.esm.js',
 });
-build('create-prext', 'src/bin.ts', { cjs: 'dist/bin.js', esm: 'dist/bin.esm.js' });
-
-build('plugin-kit');

@@ -32,9 +32,9 @@ export async function middleware(config: Config): Promise<pureMiddleware[]> {
     }
   });
 
-  middlewares.push(kitMiddleware);
-
   // @prext/plugin-kit
+
+  middlewares.push(kitMiddleware);
 
   // @osik/static
 
@@ -63,7 +63,7 @@ export async function middleware(config: Config): Promise<pureMiddleware[]> {
   middlewares.push((req, res, next) => {
     config.error = next;
 
-    Handler(req, res, config);
+    Handler(req as any, res as any, config);
   });
 
   return middlewares;

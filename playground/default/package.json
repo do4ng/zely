@@ -3,8 +3,7 @@
   "version": "2.0.8",
   "devDependencies": {
     "@prext/plugin-kit": "*",
-    "prext": "*",
-    "prexty": "1.2.5"
+    "prext": "*"
   },
   "scripts": {
     "dev": "prext dev",

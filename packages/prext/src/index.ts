@@ -20,3 +20,6 @@ export * from './show-listen';
 
 export * from './server/middlewaremode';
 export * from './snatcher';
+
+export * from './apply-plugins';
+export * from './prewrite';

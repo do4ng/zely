@@ -74,6 +74,7 @@ export function handles(
 
         Object.keys(page.m).forEach(async (pageHandler) => {
           // "all"
+
           if (pageHandler === req.method.toLowerCase() || pageHandler === 'all') {
             isSended = true;
 
@@ -95,11 +96,27 @@ export function handles(
 
               // console.log('response1');
 
-              if ($page.before) await $page.before(req, res);
+              // response
 
-              await target[pageHandler](req, res);
+              const next = async () => {
+                // $page.before
 
-              if ($page.after) await $page.after(req, res);
+                if ($page.before) await $page.before(req, res);
+
+                await target[pageHandler](req, res);
+
+                // $page.after
+
+                if ($page.after) await $page.after(req, res);
+              };
+
+              // $page.use
+
+              if ($page.use) {
+                $page.use(req, res, next);
+              } else {
+                await next();
+              }
             } catch (e) {
               const stacks = parseError(e);
 
