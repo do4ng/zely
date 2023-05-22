@@ -1,6 +1,5 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { join, parse, relative } from 'path';
-import { IncomingMessage, ServerResponse } from 'http';
 
 import { Config, FileData } from '../config';
 import { CACHE_DIRECTORY, CACHE_FILE, CACHE_VERSION } from '../constants';
@@ -11,6 +10,7 @@ import { handles } from './handles';
 import { readDirectory } from '../../lib/readDirectory';
 import { transformFilename } from '../../lib/transform-filename';
 import { prettyURL } from '../../lib/pretty-url';
+import { PrextRequest, PrextResponse } from '$prext/types';
 
 let globalCache: any = null;
 
@@ -188,7 +188,42 @@ export function filenameToRoute(map: Array<FileData>) {
   return filesResult;
 }
 
-export async function Handler(req: IncomingMessage, res: ServerResponse, config: Config) {
+export async function Handler(req: PrextRequest, res: PrextResponse, config: Config) {
+  // prewrite
+
+  // custom res.end
+
+  // @ts-ignore
+  res.send = async (chunk: string | number | object | any[], status?: number) => {
+    // console.log(chunk, res.prewrite);
+
+    if (status) res.status(status);
+
+    if (Array.isArray(chunk)) {
+      chunk = JSON.stringify(chunk as Array<any>);
+    }
+
+    switch (typeof chunk) {
+      case 'string':
+        break;
+      case 'number':
+        chunk = (chunk as number).toString();
+        break;
+      case 'object':
+        chunk = JSON.stringify(chunk);
+        break;
+      default:
+        break;
+    }
+
+    if (res.prewrite) {
+      for await (const prewite of res.prewrite) {
+        chunk = prewite(chunk);
+      }
+    }
+    res.end(chunk);
+  };
+
   try {
     if (!globalCache) {
       const pages = await getPages(config);

@@ -28,7 +28,8 @@ export function apply(req: Req, res: Res) {
   // res.send
   // res.send("text")
   // same: res.end
-  (res as any).send = res.end;
+  // (res as any).send = res.end;
+  // replaced: prewrite (/packages/prext/src/core/handles.ts)
 
   // res.status
   // res.status(404).send("not found")
