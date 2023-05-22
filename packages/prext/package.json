@@ -59,6 +59,7 @@
   },
   "devDependencies": {
     "@prext/plugin-cors": "0.1.1",
-    "prext-analyst": "latest"
+    "prext-analyst": "latest",
+    "teeti": "^0.0.1"
   }
 }

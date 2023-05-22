@@ -6418,6 +6418,18 @@ prext-analyst@latest:
     colors "^1.4.0"
     prext "*"
 
+prext@*:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/prext/-/prext-2.3.0.tgz#12c665699bcfdcfe2531eb80968d6ab00bf57cff"
+  integrity sha512-GWLnmkFJuDyHjeyjVIPy5lfX3Xl8TwrnOKWw0IrGcCNFRMHWLMhH743IgGSK941LMdsYNQkQwKXehrRrRU4E/w==
+  dependencies:
+    "@osik/path-regexp" "^0.0.1"
+    animaux "^0.0.4"
+    chokidar "^3.5.3"
+    esbuild "^0.17.6"
+    esbuild-node-externals "^1.6.0"
+    osik "^0.0.5"
+
 proc-log@^2.0.0, proc-log@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/proc-log/-/proc-log-2.0.1.tgz#8f3f69a1f608de27878f91f5c688b225391cb685"
@@ -6979,7 +6991,7 @@ string-length@^4.0.1:
     char-regex "^1.0.2"
     strip-ansi "^6.0.0"
 
-"string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+string-width@4.2.3, "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -7123,6 +7135,13 @@ tar@^6.1.11, tar@^6.1.2:
     minizlib "^2.1.1"
     mkdirp "^1.0.3"
     yallist "^4.0.0"
+
+teeti@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/teeti/-/teeti-0.0.1.tgz#fd933ec5a4bf3b2111265c5dcbed66f51783f02e"
+  integrity sha512-+pAUDe72jfjgap2r776IZszkAVeucsFcVwOB52xFiLNtHPHKkxSTQVg3Hqx5FO0FwRR+dGjgHw2VDV1/1dPUHA==
+  dependencies:
+    string-width "4.2.3"
 
 temp-dir@1.0.0:
   version "1.0.0"

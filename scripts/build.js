@@ -23,6 +23,7 @@ const build = (
       // @ts-ignore
       nodeExternalsPlugin({
         packagePath: join(process.cwd(), 'packages', pkg, 'package.json'),
+        devDependencies: false,
       }),
     ],
     external: ['esbuild'],
