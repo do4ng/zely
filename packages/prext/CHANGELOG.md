@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.0-next.1](https://github.com/do4ng/prext/compare/prext@2.3.0...prext@3.0.0-next.1) (2023-05-22)
+
+
+### New Features
+
+* apply plugins function ([889ef59](https://github.com/do4ng/prext/commit/889ef596f59ca53fe06ac34c00cc350f0daf6dc2))
+* builder supports plugins ([ca56d0b](https://github.com/do4ng/prext/commit/ca56d0b0bf9a6745a791474b63ce0dd35afb8280))
+* support prewrite ([29a6975](https://github.com/do4ng/prext/commit/29a69755604695807620d9cda87d7df96f10e857))
+* support prewrite (dts) ([536e3c2](https://github.com/do4ng/prext/commit/536e3c2ad4b1af5ccc45d2036726fb98e3d97d81))
+
+
+### Others
+
+* 3.0-next.0 ([88346a0](https://github.com/do4ng/prext/commit/88346a06b4c09e1b82056de1020d23623c9a1394))
+* add keywords ([fea4425](https://github.com/do4ng/prext/commit/fea442510694defd87b4bfe892c1ae604f430780))
+* fixed typo ([d40df61](https://github.com/do4ng/prext/commit/d40df61cd68d86e0295074fd720dd04342ee187f))
+* prettier code ([acb8bcf](https://github.com/do4ng/prext/commit/acb8bcff6c043bf1057f71d62a0f7d9b62fa629d))
+* typescript (dts) ([c61c67b](https://github.com/do4ng/prext/commit/c61c67bccc3fa20ca044cf722737fc33b2ca39dc))
+
+
+
 ## [2.3.0](https://github.com/do4ng/prext/compare/prext@2.2.3...prext@2.3.0) (2023-05-11)
 
 
