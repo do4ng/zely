@@ -1,22 +1,22 @@
 <app-announcement>
 </app-announcement>
 
-# What is Prext
+# What is Zely
 
-🛰️ Prext is a backend framework for Node.js.
+🛰️ Zely is a backend framework for Node.js.
 
 ## Features
 
-- **🚧 File-based routing.** Prext.js creates routes automatically with filenames.
+- **🚧 File-based routing.** zely creates routes automatically with filenames.
 - **🚀 Server Reload.** You don't have to restart server to apply changes.
 - **✅ Typescript Supported.**
-- **⚡ Lightning fast.** Prext uses [esbuild](https://esbuild.github.io/) as javascript loader.
+- **⚡ Lightning fast.** zely uses [esbuild](https://esbuild.github.io/) as javascript loader.
 
 ## Introduction
 
-Prext.js (previous + next) is a node.js backend framework inspired by [next](https://nextjs.org/). This project aims to be the lightest Nodejs backend framework.
+Zely (previous + next) is a node.js backend framework inspired by [next](https://nextjs.org/). This project aims to be the lightest Nodejs backend framework.
 
-Prext is running on [osik](https://npmjs.com/package/osik) which was made for speed and weight. It also uses [esbuild](https://esbuild.github.io/) to reduce compile time.
+Zely is running on [osik](https://npmjs.com/package/osik) which was made for speed and weight. It also uses [esbuild](https://esbuild.github.io/) to reduce compile time.
 
 ## Why you made it?
 
@@ -34,4 +34,4 @@ Taking express as an example again, I want to create an sns backend system, but 
 
 ### Solution
 
-Prext solves these problems. It has many features such as file based routing, fastest server, etc,
+Zely solves these problems. It has many features such as file based routing, fastest server, etc,

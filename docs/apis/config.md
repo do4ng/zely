@@ -2,17 +2,17 @@
 
 ## DefineConfig
 
-Create `prext.config.js` or `prext.config.ts` to define config.
+Create `zely.config.js` or `zely.config.ts` to define config.
 
 1. Default
 
 ::: code-group
 
-```ts [prext.config.ts]
+```ts [zely.config.ts]
 export default {};
 ```
 
-```js [prext.config.js]
+```js [zely.config.js]
 module.exports = {};
 ```
 
@@ -22,16 +22,16 @@ module.exports = {};
 
 ::: code-group
 
-```ts [prext.config.ts]
-import { defineConfig } from 'prext/config';
+```ts [zely.config.ts]
+import { defineConfig } from 'zely/config';
 
 export default defineConfig({
   /* config */
 });
 ```
 
-```js [prext.config.js]
-const { defineConfig } = require('prext/config');
+```js [zely.config.js]
+const { defineConfig } = require('zely/config');
 
 module.exports = defineConfig({
   /* config */
@@ -87,7 +87,7 @@ Port
 Custom Server Handler
 
 ```ts
-Prext({
+Zely({
   handler: (req, res, routes) => {
     // ...
   },

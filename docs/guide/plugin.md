@@ -7,7 +7,7 @@
 ::: code-group
 
 ```ts [plugins/simple.ts]
-import { Plugin } from 'prext';
+import { Plugin } from 'zely';
 
 export function SimplePlugin(): Plugin {
   return {
@@ -20,9 +20,8 @@ export function SimplePlugin(): Plugin {
 
 ::: code-group
 
-```ts [prext.config.ts]
-// prext.config.ts
-import { defineConfig } from 'prext/config';
+```ts [zely.config.ts]
+import { defineConfig } from 'zely/config';
 import { SimplePlugin } from './plugins/simple';
 
 export default defineConfig({
@@ -50,7 +49,7 @@ export function MyPlugin(): Plugin {
 
         /*
           module.
-          See - https://prext.netlify.app/guide/routing
+          See - https://zely.netlify.app/guide/routing
         */
         m: {
           get(req, res) {

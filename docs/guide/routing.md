@@ -1,6 +1,6 @@
 # Routing
 
-Prext.js automatically generates routes based on your file tree of pages.
+zely.js automatically generates routes based on your file tree of pages.
 
 ```txt
 .
@@ -9,7 +9,7 @@ Prext.js automatically generates routes based on your file tree of pages.
 │  │  └─ $id.ts
 │  ├─ users.ts
 │  └─ index.ts
-├─ prext.config.ts
+├─ zely.config.ts
 └─ package.json
 ```
 
@@ -45,9 +45,9 @@ You can access the current page parameters by `req.params`.
 ::: code-group
 
 ```ts [pages/user/$id.ts]
-import { PrextRequest, PrextResponse } from 'prext';
+import { ZelyRequest, ZelyResponse } from 'zely';
 
-export function get(req: PrextRequest, res: PrextResponse) {
+export function get(req: ZelyRequest, res: ZelyResponse) {
   res.json({ id: req.params.id });
 }
 ```
@@ -68,7 +68,7 @@ export function post(req, res) {}
 
 ### request
 
-Prext Server is based on `node:http` module.
+Zely Server is based on `node:http` module.
 
 > reference: [http.req](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/#request-body)
 
@@ -94,7 +94,7 @@ Page Querystring.
 
 ### response
 
-Prext Server is based on `node:http` module.
+Zely Server is based on `node:http` module.
 
 > reference: [http.res](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/#http-status-code)
 
@@ -136,7 +136,7 @@ Set header
 
 Set status
 
-- added: [1.0.0-beta.1](https://github.com/do4ng/prext/blob/main/packages/prext/CHANGELOG.md#100-beta1-2023-02-27)
+- added: [1.0.0-beta.1](https://github.com/do4ng/zely/blob/main/packages/zely/CHANGELOG.md#100-beta1-2023-02-27)
 
 ```js
 export function get(req, res) {
@@ -160,4 +160,4 @@ export default defineConfig({
 
 ## Parameters in HTML
 
-You cannot access the current page parameters. - ([#1](https://github.com/do4ng/prext/issues/1))
+You cannot access the current page parameters. - ([#1](https://github.com/do4ng/zely/issues/1))
