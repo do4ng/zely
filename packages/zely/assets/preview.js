@@ -9,7 +9,7 @@ async function main() {
   };
 
   // server
-  const server = await zely.Prext(config);
+  const server = await zely.Zely(config);
 
   // port
   const port = config.port || 3000;

@@ -10,7 +10,7 @@ a Next-Generation backend framework for nodejs
 
 ## Documentation
 
-Visit [prext website](https://zely.netlify.app/).
+Visit [zely website](https://zely.netlify.app/).
 
 See the [Getting Started](https://zely.netlify.app/guide/getting-started) to start your first app.
 
