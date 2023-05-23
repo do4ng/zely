@@ -1572,11 +1572,6 @@
   dependencies:
     esquery "^1.0.1"
 
-"@prext/plugin-kit@*":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@prext/plugin-kit/-/plugin-kit-0.1.0.tgz#27c11bb6d64cb0f535d9604e7beff30341142a8e"
-  integrity sha512-HxnkYkSP6+x4L0ewIs4787zUmV3LZN6uGUayy4nXmlRVDYolU/SMzvnGH+NZKbIJi85eJm8eEwm3i0M1rsrV0g==
-
 "@sinclair/typebox@^0.25.16":
   version "0.25.24"
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.25.24.tgz#8c7688559979f7079aacaf31aa881c3aa410b718"

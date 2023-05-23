@@ -57,11 +57,11 @@ const build = (
   }
 };
 
-build('prext');
+build('zely');
 // cli
-build('prext', 'src/bin/index.ts', { cjs: 'dist/bin.js', esm: 'dist/bin.esm.js' });
-build('prext', 'src/server.ts', { cjs: 'dist/server.js', esm: 'dist/server.esm.js' });
-build('prext', 'src/export-config.ts', {
+build('zely', 'src/bin/index.ts', { cjs: 'dist/bin.js', esm: 'dist/bin.esm.js' });
+build('zely', 'src/server.ts', { cjs: 'dist/server.js', esm: 'dist/server.esm.js' });
+build('zely', 'src/export-config.ts', {
   cjs: 'dist/config.js',
   esm: 'dist/config.esm.js',
 });
