@@ -1,5 +1,5 @@
 import { Request, Response } from 'osik';
-import { Config, PrextRequest, PrextResponse, pureMiddleware } from '.';
+import { Config, ZelyRequest, ZelyResponse, pureMiddleware } from '.';
 
 /*
 
