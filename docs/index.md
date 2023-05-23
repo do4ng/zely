@@ -3,16 +3,16 @@
 layout: home
 
 hero:
-  name: 'prext'
-  text: 'a Backend Framework for Node.js'
+  name: 'zely'
+  text: 'Next-Gen backend framework for nodejs.'
   tagline: Create web servers easily
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/what-is-prext
+      link: /guide/what-is-zely
     - theme: alt
       text: View on GitHub
-      link: https://github.com/do4ng/prext
+      link: https://github.com/do4ng/zely
 
 features:
   - icon: 🛠️

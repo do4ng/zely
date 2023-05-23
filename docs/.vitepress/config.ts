@@ -1,10 +1,10 @@
 import { defineConfig } from 'vitepress';
 
-import pkg from '../../packages/prext/package.json';
+import pkg from '../../packages/zely/package.json';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'Prext',
+  title: 'Zely',
   description: 'a Backend Framework for Node.js',
 
   cleanUrls: true,
@@ -17,10 +17,10 @@ export default defineConfig({
   },
 
   themeConfig: {
-    editLink: { pattern: 'https://github.com/do4ng/prext/edit/main/docs/:path' },
+    editLink: { pattern: 'https://github.com/do4ng/zely/edit/main/docs/:path' },
 
     nav: [
-      { text: 'Guide', link: '/guide/what-is-prext' },
+      { text: 'Guide', link: '/guide/what-is-zely' },
       { text: 'APIs', link: '/apis/introduction' },
       { text: 'Config', link: '/apis/config' },
       { text: 'Blog', link: '/blog/introduction' },
@@ -29,17 +29,13 @@ export default defineConfig({
         items: [
           {
             text: 'CHANGELOG',
-            link: 'https://github.com/do4ng/prext/blob/main/packages/prext/CHANGELOG.md',
+            link: 'https://github.com/do4ng/zely/blob/main/packages/zely/CHANGELOG.md',
           },
           {
             items: [
               {
-                text: 'v1 docs',
-                link: 'https://642c254446f3190008a45c8b--prext.netlify.app/',
-              },
-              {
-                text: 'v0 docs',
-                link: 'https://63d5367b5e458b7e0ce3f315--prext.netlify.app/',
+                text: 'prext docs',
+                link: 'https://prext.netlify.app',
               },
             ],
           },
@@ -53,38 +49,13 @@ export default defineConfig({
       '/blog/': sidebarBlog(),
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/do4ng/prext' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/do4ng/zely' }],
   },
 });
 
 function sidebarBlog() {
   return [
     { text: 'Intro', items: [{ text: 'Introduction', link: '/blog/introduction' }] },
-    {
-      text: 'v3.x',
-      collapsed: true,
-      items: [{ text: 'Dev v3.0', link: '/blog/v3/dev-v3-0' }],
-    },
-    {
-      text: 'v2.x',
-      collapsed: true,
-      items: [
-        { text: 'Introduce v2.1', link: '/blog/v2/v2-1' },
-        { text: 'Prexty v1.2', link: '/blog/v2/prexty-v1-2' },
-        { text: 'Introduce v2.0', link: '/blog/v2/v2-0' },
-        { text: 'v2.0 is coming', link: '/blog/v2/dev-v2-0' },
-        { text: 'New Docs', link: '/blog/v2/new-docs' },
-      ],
-    },
-    {
-      text: 'v1.x',
-      collapsed: true,
-      items: [
-        { text: 'Introduce v1.3', link: '/blog/v1/v1-3' },
-        { text: 'Introduce v1.2', link: '/blog/v1/v1-2' },
-        { text: 'Introduce v1.0', link: '/blog/v1/v1-0' },
-      ],
-    },
   ];
 }
 
@@ -114,7 +85,7 @@ function sidebarGuide() {
       text: 'Introduction',
       collapsed: false,
       items: [
-        { text: 'What is Prext?', link: '/guide/what-is-prext' },
+        { text: 'What is Zely?', link: '/guide/what-is-zely' },
         { text: 'Getting Started', link: '/guide/getting-started' },
         { text: 'Routing', link: '/guide/routing' },
         { text: 'Middlewares', link: '/guide/middlewares' },

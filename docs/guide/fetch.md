@@ -7,7 +7,7 @@ You can fetch data from other pages using `snatcher()`.
 'snatch' does not fetch data through http, but directly accesses the file and fetch data.
 
 ```ts
-import { snatcher } from 'prext';
+import { snatcher } from 'zely';
 
 export async function get(req, res) {
   const snatch = snatcher(req, res);
@@ -17,7 +17,7 @@ export async function get(req, res) {
 
 ::: tip
 
-After [`^2.3.0`](https://github.com/do4ng/prext/blob/main/packages/prext/CHANGELOG.md#230-2023-05-11), you can use `req.snatch`.
+After [`^2.3.0`](https://github.com/do4ng/zely/blob/main/packages/zely/CHANGELOG.md#230-2023-05-11), you can use `req.snatch`.
 
 ```ts
 export async function get(req, res) {
@@ -34,7 +34,7 @@ export async function get(req, res) {
 ::: code-group
 
 ```ts [pages/index.ts]
-import { snatcher } from 'prext';
+import { snatcher } from 'zely';
 
 export async function get(req, res) {
   const snatch = snatcher(req, res);

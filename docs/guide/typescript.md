@@ -1,19 +1,19 @@
 # Typescript
 
-Prext fully supports typescript. Most of tests (while development) were run with typescript. Thus, using typescript is recommended.
+zely fully supports typescript. Most of tests (while development) were run with typescript. Thus, using typescript is recommended.
 
-## Using [create-prext-app](https://npmjs.com/package/create-prext-app)
+## Using [create-zely-app](https://npmjs.com/package/create-zely-app)
 
 ```bash
-$ npx create-prext-app my-ts-app --with-typescript
+$ npx create-zely-app my-ts-app --with-typescript
 ```
 
-## Using [create-prext](https://npmjs.com/package/create-prext)
+## Using [create-zely](https://npmjs.com/package/create-zely)
 
 Select Typescript Option
 
 ```bash
-$ npx create-prext
+$ npx create-zely
 
 ? Project name: my-app
 ? Directory: backend
@@ -26,10 +26,10 @@ $ npx create-prext
 
 ```ts [page/index.ts]
 
-import { PrextRequest, PrextResponse } from 'prext';
+import { ZelyRequest, ZelyResponse } from 'zely';
 
 module.exports.get = function(req, res) {  // [!code --]
-export function get(req: PrextRequest, res: PrextResponse) { // [!code ++]
+export function get(req: ZelyRequest, res: ZelyResponse) { // [!code ++]
 
   res.end("I love typescript!");
 }
@@ -37,16 +37,16 @@ export function get(req: PrextRequest, res: PrextResponse) { // [!code ++]
 
 :::
 
-rename `prext.config.js` to `prext.config.ts`
+rename `zely.config.js` to `zely.config.ts`
 
 ::: code-group
 
-```ts [prext.config.ts]
-// prext.config.js => prext.config.ts
-const { defineConfig } = require('prext'); // [!code --]
+```ts [zely.config.ts]
+// zely.config.js => zely.config.ts
+const { defineConfig } = require('zely'); // [!code --]
 module.exports = defineConfig({}); // [!code --]
 
-import { defineConfig } from 'prext'; // [!code ++]
+import { defineConfig } from 'zely'; // [!code ++]
 export default defineConfig({}); // [!code ++]
 ```
 

@@ -8,12 +8,12 @@ This feature creates a ready-to-run javascript file like an executable (such as 
 
 ## Before Build
 
-You have to update configure file (`prext.config.js` or `prext.config.ts`).
+You have to update configure file (`zely.config.js` or `zely.config.ts`).
 ::: code-group
 
-```ts [prext.config.ts]
-import { defineConfig } from 'prext'; // [!code --]
-import { defineConfig } from 'prext/config'; // [!code ++]
+```ts [zely.config.ts]
+import { defineConfig } from 'zely'; // [!code --]
+import { defineConfig } from 'zely/config'; // [!code ++]
 ```
 
 :::
@@ -25,7 +25,7 @@ This step helps reduce the size of the output.
 Run:
 
 ```bash
-$ prext export
+$ zely export
 ```
 
 will create `dist/index.js`. And check if it works well.
@@ -50,7 +50,7 @@ $ node dist/index.js
 ## CLI
 
 ```txt
-$ prext export -h
+$ zely export -h
 ```
 
 ## Warning

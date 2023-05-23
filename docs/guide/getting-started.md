@@ -2,7 +2,7 @@
 
 ## Using tool
 
-You can create prext application easily with [create-prext](https://npmjs.com/package/create-prext).
+You can create zely application easily with [create-zely](https://npmjs.com/package/create-zely).
 
 ---
 
@@ -11,11 +11,11 @@ You can create prext application easily with [create-prext](https://npmjs.com/pa
 ::: code-group
 
 ```bash [npx]
-$ npx create-prext
+$ npx create-zely
 ```
 
 ```bash [yarn]
-$ yarn create prext
+$ yarn create zely
 ```
 
 :::
@@ -50,28 +50,28 @@ $ npm dev # start app
 
 ## Manual Installation
 
-You can also add prext to a project that already exists.
+You can also add zely to a project that already exists.
 
 Enter the command below:
 
 ::: code-group
 
 ```bash [npm]
-$ npm install --save-dev prext
+$ npm install --save-dev zely
 ```
 
 ```bash [yarn]
-$ yarn add -D prext
+$ yarn add -D zely
 ```
 
 :::
 
-Add the configuration file (`prext.config.ts`).
+Add the configuration file (`zely.config.ts`).
 
 ::: code-group
 
-```ts [prext.config.ts]
-import { defineConfig } from 'prext/config';
+```ts [zely.config.ts]
+import { defineConfig } from 'zely/config';
 
 export default defineConfig({
   // options

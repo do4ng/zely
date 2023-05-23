@@ -5,7 +5,7 @@
 ::: code-group
 
 ```ts [middlewares/message.ts]
-import { Middleware } from 'prext';
+import { Middleware } from 'zely';
 
 export const Message: Middleware = (req, res, next) => {
   (req as any).message = 'Hello World!';
@@ -18,9 +18,9 @@ export const Message: Middleware = (req, res, next) => {
 ::: code-group
 
 ```ts [pages/index.ts]
-import { PrextRequest, PrextResponse } from 'prext';
+import { ZelyRequest, ZelyResponse } from 'zely';
 
-export function get(req: PrextRequest, res: PrextResponse) {
+export function get(req: ZelyRequest, res: ZelyResponse) {
   res.end((req as any).message);
 }
 ```
@@ -33,7 +33,7 @@ Add them to `config.middlewares`.
 
 ::: code-group
 
-```ts [prext.config.ts]
+```ts [zely.config.ts]
 import { Message } from './middlewares/message';
 
 export default defineConfig({
@@ -55,7 +55,7 @@ To use auto middleware mode, edit config value.
 ::: code-group
 
 ```ts [middlewares/message.ts]
-import { Middleware } from 'prext';
+import { Middleware } from 'zely';
 
 const Message: Middleware = (req, res, next) => {
   (req as any).message = 'Hello World!';
@@ -72,7 +72,7 @@ export default Message;
 
 ::: code-group
 
-```ts [prext.config.ts]
+```ts [zely.config.ts]
 export default defineConfig({
   allowAutoMiddlewares: true,
   middlewareDirectory: 'middlewares',
