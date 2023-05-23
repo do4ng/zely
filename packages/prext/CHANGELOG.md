@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.0-next.2](https://github.com/do4ng/prext/compare/prext@3.0.0-next.1...prext@3.0.0-next.2) (2023-05-23)
+
+
+### Others
+
+* edit listen style ([b1e37dc](https://github.com/do4ng/prext/commit/b1e37dcee8af18ac87bfbaa9a8857e8079c686ad))
+
+
+### New Features
+
+* add --bundle option ([a3e030a](https://github.com/do4ng/prext/commit/a3e030a27b5009e020b4faa399e2bd9194b27b18))
+
+
+
 ## [3.0.0-next.1](https://github.com/do4ng/prext/compare/prext@2.3.0...prext@3.0.0-next.1) (2023-05-22)
 
 
