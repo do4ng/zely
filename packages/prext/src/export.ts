@@ -17,7 +17,10 @@ export function exportsCode(config: Config) {
   };
 }
 
-export async function exportServer(config: Config): Promise<void> {
+export async function exportServer(
+  config: Config,
+  bundleModules: boolean = true
+): Promise<void> {
   rmSync(CACHE_DIRECTORY, { recursive: true, force: true });
   console.log(`${'$'.gray} Exporting App.\n`.cyan);
 
@@ -83,7 +86,7 @@ ${code.listen}`
     logLevel: 'error',
     platform: 'node',
     minify: true,
-    plugins: [nodeExternalsPlugin() as any],
+    ...(!bundleModules ? { plugins: [nodeExternalsPlugin() as any] } : {}),
   });
 
   success('success to export app.');

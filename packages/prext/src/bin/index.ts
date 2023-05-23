@@ -49,10 +49,16 @@ app
 app
   .command('export', ['build'])
   .describe('Export Prext Server')
+  .option('--bundle, -b', 'Bundle with node_modules', true)
   .action(async (options) => {
     const config = await getConfig(options.config || null);
 
-    exportServer(config);
+    if (options.bundle) {
+      console.log();
+      info('--bundle option enabled.\n');
+    }
+
+    exportServer(config, options.bundle);
   });
 
 app
