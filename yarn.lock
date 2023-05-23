@@ -8258,3 +8258,15 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zely@latest:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/zely/-/zely-0.0.1.tgz#36cd3220807dabc5d58dba0cc2106e3561f968b7"
+  integrity sha512-JSiqRYGWzbfN11b1URyUI5mIurWnVmEx5HTSytO7C0+dpu7BuCtkPb1j6Ep4lmEN2vCsG6wYGHM6s1AUJsAwEA==
+  dependencies:
+    "@osik/path-regexp" "^0.0.1"
+    animaux "^0.0.4"
+    chokidar "^3.5.3"
+    esbuild "^0.17.6"
+    esbuild-node-externals "^1.6.0"
+    osik "^0.0.5"
