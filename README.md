@@ -1,25 +1,23 @@
 [![img](.github/assets/icon-v3-white.svg)](https://github.com/do4ng/prext)
 
-# Prext
+# Zely
 
 a Next-Generation backend framework for nodejs
 
-[**github**](https://github.com/do4ng/prext) • [**npm**](https://npmjs.com/package/prext) • [**website**](https://prext.netlify.app/)
+[**github**](https://github.com/do4ng/zely) • [**npm**](https://npmjs.com/package/zely) • [**website**](https://prext.netlify.app/)
 
 ---
 
 ## Documentation
 
-Visit [prext website](https://prext.netlify.app/).
+Visit [prext website](https://zely.netlify.app/).
 
-See the [Getting Started](https://prext.netlify.app/guide/getting-started) to start your first app.
+See the [Getting Started](https://zely.netlify.app/guide/getting-started) to start your first app.
 
 ## Contribution
 
-Read [Contributing Guide](https://prext.netlify.app/guide/contributing).
+Read [Contributing Guide](https://zely.netlify.app/guide/contributing).
 
 ## License
 
 MIT
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdo4ng%2Fprext.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdo4ng%2Fprext?ref=badge_large)
