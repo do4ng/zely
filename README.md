@@ -1,6 +1,6 @@
 [![img](.github/assets/icon-v3-white.svg)](https://github.com/do4ng/prext)
 
-> This repository has been deprecated. Please visit [/zelyjs/core](https://github.com/zelyjs/zely)
+> This repository has been deprecated. Please visit [/zely-js/core](https://github.com/zely-js/core)
 
 # Zely
 
