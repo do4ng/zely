@@ -1,5 +1,7 @@
 [![img](.github/assets/icon-v3-white.svg)](https://github.com/do4ng/prext)
 
+> This repository has been deprecated. Please visit [/zelyjs/core](https://github.com/zelyjs/zely)
+
 # Zely
 
 a Next-Generation backend framework for nodejs
